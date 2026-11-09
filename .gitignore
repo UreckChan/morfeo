@@ -3,3 +3,5 @@ node_modules/
 salida/
 .env
 .DS_Store
+docs/.vitepress/dist/
+docs/.vitepress/cache/

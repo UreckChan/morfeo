@@ -3,7 +3,9 @@
 **Videos verticales animados desde código.** Escribes las escenas; Morfeo pone la voz, la música, los efectos,
 los subtítulos, las animaciones y la miniatura. Para YouTube Shorts, TikTok y Reels.
 
-![Estilos de Morfeo](docs/img/galeria.jpg)
+**📖 Documentación: [ureckchan.github.io/morfeo](https://ureckchan.github.io/morfeo/)**
+
+![Estilos de Morfeo](docs/public/img/galeria.jpg)
 
 <sub>De izquierda a derecha y de arriba abajo: `datos-curiosos`, `explicativo`, `documental`, `mesa`, `historia`, `serie`, `infografia`, `3d`. Todos salieron de los [ejemplos](ejemplos/guiones).</sub>
 
@@ -72,7 +74,7 @@ npx morfeo render cachalote
 
 ## Más
 
-- **[Guía completa](docs/guia.md):** estilos, escenas, capas, animaciones, HUD, personajes, 3D, voces, música, guiones y la API para usarlo desde código.
+- **[Documentación](https://ureckchan.github.io/morfeo/):** estilos, escenas, capas, animaciones, HUD, personajes, 3D, voces, música, guiones y la API para usarlo desde código.
 - **[Ejemplos](ejemplos):** los 8 videos de la galería, listos para renderizar. Entra a `ejemplos/`, corre `npm install` y luego `npx morfeo render`.
 - **¿Algo falla o tienes una idea?** [Abre un issue](../../issues/new/choose).
 
