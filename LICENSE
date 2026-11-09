@@ -1,0 +1,22 @@
+Licencia de uso de Morfeo
+
+Copyright (c) 2026 Uriel Gómez. Todos los derechos reservados.
+
+1. Uso permitido. Puedes instalar y usar Morfeo sin costo para crear videos,
+   incluidos videos con fines comerciales. Los videos que generes son tuyos.
+
+2. Lo que no está permitido sin permiso escrito del autor: copiar, modificar,
+   redistribuir, sublicenciar o vender el código fuente de Morfeo, ni publicar
+   versiones derivadas o paquetes que lo incluyan.
+
+3. Terceros. Morfeo usa software y recursos con sus propias licencias, que
+   también debes cumplir:
+   - Remotion (https://remotion.dev/license): gratis para personas y empresas
+     de hasta 3 personas; empresas más grandes necesitan licencia de Remotion.
+   - Voces Kokoro (Apache 2.0), whisper.cpp (MIT), Three.js (MIT), React (MIT).
+   - Fuentes Anton, Montserrat y JetBrains Mono (SIL Open Font License 1.1).
+   - Si usas servicios externos (ElevenLabs, OpenAI, Anthropic), aplican sus
+     términos y lo que cobren.
+
+4. Sin garantía. Morfeo se entrega "tal cual", sin garantía de ningún tipo. El
+   autor no es responsable de daños derivados de su uso.

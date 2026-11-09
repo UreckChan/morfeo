@@ -1,0 +1,13 @@
+{
+	"name": "morfeo-ejemplos",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"render": "morfeo render",
+		"lista": "morfeo lista",
+		"studio": "morfeo studio"
+	},
+	"dependencies": {
+		"morfeo": "^0.1.0"
+	}
+}
