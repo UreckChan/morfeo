@@ -71,7 +71,16 @@ Para que una imagen se convierta en otra, con un fundido, un barrido o un círcu
 | `onda` | `barras`, `ancho`, `alto`, `color`, `siempre`: onda de audio que se mueve con la voz |
 | `globo` | `texto`, `cola` (`abajo`, `arriba`, `izq`, `der`, `ninguna`), `fondo`, `color` |
 | `seguir` | `usuario`, `texto`, `pulsar` (segundos): tarjeta con botón que pasa a "Siguiendo" |
+| `ventana` | `diametro`, `src` o `capas`, `borde` (`metal`, `ninguno` o un color), `remaches`, `zoom` (`[inicio, fin]`), `fondo`: escotilla o lupa circular |
 | `marca` | `tam`: tu avatar |
+
+### Ventana circular
+
+Para mostrar el interior de algo (un submarino, una célula, un motor) con borde metálico y remaches:
+
+```js
+{tipo: 'ventana', diametro: 640, src: 'interior-submarino.png', zoom: [1, 1.2], en: 'dentro'}
+```
 
 ## Formas e íconos
 

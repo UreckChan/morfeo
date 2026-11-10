@@ -45,8 +45,8 @@ export default defineConfig({
 | `assets` | Carpeta de tus imágenes, videos y modelos (por defecto `./assets`) |
 | `salida` | Carpeta de los videos terminados (por defecto `./salida`) |
 | `render.crf` | Calidad del video: menos es mejor (18 por defecto) |
-| `render.gl` | `swangle` (funciona en todas las computadoras) o `angle` (usa la tarjeta de video) |
-| `render.concurrencia` | Cuadros en paralelo (por defecto, automático) |
+| `render.gl` | `angle` usa la tarjeta de video (por defecto en Mac con Apple Silicon, unas 4 veces más rápido) y `swangle` funciona en cualquier computadora. Si la GPU falla, reintenta solo con `swangle` |
+| `render.concurrencia` | Cuadros en paralelo. Por defecto Morfeo elige un valor seguro y, si el navegador truena, reintenta con menos |
 | `render.miniatura` | Generar el `.jpg` de cada video |
 
 ## Un video
@@ -59,6 +59,7 @@ export default defineConfig({
 | `music` | Música |
 | `hud` | Capas fijas encima de todo el video. Ver [HUD](../guia/series#hud) |
 | `scenes` | Las escenas. Ver [Escenas](../guia/escenas) |
+| `miniaturaEn` | Segundo para la miniatura (por defecto, cuando termina de armarse la primera escena). Sale sin subtítulos |
 | `meta` | Datos libres que se copian a `salida/resumen.json` |
 
 ## Variables de entorno
