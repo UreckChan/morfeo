@@ -69,6 +69,7 @@ export default defineConfig({
 | `ANTHROPIC_API_KEY` | Guiones con Claude |
 | `OPENAI_API_KEY` | Imágenes, poses y voces de OpenAI |
 | `ELEVENLABS_API_KEY` | Voces de ElevenLabs |
+| `POLYPIZZA_API_KEY` | Opcional: suma los 10 mil+ modelos de Poly Pizza a la biblioteca 3D |
 | `MORFEO_HOME` | Dónde guardar Python, voces, Whisper y el navegador (por defecto `~/.morfeo`) |
 | `MORFEO_PYTHON` | Usar un Python específico al instalar |
 | `MORFEO_GL` | Igual que `render.gl` |

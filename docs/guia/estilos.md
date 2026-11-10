@@ -20,6 +20,16 @@ Se elige por video (`estilo: 'documental'`) o para todo el proyecto en `morfeo.c
 
 </div>
 
+## Escenarios ilustrados
+
+Cinco escenarios animados para que un personaje nunca quede sobre un fondo vacío: `bosque` (estrellas, luna con cara que canta, luciérnagas), `cuarto` (ventana, póster, calendario y, como capa, el escritorio con teclado RGB), `departamento` (ciudad por la ventana, lámpara, tele), `tunel` (el tren llega en la palabra que digas) y `pasillo` (la puerta se sacude al tocar).
+
+```js
+fondo: {tipo: 'escenario', nombre: 'bosque', paneo: 80, luna: {cara: true, cantar: 'canta'}}
+```
+
+`serie` usa el cuarto, `ilustrado` el bosque e `historia` el departamento por defecto.
+
 ## Cambiar un estilo para un video
 
 Con `tema` cambias lo que quieras del estilo en ese video:
@@ -61,7 +71,7 @@ estilo: 'mi-marca',
 
 | Clave | Valores |
 |---|---|
-| `fondo` | `{tipo: 'color', color}` · `{tipo: 'degradado', colores, angulo}` · `{tipo: 'imagen', src, oscurecer, desenfoque}` · `{tipo: 'video', src}` |
+| `fondo` | `{tipo: 'color', color}` · `{tipo: 'degradado', colores, angulo}` · `{tipo: 'imagen', src, oscurecer, desenfoque}` · `{tipo: 'video', src}` · `{tipo: 'escenario', nombre}` |
 | `rayos` | `{color, fuerza}`: rayos de luz desde arriba |
 | `foco` | `{color, x, y, radio, fuerza}`: luz puntual |
 | `vineta` | `0` a `1`: oscurece los bordes |

@@ -108,6 +108,13 @@ Varias capas que se mueven juntas, o una capa repetida en una formación:
 | `espacio` | Separación entre copias |
 | `retraso` | Segundos entre la aparición de cada copia |
 
+## Escenarios y recursos
+
+| Tipo | Campos |
+|---|---|
+| `recurso` | `buscar` (palabra en español), `estilo` (`3d`, `realista`, `2d`), `variante`, `indice`: objeto de la biblioteca. Ver [Objetos 2D y 3D](./recursos) |
+| `escenario` | `nombre` (`bosque`, `cuarto`, `departamento`, `tunel`, `pasillo`), `parte: 'frente'` para el primer plano |
+
 ## Más
 
 - `personaje`: ver [Series y personajes](./series#personajes).

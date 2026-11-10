@@ -15,6 +15,8 @@ npx morfeo <comando> [opciones]
 | `guion "tema"` | Claude escribe un video. Ver [Guiones](../guia/ia#guiones) |
 | `guion --desde f.txt` | Convierte tu guion en escenas (`--sin-ia`: una escena por frase) |
 | `estilos` | Lista los estilos visuales |
+| `recursos temas` | Diccionario de objetos 2D/3D por temática |
+| `recursos buscar "x"` | Busca un objeto: `--3d`, `--realista`, `--2d --variante clay` |
 | `ayuda`, `-v` | Ayuda y versión |
 
 Todos aceptan `--proyecto <carpeta>` para trabajar con un proyecto que no está en la carpeta actual.
