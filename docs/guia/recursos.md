@@ -32,8 +32,16 @@ Si no hay nada en ese estilo, prueba solo en los otros.
 ### Variantes 2D
 
 Toda una línea gráfica para el video: `color` (por defecto), `clay`, `glass`, `kawaii`, `retro`, `pastel`, `sticker`,
-`skeuo`, `plush`, `anime`, `luxe`, `chrome`, `liquid`, `bauhaus`, `brutal`, `gothic` y `linea` (íconos de un color,
-que se pintan con `color`).
+`skeuo`, `plush`, `anime`, `luxe`, `chrome`, `liquid`, `bauhaus`, `brutal`, `gothic`, `plano` (ilustración plana con
+muchísimos animales y objetos) y `linea` (íconos de un color, que se pintan con `color`).
+
+### Si no lo encuentra
+
+- Primero prueba el mismo estilo con otra línea gráfica (`2d glass` → `2d color` → … → `2d plano`), y después los
+  otros estilos (`3d`, `realista`). La terminal dice qué usó: `"tiburón" no está en 2d glass; uso 2d plano`.
+- Si no está en ninguna biblioteca, avisa y omite esa capa: el video se hace igual.
+- Los modelos externos planos (un control, un libro) se levantan hacia la cámara, y si tienen partes sueltas largas
+  (un cable) el encuadre se centra en el objeto. Para un `.glb` tuyo, usa `levantar: true` en la capa `modelo`.
 
 ### Buscar desde la terminal
 

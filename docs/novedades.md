@@ -2,6 +2,18 @@
 
 Para actualizar un proyecto: `npm install morfeo@latest`.
 
+## 0.1.3
+
+**Recursos más difíciles de romper**
+- Si un recurso no está en la variante 2D pedida, prueba las otras variantes 2D antes de usar un modelo 3D.
+- Nueva variante 2D `plano`: ilustración plana con muchísimos animales y objetos.
+- Un recurso que no está en ninguna biblioteca ya no detiene el render: se avisa y se omite la capa.
+- Diccionario: televisión, tele, tv, monitor, pantalla, cd, disco, dvd, tablet, consola portátil, cartucho, joystick, arcade, vida, nivel, bloque, hongo y más.
+- Modelos externos planos (un control acostado) se levantan hacia la cámara, y el encuadre ignora cables y partes sueltas largas.
+
+**Arreglos**
+- Subtítulo `pop`: las palabras ya no se pegan cuando la palabra activa crece.
+
 ## 0.1.2
 
 **Objetos 2D y 3D sin dibujar nada**
