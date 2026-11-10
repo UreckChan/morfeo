@@ -18,6 +18,7 @@ export default defineConfig({
 			{text: 'Estilos', link: '/guia/estilos'},
 			{text: 'Capas', link: '/guia/capas'},
 			{text: 'Referencia', link: '/referencia/config'},
+			{text: 'Novedades', link: '/novedades'},
 			{text: 'npm', link: 'https://www.npmjs.com/package/morfeo'},
 		],
 		sidebar: [
@@ -54,6 +55,7 @@ export default defineConfig({
 					{text: 'morfeo.config.mjs', link: '/referencia/config'},
 					{text: 'Comandos', link: '/referencia/cli'},
 					{text: 'Uso desde código', link: '/referencia/api'},
+					{text: 'Novedades', link: '/novedades'},
 					{text: 'Licencia', link: '/licencia'},
 				],
 			},

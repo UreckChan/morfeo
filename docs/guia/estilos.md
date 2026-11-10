@@ -11,16 +11,18 @@ Se elige por video (`estilo: 'documental'`) o para todo el proyecto en `morfeo.c
 | ![](/img/explicativo.jpg) | **`explicativo`** | Tutoriales: papel claro, titulares negro y rojo, etiquetas `// paso 1`, tarjetas y teléfonos |
 | ![](/img/documental.jpg) | **`documental`** | Naturaleza y ciencia: azul profundo, rayos de luz, burbujas, chips con datos |
 | ![](/img/mesa.jpg) | **`mesa`** | Dinero y crecimiento: mesa de madera con foco, objetos 3D, contadores LCD |
-| ![](/img/historia.jpg) | **`historia`** | Misterio: interiores oscuros, foco de luz, siluetas, letreros "DÍA 10" |
-| ![](/img/serie.jpg) | **`serie`** | Series con personaje: HUD (días, barras), cartas VS, "¡comenta!", subtítulos en bloque |
+| ![](/img/historia.jpg) | **`historia`** | Misterio: el departamento de noche por defecto, foco de luz, siluetas, letreros "DÍA 10" |
+| ![](/img/serie.jpg) | **`serie`** | Series con personaje en su cuarto: HUD (días, barras), cartas VS, "¡comenta!", subtítulos en bloque |
 | ![](/img/infografia.jpg) | **`infografia`** | Infografía plana: medidores, barras, globos, rayos X, subtítulos en caja |
 | ![](/img/3d.jpg) | **`3d`** | Tus escenas de Blender con recorrido de cámara, una palabra grande a la vez |
-| | **`ilustrado`** | Cuentos y animales: cielo de atardecer o tu escenario ilustrado |
+| ![](/img/ilustrado.jpg) | **`ilustrado`** | Cuentos y animales: el bosque animado por defecto, o tu escenario ilustrado |
 | | **`minimal`** | Oscuro y limpio, para lo que sea |
 
 </div>
 
 ## Escenarios ilustrados
+
+![Escenarios](/img/escenarios.jpg)
 
 Cinco escenarios animados para que un personaje nunca quede sobre un fondo vacío: `bosque` (estrellas, luna con cara que canta, luciérnagas), `cuarto` (ventana, póster, calendario y, como capa, el escritorio con teclado RGB), `departamento` (ciudad por la ventana, lámpara, tele), `tunel` (el tren llega en la palabra que digas) y `pasillo` (la puerta se sacude al tocar).
 

@@ -7,6 +7,8 @@ Para ilustrar un video no hace falta dibujar nada. Usa, en este orden:
 3. **Tus imágenes** en `assets/`, o **imágenes con IA**.
 4. **Emojis**: solo como último recurso.
 
+![Objetos 2D y 3D](/img/objetos.jpg)
+
 ## Recursos de la biblioteca
 
 ```js

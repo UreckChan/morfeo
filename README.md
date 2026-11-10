@@ -7,7 +7,11 @@ los subtítulos, las animaciones y la miniatura. Para YouTube Shorts, TikTok y R
 
 ![Estilos de Morfeo](docs/public/img/galeria.jpg)
 
-<sub>De izquierda a derecha y de arriba abajo: `datos-curiosos`, `explicativo`, `documental`, `mesa`, `historia`, `serie`, `infografia`, `3d`. Todos salieron de los [ejemplos](ejemplos/guiones).</sub>
+<sub>Estilos: `datos-curiosos`, `explicativo`, `documental`, `mesa`, `historia`, `serie`, `infografia`, `3d`.</sub>
+
+![Objetos 2D y 3D](docs/public/img/objetos.jpg)
+
+![Escenarios](docs/public/img/escenarios.jpg)
 
 ## Qué hace
 
@@ -20,6 +24,10 @@ los subtítulos, las animaciones y la miniatura. Para YouTube Shorts, TikTok y R
   - escenas 3D de Blender con recorrido de cámara.
 - **Motor de capas:** imágenes, texto, contadores, tarjetas, teléfonos, medidores, votaciones, noticieros, chats,
   personajes con poses, modelos 3D y tus propios componentes de React. Todo aparece justo en la palabra que dice la voz.
+- **Objetos 2D y 3D:** escribe `buscar: 'tubería'` y Morfeo trae el objeto de bibliotecas libres (Kenney, Poly Haven,
+  Iconify), en 3D low-poly, realista o 2D en 17 estilos, con diccionario temático en español. Además, objetos y piezas
+  de construcción hechos en código (tuberías con agua, muros, vigas…).
+- **Escenarios ilustrados:** bosque, cuarto, departamento, túnel y pasillo animados.
 - **Voces:**
   - Kokoro, gratis y en tu computadora, con más de 50 voces y mezclas;
   - ElevenLabs u OpenAI con tu cuenta;
@@ -74,6 +82,7 @@ npx morfeo render cachalote
 
 ## Más
 
+- **[Novedades](https://ureckchan.github.io/morfeo/novedades):** qué trae cada versión.
 - **[Documentación](https://ureckchan.github.io/morfeo/):** estilos, escenas, capas, animaciones, HUD, personajes, 3D, voces, música, guiones y la API para usarlo desde código.
 - **[Ejemplos](ejemplos):** los 8 videos de la galería, listos para renderizar. Entra a `ejemplos/`, corre `npm install` y luego `npx morfeo render`.
 - **¿Algo falla o tienes una idea?** [Abre un issue](../../issues/new/choose).
@@ -89,6 +98,7 @@ npx morfeo render cachalote
 | `morfeo studio` | Editor en el navegador para ver y ajustar en vivo |
 | `morfeo guion "tema"` | Claude escribe un video (`--estilo serie`, `--imagenes`, `--desde guion.txt`) |
 | `morfeo estilos` | Lista los estilos visuales |
+| `morfeo recursos buscar "x"` | Busca un objeto 2D/3D (`--3d`, `--realista`, `--2d --variante clay`) |
 
 ## Licencia
 
