@@ -2,6 +2,19 @@
 
 Para actualizar un proyecto: `npm install morfeo@latest`.
 
+## 0.3.1
+
+**Producción en serie**
+- `npx morfeo nuevo-video <id> --look 2d|3d`: crea el guion y su mundo desde una base que ya renderiza y registra el componente en `morfeo.config.mjs`. `morfeo nuevo` ya trae `ejemplo-2d` y `ejemplo-3d`.
+- Lote que no se detiene: si un video falla, los demás siguen; al final ves cuáles fallaron y `render --solo-fallidos` reintenta solo esos.
+- Aviso antes de renderizar cuando un momento por palabra (`en`, `rotuloEn`, `hasta`…) no está en lo que dice la voz o en el `show`.
+- Validación más clara: componentes no registrados, `toma` sin `mundo`, `medida`, `trazo`, `cta pide`, `calidad`, `tags`.
+- Calidad por video: `calidad: 'alta' | 'media' | 'ligera'` (o `render.calidad`); los videos con `mundo` usan `media` por defecto y pesan menos.
+- `salida/<id>.txt` con título, `descripcion`, `tags` y créditos listos para publicar.
+- Sonidos automáticos según cómo entra cada capa (`sonido: false` lo apaga); efecto nuevo `golpe`.
+- Kit: personajes y escenarios 2D (`Persona2D`, `Multitud`, `Globo`, `CiudadNoche`, `Cuarto`), 3D (`Persona3D`, `Ciudad`) y gráficas.
+- Windows: Whisper acomoda sus binarios, `hoja` acepta rutas relativas y el cambio CRLF/LF ya no pide reinstalar.
+
 ## 0.3.0
 
 **Maqueta 3D: explicadores en un diorama low-poly**
