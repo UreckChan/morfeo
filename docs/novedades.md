@@ -2,6 +2,12 @@
 
 Para actualizar un proyecto: `npm install morfeo@latest`.
 
+## 0.2.1
+
+**Whisper se instala a la primera**
+- `npx morfeo instalar --whisper` revisa antes que estén `git`, `make` y `cmake`. En Mac con Homebrew, si falta `cmake`, pregunta y lo instala.
+- Si la compilación falla, ya no deja la carpeta a medias: el siguiente intento empieza limpio (antes había que borrar `~/.morfeo/whisper` a mano).
+
 ## 0.2.0
 
 **Videos que se ven producidos**

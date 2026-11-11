@@ -28,7 +28,7 @@ Deja todo en `~/.morfeo` y lo comparten todos tus proyectos:
 | Entorno de voces | ~200 MB | Crea un entorno aislado con Kokoro, numpy y scipy |
 | Voces Kokoro | ~340 MB | Más de 50 voces en varios idiomas |
 | Navegador de render | ~100 MB | Chrome Headless, una sola copia para todos tus proyectos |
-| Whisper (opcional) | ~470 MB | Subtítulos sincronizados palabra por palabra. En Mac pide `xcode-select --install` |
+| Whisper (opcional) | ~470 MB | Subtítulos sincronizados palabra por palabra. Se compila: en Mac pide `xcode-select --install` y `cmake` (te ofrece instalarlo con Homebrew) |
 
 Opciones: `--si` responde que sí a todo; `--whisper` o `--sin-whisper` deciden Whisper sin preguntar.
 
