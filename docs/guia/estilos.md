@@ -16,6 +16,7 @@ Se elige por video (`estilo: 'documental'`) o para todo el proyecto en `morfeo.c
 | ![](/img/infografia.jpg) | **`infografia`** | Infografía plana: medidores, barras, globos, rayos X, subtítulos en caja |
 | ![](/img/3d.jpg) | **`3d`** | Tus escenas de Blender con recorrido de cámara, una palabra grande a la vez |
 | ![](/img/ilustrado.jpg) | **`ilustrado`** | Cuentos y animales: el bosque animado por defecto, o tu escenario ilustrado |
+| | **`maqueta`** | Explicadores largos (90–130 s) en un diorama 3D low-poly con corte de tierra: una palabra a la vez al centro, rótulos con contorno, etiquetas con flecha pegadas a los objetos. Ver [Maqueta 3D](./maqueta) |
 | | **`minimal`** | Oscuro y limpio, para lo que sea |
 
 </div>

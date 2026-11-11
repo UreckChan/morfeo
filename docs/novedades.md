@@ -2,6 +2,16 @@
 
 Para actualizar un proyecto: `npm install morfeo@latest`.
 
+## 0.3.0
+
+**Maqueta 3D: explicadores en un diorama low-poly**
+- Estilo nuevo **`maqueta`**: una palabra a la vez al centro (Primera Letra, sombra suave), rótulos blancos con contorno o en pastilla oscura inclinada (`rotuloEstilo: 'pastilla'`), cortes rápidos. Ver [Maqueta 3D](./guia/maqueta).
+- Kit diorama (`morfeo/kit`): `Maqueta` (isla flotante con estratos, pasto y flores), `Modelo` (cualquier `.glb` o recurso de la biblioteca, con sus animaciones), `Persona`, `Coche`, `Trafico` (coches que hacen fila en una pluma o un rojo), `Pluma`, `Corte` (rayos X), `Gotas`, `Confeti3D` y `Linterna`.
+- `Lienzo3D` con `hora` (día → atardecer → noche) y `etiquetas`: pastillas con flecha pegadas a puntos 3D que siguen al objeto cuando la cámara se mueve. `proyectar()` dice dónde cae un punto 3D en la pantalla.
+- Tarjetas de datos nuevas: `reloj`, `cronometro`, `termometro`, `recipientes`, `ficha` (credencial), `checklist` y `mapa`.
+- `morfeo revisar` entiende el formato largo: en `maqueta` (o `formato: 'largo'`) 90–130 s está bien y pide un corte de cámara cada 2–3 s.
+- Rótulos: `tema.rotulo` (`estilo`, `inclinar`, `y`, `tam`) y, por escena, `rotuloEstilo` y `rotuloInclinar`. Subtítulos con `mayusculas: 'inicial'`, y `contorno: 0` usa sombra suave.
+
 ## 0.2.1
 
 **Whisper se instala a la primera**
