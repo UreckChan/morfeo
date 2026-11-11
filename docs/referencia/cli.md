@@ -11,6 +11,8 @@ npx morfeo <comando> [opciones]
 | `doctor` | Revisa qué está instalado y qué falta |
 | `lista` | Muestra los videos del proyecto y cuáles ya están hechos |
 | `render [id...]` | Genera los que faltan, o los que indiques. `--todos` regenera todos, `--gpu` usa la tarjeta de video |
+| `revisar [id...]` | Revisa la estructura (gancho, ritmo, preguntas, rótulos, cierre). Ver [Estructura](../guia/mundo#revisar-la-estructura) |
+| `hoja <id>` | Hoja de contacto PNG para revisar un video de un vistazo. `--desde 8 --hasta 11`, `--cols 5 --filas 3` |
 | `studio` | Abre el editor en el navegador con los videos ya preparados. `--puerto 3001` |
 | `guion "tema"` | Claude escribe un video. Ver [Guiones](../guia/ia#guiones) |
 | `guion --desde f.txt` | Convierte tu guion en escenas (`--sin-ia`: una escena por frase) |

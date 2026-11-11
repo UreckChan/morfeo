@@ -2,6 +2,28 @@
 
 Para actualizar un proyecto: `npm install morfeo@latest`.
 
+## 0.2.0
+
+**Videos que se ven producidos**
+- **Mundo por video**: `mundo: [...]` y `toma` en cada escena; la cámara viaja entre planos en vez de cambiar de fondo. Ver [Mundo, anotaciones y estructura](./guia/mundo).
+- **Kit** (`morfeo/kit`) para armar escenas a medida: 2D ilustrado con paralaje y 3D (`Lienzo3D`, terreno, tubos con agua, casas, mesa, pilas).
+- **Anotaciones**: `dato`, `medida`, `trazo`, `contorno`, `fuente`, `seccion`, `insignia`, `sello`, `nombre`, `accion`, `cursor` y `terminal`; `sigue` pega una capa a otra.
+- **Texto en dos niveles**: subtítulo `seleccion` (chico, arriba) con `claves`, y `rotulo` grande por escena. `serie` pone una pastilla fija arriba.
+- **Cierre que pide algo**: `{type: 'cta', pide: 'comenta', palabra: '…'}` o `pide: 'comparte'`.
+- Transiciones `barrido`, `empuje`, `mascara` y `destello`; curvas `resorte` y `seca`; acabado `post` (tinte, luz, bordes).
+
+**Estructura y revisión**
+- `npx morfeo revisar`: consejos de gancho, ritmo, preguntas y cierre medidos en videos virales (también al renderizar; `render.consejos: false` los apaga).
+- `npx morfeo hoja <id>`: hoja de contacto PNG del video.
+- El guion con IA apunta a ~45 s, agrega rótulos, claves y un cierre que pide algo.
+
+**Más rápido en Windows**
+- La tarjeta de video (`angle`) es el modo por defecto también en Windows (~4× más rápido) y se renderizan más cuadros en paralelo. `MORFEO_CONCURRENCIA=n` la fuerza.
+
+**Cambia el aspecto**
+- Los subtítulos por defecto de documental, ilustrado, historia y mesa ahora son chicos y arriba (`seleccion`). Para el aspecto anterior: `tema: {subtitulos: {tipo: 'karaoke', y: 330, tam: 54}}`.
+- El estilo `3d` usa subtítulos `pop` de hasta 3 palabras (antes, una palabra a la vez).
+
 ## 0.1.3
 
 **Recursos más difíciles de romper**
