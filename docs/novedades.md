@@ -12,8 +12,21 @@ Para actualizar un proyecto: `npm install morfeo@latest`.
 - Calidad por video: `calidad: 'alta' | 'media' | 'ligera'` (o `render.calidad`); los videos con `mundo` usan `media` por defecto y pesan menos.
 - `salida/<id>.txt` con título, `descripcion`, `tags` y créditos listos para publicar.
 - Sonidos automáticos según cómo entra cada capa (`sonido: false` lo apaga); efecto nuevo `golpe`.
-- Kit: personajes y escenarios 2D (`Persona2D`, `Multitud`, `Globo`, `CiudadNoche`, `Cuarto`), 3D (`Persona3D`, `Ciudad`) y gráficas.
-- Windows: Whisper acomoda sus binarios, `hoja` acepta rutas relativas y el cambio CRLF/LF ya no pide reinstalar.
+- Más rápido: si la voz ya está en caché, el audio se prepara en una sola pasada (unas 40 % menos de espera al volver a renderizar).
+- El texto de una capa que no cabe se achica solo (palabra más larga o más de `maxLineas` renglones); `ajustar: false` lo apaga.
+
+**Kit para cualquier tema, en 2D o 3D** (ver [Mundo, anotaciones y estructura](./guia/mundo#kit-para-escenas-a-medida))
+- Personajes 2D: `Persona2D` con 8 expresiones (feliz, triste, enojado, sorpresa, miedo, dormido, pensativo, neutral), 7 poses, boca que se mueve mientras habla y cambios por palabra; `Multitud` y `Globo` de diálogo (con `en` y `hasta`).
+- Escenarios 2D listos: `CiudadNoche`, `Cuarto`, `Campo`, `Calle`, `Oficina` y `Mar` (superficie o fondo marino).
+- 3D: `Persona3D` con cara y las mismas expresiones y poses, `Ciudad` (de día o de noche), `Camino` y `Cuarto3D`.
+- Gráficas que se dibujan solas: `GraficaBarras`, `GraficaLinea`, `Comparacion` y `Lupa`.
+- Los nombres `Persona` y `Coche` siguen siendo los del diorama (0.3.0).
+
+**Arreglos**
+- Windows: Whisper ya funciona (Remotion dejaba sus binarios en otra carpeta y el render se caía); el progreso de su descarga va en una sola línea.
+- Una instalación desde npm ya no pide `npx morfeo instalar` otra vez por diferencias de saltos de línea (CRLF/LF).
+- Los efectos de sonido caen en su momento con `en: 'palabra+0.3'`, `'voz'` o `'fin'`, y con palabras con acento.
+- `hoja` acepta rutas relativas.
 
 ## 0.3.0
 

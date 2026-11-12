@@ -26,15 +26,39 @@ export default {
 
 ## Kit para escenas a medida
 
-```tsx
-import {Cielo, Pinos, Paralaje} from 'morfeo/kit';          // 2D ilustrado, dentro de un <svg>
-import {Lienzo3D, Terreno, Tubo, Mesa, Pila} from 'morfeo/kit';   // 3D: maqueta de día o mesa con luz cálida
+La forma más rápida de empezar es con una base que ya renderiza:
+
+```bash
+npx morfeo nuevo-video mi-video --look 2d     # o --look 3d
 ```
 
-- **2D:** cielo, pinos, suelo, pasto, luna y `Paralaje` (capas que se mueven distinto con la cámara).
-- **3D:** `Lienzo3D` (`luz="dia"` o `luz="calida"`) con `Terreno`, `Tubo` (con agua), `Arbol`, `Casa`, `Agua`, `Mesa`,
-  `Pila` y `Bloque`. En 3D la cámara va dentro del componente: una toma por escena según `escena`/`tEscena`.
+Crea `guiones/mi-video.mjs` y `escenas/MundoMiVideo.tsx` (ya registrado en `componentes`) con la estructura completa:
+gancho, etiquetas, pregunta, revelación y cierre. Cambia el texto y el mundo a partir de ahí.
+
+```tsx
+import {Persona2D, Globo, CiudadNoche, Paralaje} from 'morfeo/kit';       // 2D, dentro de un <svg>
+import {Lienzo3D, Persona3D, Ciudad, Camino, Terreno, Tubo} from 'morfeo/kit';   // 3D
+import {GraficaBarras, GraficaLinea, Comparacion, Lupa} from 'morfeo/kit';  // gráficas 2D
+```
+
+Cualquier tema puede ir en 2D o en 3D; el kit no ata el look al tipo de video.
+
+- **Personajes 2D:** `Persona2D` (piel, pelo, `peinado`, ropa, `complexion`, `accesorio`), con `expresion` (feliz, triste,
+  enojado, sorpresa, miedo, dormido, pensativo, neutral), `pose` (parado, caminar, señalar, brazosArriba, pensar, cruzado,
+  sentado), `estados: [{en, expresion, pose}]` para cambiar con la historia y `habla: [[inicio, fin]]` para mover la boca.
+  `silueta` la vuelve una figura de un solo color. `Multitud` pone varias en filas y `Globo` es un globo de diálogo
+  (`en`, `hasta`, `pensar`).
+- **Escenarios 2D:** `CiudadNoche`, `Cuarto`, `Campo`, `Calle`, `Oficina` y `Mar`, más anchos que el cuadro para que la
+  cámara los recorra. Piezas sueltas: cielo, estrellas, luna, montañas, pinos, suelo, pasto, luciérnagas, `ConoLuz` y
+  `Paralaje` (capas que se mueven distinto con la cámara).
+- **3D:** `Lienzo3D` (`luz="dia"` o `luz="calida"`) con `Persona3D` (con cara y las mismas expresiones y poses),
+  `Ciudad`, `Camino`, `Cuarto3D`, `Terreno`, `Tubo` (con agua), `Arbol`, `Casa`, `Agua`, `Mesa`, `Pila` y `Bloque`; para
+  dioramas, las piezas de [Maqueta 3D](./maqueta). En 3D la cámara va dentro del componente: una toma por escena según
+  `escena`/`tEscena`.
+- **Gráficas 2D:** `GraficaBarras`, `GraficaLinea`, `Comparacion` (antes/después) y `Lupa`; se dibujan solas a partir de `en`.
 - Usa un solo `Lienzo3D` por video y anima todo con `t` (nada de `useFrame`).
+- Con `show`, los momentos por palabra se buscan en el subtítulo: si dice "1.560.000", usa `en: '1.560.000'`, no `'millón'`.
+  Al renderizar, Morfeo avisa con `!` cuando una palabra no aparece.
 
 ## Anotaciones
 

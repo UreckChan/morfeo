@@ -25,7 +25,7 @@ export default defineConfig({
 	guiones: './guiones',
 	assets: './assets',
 	salida: './salida',
-	render: {crf: 18, gl: 'swangle', concurrencia: null, miniatura: true},
+	render: {calidad: 'alta', gl: 'angle', concurrencia: null, miniatura: true, consejos: true},
 });
 ```
 
@@ -44,8 +44,10 @@ export default defineConfig({
 | `guiones` | Carpeta con un video por archivo (por defecto `./guiones`) |
 | `assets` | Carpeta de tus imágenes, videos y modelos (por defecto `./assets`) |
 | `salida` | Carpeta de los videos terminados (por defecto `./salida`) |
-| `render.crf` | Calidad del video: menos es mejor (18 por defecto) |
-| `render.gl` | `angle` usa la tarjeta de video (por defecto en Mac con Apple Silicon, unas 4 veces más rápido) y `swangle` funciona en cualquier computadora. Si la GPU falla, reintenta solo con `swangle` |
+| `render.calidad` | `alta`, `media` o `ligera`. Por defecto `media` en videos con `mundo` (la cámara siempre se mueve y pesarían el doble) y `alta` en los demás |
+| `render.crf` | Fuerza un valor exacto de calidad (menos es mejor; `alta` = 18, `media` = 21, `ligera` = 24) |
+| `render.consejos` | Mostrar al renderizar los consejos de estructura (`npx morfeo revisar`). `false` los apaga |
+| `render.gl` | `angle` usa la tarjeta de video (por defecto en Mac con Apple Silicon y en Windows, unas 4 veces más rápido) y `swangle` funciona en cualquier computadora. Si la GPU falla, reintenta solo con `swangle` |
 | `render.concurrencia` | Cuadros en paralelo. Por defecto Morfeo elige un valor seguro y, si el navegador truena, reintenta con menos |
 | `render.miniatura` | Generar el `.jpg` de cada video |
 
@@ -53,11 +55,15 @@ export default defineConfig({
 
 | Clave | Qué es |
 |---|---|
-| `title` | Título para publicar (sale en `npx morfeo lista` y en `salida/resumen.json`) |
+| `title` | Título para publicar (sale en `npx morfeo lista`, `salida/resumen.json` y `salida/<id>.txt`) |
+| `descripcion`, `tags` | Descripción y etiquetas para publicar; van a `salida/<id>.txt` con el título y los créditos |
 | `estilo`, `tema` | Estilo y ajustes del estilo para este video |
 | `voice`, `speed`, `lang` | Voz. Ver [Voces](../guia/voces-musica) |
 | `music` | Música |
 | `hud` | Capas fijas encima de todo el video. Ver [HUD](../guia/series#hud) |
+| `mundo` | Escenario que dura todo el video y la cámara recorre con la `toma` de cada escena. Ver [Mundo](../guia/mundo) |
+| `serie` | Pastilla fija arriba para series: `'MI SERIE · EP. 2'` |
+| `calidad` | Calidad de este video (`alta`, `media`, `ligera`) |
 | `scenes` | Las escenas. Ver [Escenas](../guia/escenas) |
 | `miniaturaEn` | Segundo para la miniatura (por defecto, cuando termina de armarse la primera escena). Sale sin subtítulos |
 | `meta` | Datos libres que se copian a `salida/resumen.json` |
