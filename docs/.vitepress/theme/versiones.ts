@@ -1,0 +1,53 @@
+// Historial de versiones publicadas en npm. Lo usan la portada (últimas) y la página de historial (todas).
+// Al publicar una versión: agrégala arriba y escribe su detalle en docs/historial.md con el ancla {#v0-x-y}.
+export type Version = {
+	v: string;
+	fecha: string; // AAAA-MM-DD (hora de México)
+	titulo: string;
+	resumen: string;
+	tipo: 'mayor' | 'menor' | 'arreglo';
+};
+
+export const VERSIONES: Version[] = [
+	{
+		v: '0.3.3',
+		fecha: '2026-11-11',
+		titulo: 'Archivos con el título y render limpio',
+		resumen: 'Los videos salen con su título como nombre de archivo, un render a la vez por computadora y reflejos 3D desde el primer cuadro.',
+		tipo: 'arreglo',
+	},
+	{
+		v: '0.3.1',
+		fecha: '2026-11-11',
+		titulo: 'Producción en serie',
+		resumen: '`nuevo-video` desde bases 2D/3D, lotes que no se detienen, kit de personajes y escenarios, gráficas y calidad por video.',
+		tipo: 'menor',
+	},
+	{
+		v: '0.3.0',
+		fecha: '2026-11-11',
+		titulo: 'Maqueta 3D',
+		resumen: 'Estilo `maqueta`: explicadores en un diorama low-poly con tráfico, rayos X, cambio de hora y etiquetas pegadas a objetos 3D.',
+		tipo: 'mayor',
+	},
+	{v: '0.2.1', fecha: '2026-11-11', titulo: 'Whisper a la primera', resumen: 'Revisa git, make y cmake antes de compilar y no deja instalaciones a medias.', tipo: 'arreglo'},
+	{
+		v: '0.2.0',
+		fecha: '2026-11-10',
+		titulo: 'Videos que se ven producidos',
+		resumen: 'Mundo por video con cámara que viaja, anotaciones, rótulos en dos niveles, `revisar` y `hoja`.',
+		tipo: 'mayor',
+	},
+	{v: '0.1.3', fecha: '2026-11-10', titulo: 'Recursos más difíciles de romper', resumen: 'Variante 2D `plano`, diccionario más grande y un recurso faltante ya no detiene el render.', tipo: 'arreglo'},
+	{v: '0.1.2', fecha: '2026-11-10', titulo: 'Objetos 2D y 3D', resumen: 'Biblioteca con Kenney, Poly Haven e Iconify, diccionario temático y escenarios ilustrados.', tipo: 'menor'},
+	{v: '0.1.1', fecha: '2026-11-10', titulo: 'Render más rápido y estable', resumen: 'GPU por defecto en Apple Silicon, reintentos y errores claros antes de renderizar.', tipo: 'arreglo'},
+	{v: '0.1.0', fecha: '2026-11-09', titulo: 'Primera versión', resumen: '10 estilos, motor de capas, voces, música, subtítulos, guiones con IA, personajes y 3D.', tipo: 'mayor'},
+];
+
+export const ancla = (v: string) => 'v' + v.replace(/\./g, '-');
+
+const MESES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+export const fechaCorta = (f: string) => {
+	const [a, m, d] = f.split('-').map(Number);
+	return `${d} ${MESES[m - 1]} ${a}`;
+};

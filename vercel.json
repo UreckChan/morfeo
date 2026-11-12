@@ -1,0 +1,17 @@
+{
+	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"framework": "vitepress",
+	"installCommand": "npm ci",
+	"buildCommand": "npm run docs:build",
+	"outputDirectory": "docs/.vitepress/dist",
+	"cleanUrls": true,
+	"redirects": [
+		{"source": "/morfeo", "destination": "/", "permanent": true},
+		{"source": "/morfeo/:path*", "destination": "/:path*", "permanent": true},
+		{"source": "/novedades", "destination": "/historial", "permanent": true}
+	],
+	"headers": [
+		{"source": "/assets/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]},
+		{"source": "/clips/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=604800"}]}
+	]
+}

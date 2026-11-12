@@ -1,8 +1,27 @@
-# Novedades
+---
+outline: [2, 2]
+---
 
-Para actualizar un proyecto: `npm install morfeo@latest`.
+# Historial de versiones
 
-## 0.3.2
+Todas las versiones publicadas en npm, de la más nueva a la primera. Para actualizar un proyecto:
+
+```bash
+npm install morfeo@latest
+```
+
+<div class="historial-lista">
+<Versiones enlaces="misma" />
+</div>
+
+## 0.3.3 {#v0-3-3}
+
+<p class="fecha-version">11 de noviembre de 2026 · incluye los cambios de 0.3.2, que no se publicó por separado</p>
+
+**Videos listos para subir**
+- Los videos terminados se llaman como su título: `salida/El cachalote, el gigante del océano.mp4` (con su `.jpg` y `.txt`). YouTube y TikTok toman el nombre del archivo como título al subirlo. `render.nombreArchivo: 'id'` vuelve al nombre por id.
+- Los videos que ya tenías con el id, o con un título que cambiaste, se renombran solos sin volver a renderizar. Dos títulos iguales llevan " (2)".
+- El nombre se limpia para que sirva en Windows, Mac y Linux (conserva acentos y emojis).
 
 **Render limpio**
 - Un render a la vez por computadora: si corres dos, el segundo espera su turno. Dos renders usando la tarjeta de video a la vez dejaban pedazos de texto de otros cuadros (rótulos o subtítulos fantasma).
@@ -10,7 +29,9 @@ Para actualizar un proyecto: `npm install morfeo@latest`.
 - Tus componentes pueden importar `three` y `react` aunque tu proyecto no los tenga instalados.
 - `morfeo revisar` reconoce más frases en segunda persona ("¿sabías…?", "crees", "pagarías").
 
-## 0.3.1
+## 0.3.1 {#v0-3-1}
+
+<p class="fecha-version">11 de noviembre de 2026</p>
 
 **Producción en serie**
 - `npx morfeo nuevo-video <id> --look 2d|3d`: crea el guion y su mundo desde una base que ya renderiza y registra el componente en `morfeo.config.mjs`. `morfeo nuevo` ya trae `ejemplo-2d` y `ejemplo-3d`.
@@ -23,7 +44,7 @@ Para actualizar un proyecto: `npm install morfeo@latest`.
 - Más rápido: si la voz ya está en caché, el audio se prepara en una sola pasada (unas 40 % menos de espera al volver a renderizar).
 - El texto de una capa que no cabe se achica solo (palabra más larga o más de `maxLineas` renglones); `ajustar: false` lo apaga.
 
-**Kit para cualquier tema, en 2D o 3D** (ver [Mundo, anotaciones y estructura](./guia/mundo#kit-para-escenas-a-medida))
+**Kit para cualquier tema, en 2D o 3D** (ver [Mundo, anotaciones y estructura](/guia/mundo#kit-para-escenas-a-medida))
 - Personajes 2D: `Persona2D` con 8 expresiones (feliz, triste, enojado, sorpresa, miedo, dormido, pensativo, neutral), 7 poses, boca que se mueve mientras habla y cambios por palabra; `Multitud` y `Globo` de diálogo (con `en` y `hasta`).
 - Escenarios 2D listos: `CiudadNoche`, `Cuarto`, `Campo`, `Calle`, `Oficina` y `Mar` (superficie o fondo marino).
 - 3D: `Persona3D` con cara y las mismas expresiones y poses, `Ciudad` (de día o de noche), `Camino` y `Cuarto3D`.
@@ -36,26 +57,32 @@ Para actualizar un proyecto: `npm install morfeo@latest`.
 - Los efectos de sonido caen en su momento con `en: 'palabra+0.3'`, `'voz'` o `'fin'`, y con palabras con acento.
 - `hoja` acepta rutas relativas.
 
-## 0.3.0
+## 0.3.0 {#v0-3-0}
+
+<p class="fecha-version">11 de noviembre de 2026</p>
 
 **Maqueta 3D: explicadores en un diorama low-poly**
-- Estilo nuevo **`maqueta`**: una palabra a la vez al centro (Primera Letra, sombra suave), rótulos blancos con contorno o en pastilla oscura inclinada (`rotuloEstilo: 'pastilla'`), cortes rápidos. Ver [Maqueta 3D](./guia/maqueta).
+- Estilo nuevo **`maqueta`**: una palabra a la vez al centro (Primera Letra, sombra suave), rótulos blancos con contorno o en pastilla oscura inclinada (`rotuloEstilo: 'pastilla'`), cortes rápidos. Ver [Maqueta 3D](/guia/maqueta).
 - Kit diorama (`morfeo/kit`): `Maqueta` (isla flotante con estratos, pasto y flores), `Modelo` (cualquier `.glb` o recurso de la biblioteca, con sus animaciones), `Persona`, `Coche`, `Trafico` (coches que hacen fila en una pluma o un rojo), `Pluma`, `Corte` (rayos X), `Gotas`, `Confeti3D` y `Linterna`.
 - `Lienzo3D` con `hora` (día → atardecer → noche) y `etiquetas`: pastillas con flecha pegadas a puntos 3D que siguen al objeto cuando la cámara se mueve. `proyectar()` dice dónde cae un punto 3D en la pantalla.
 - Tarjetas de datos nuevas: `reloj`, `cronometro`, `termometro`, `recipientes`, `ficha` (credencial), `checklist` y `mapa`.
 - `morfeo revisar` entiende el formato largo: en `maqueta` (o `formato: 'largo'`) 90–130 s está bien y pide un corte de cámara cada 2–3 s.
 - Rótulos: `tema.rotulo` (`estilo`, `inclinar`, `y`, `tam`) y, por escena, `rotuloEstilo` y `rotuloInclinar`. Subtítulos con `mayusculas: 'inicial'`, y `contorno: 0` usa sombra suave.
 
-## 0.2.1
+## 0.2.1 {#v0-2-1}
+
+<p class="fecha-version">11 de noviembre de 2026</p>
 
 **Whisper se instala a la primera**
 - `npx morfeo instalar --whisper` revisa antes que estén `git`, `make` y `cmake`. En Mac con Homebrew, si falta `cmake`, pregunta y lo instala.
 - Si la compilación falla, ya no deja la carpeta a medias: el siguiente intento empieza limpio (antes había que borrar `~/.morfeo/whisper` a mano).
 
-## 0.2.0
+## 0.2.0 {#v0-2-0}
+
+<p class="fecha-version">10 de noviembre de 2026</p>
 
 **Videos que se ven producidos**
-- **Mundo por video**: `mundo: [...]` y `toma` en cada escena; la cámara viaja entre planos en vez de cambiar de fondo. Ver [Mundo, anotaciones y estructura](./guia/mundo).
+- **Mundo por video**: `mundo: [...]` y `toma` en cada escena; la cámara viaja entre planos en vez de cambiar de fondo. Ver [Mundo, anotaciones y estructura](/guia/mundo).
 - **Kit** (`morfeo/kit`) para armar escenas a medida: 2D ilustrado con paralaje y 3D (`Lienzo3D`, terreno, tubos con agua, casas, mesa, pilas).
 - **Anotaciones**: `dato`, `medida`, `trazo`, `contorno`, `fuente`, `seccion`, `insignia`, `sello`, `nombre`, `accion`, `cursor` y `terminal`; `sigue` pega una capa a otra.
 - **Texto en dos niveles**: subtítulo `seleccion` (chico, arriba) con `claves`, y `rotulo` grande por escena. `serie` pone una pastilla fija arriba.
@@ -74,7 +101,9 @@ Para actualizar un proyecto: `npm install morfeo@latest`.
 - Los subtítulos por defecto de documental, ilustrado, historia y mesa ahora son chicos y arriba (`seleccion`). Para el aspecto anterior: `tema: {subtitulos: {tipo: 'karaoke', y: 330, tam: 54}}`.
 - El estilo `3d` usa subtítulos `pop` de hasta 3 palabras (antes, una palabra a la vez).
 
-## 0.1.3
+## 0.1.3 {#v0-1-3}
+
+<p class="fecha-version">10 de noviembre de 2026</p>
 
 **Recursos más difíciles de romper**
 - Si un recurso no está en la variante 2D pedida, prueba las otras variantes 2D antes de usar un modelo 3D.
@@ -86,7 +115,9 @@ Para actualizar un proyecto: `npm install morfeo@latest`.
 **Arreglos**
 - Subtítulo `pop`: las palabras ya no se pegan cuando la palabra activa crece.
 
-## 0.1.2
+## 0.1.2 {#v0-1-2}
+
+<p class="fecha-version">10 de noviembre de 2026</p>
 
 **Objetos 2D y 3D sin dibujar nada**
 - Biblioteca de recursos con diccionario temático en español (19 temas): `{tipo: 'recurso', buscar: 'tubería', estilo: '3d'}`.
@@ -105,7 +136,9 @@ Para actualizar un proyecto: `npm install morfeo@latest`.
 - Personaje, pose, escenario u objeto 3D inexistentes se avisan antes de renderizar.
 - Chat más legible y metales 3D menos oscuros.
 
-## 0.1.1
+## 0.1.1 {#v0-1-1}
+
+<p class="fecha-version">10 de noviembre de 2026</p>
 
 **Render más rápido y estable**
 - En Mac con Apple Silicon usa la GPU por defecto (unas 4 veces más rápido); si falla, reintenta con CPU.
@@ -126,7 +159,9 @@ Para actualizar un proyecto: `npm install morfeo@latest`.
 
 **Nuevo:** capa `ventana`, una escotilla circular con borde metálico.
 
-## 0.1.0
+## 0.1.0 {#v0-1-0}
+
+<p class="fecha-version">9 de noviembre de 2026</p>
 
 Primera versión: 10 estilos, motor de capas, voces Kokoro/ElevenLabs/OpenAI, música, subtítulos, guiones con IA,
 personajes, HUD, 3D y componentes propios.
