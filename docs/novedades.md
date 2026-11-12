@@ -2,6 +2,14 @@
 
 Para actualizar un proyecto: `npm install morfeo@latest`.
 
+## 0.3.2
+
+**Render limpio**
+- Un render a la vez por computadora: si corres dos, el segundo espera su turno. Dos renders usando la tarjeta de video a la vez dejaban pedazos de texto de otros cuadros (rótulos o subtítulos fantasma).
+- Los reflejos 3D se aplican desde el primer cuadro (antes el inicio de algunos tramos salía más oscuro).
+- Tus componentes pueden importar `three` y `react` aunque tu proyecto no los tenga instalados.
+- `morfeo revisar` reconoce más frases en segunda persona ("¿sabías…?", "crees", "pagarías").
+
 ## 0.3.1
 
 **Producción en serie**
