@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '0.6.0',
+		fecha: '2026-11-13',
+		titulo: 'Fondo vivo y cámara con ritmo',
+		resumen: 'Ambientes 3D listos (cuarto gamer, sala, arcade), cortes en las palabras clave, postproceso, animática y una revisión que encuentra cuadros negros, tapados y quietos.',
+		tipo: 'mayor',
+	},
+	{
 		v: '0.5.1',
 		fecha: '2026-11-13',
 		titulo: 'Videos 3D sin textos fantasma',

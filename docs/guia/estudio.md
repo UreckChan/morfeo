@@ -45,6 +45,13 @@ npx morfeo previa mi-video --hasta 5
 
 Si no te convence, cambia la primera frase (el guion trae 3 ganchos de reserva en `hooks`) y vuelve a probar.
 
+## Aprobar tomas y ritmo sin esperar el render completo
+
+```bash
+npx morfeo animatica mi-video              # todo el video a 1/3 de tamaño + su hoja de contacto
+npx morfeo render mi-video --escenas 5-6   # corregiste una toma: rehaz solo esas escenas
+```
+
 ## Revisión automática
 
 ```bash
@@ -56,6 +63,13 @@ npx morfeo hoja mi-video --zona
 - **Zona segura**: avisa si un texto o dato queda bajo los botones de TikTok, Reels o Shorts. `hoja --zona` pinta
   en rojo esas zonas sobre los cuadros del video.
 - **Estructura**: gancho, ritmo, preguntas, cierre y lo propio de la [fórmula](./historias).
+- **Riesgo de "diapositiva"**: escenas con solo el subtítulo, puro texto o sin fondo. La salida es un
+  [ambiente](./ambientes).
+- **Cuadros** (cuando ya existe el MP4): cuadros casi negros, tapados (la cámara pegada a una pantalla, una pared o un
+  objeto), fondos lisos y tramos de más de 3 s en los que nada se mueve, con la escena y el segundo exactos.
+
+Tu proyecto trae `gustos.md`: escribe ahí las reglas de estilo de tu canal ("siempre fondo con ambiente", "sin
+emojis") y la IA las sigue en todos los videos.
 
 ## Lo que te entrega
 

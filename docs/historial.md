@@ -15,6 +15,31 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 0.6.0 {#v0-6-0}
+
+<p class="fecha-version">13 de noviembre de 2026</p>
+
+**Fondo vivo** (ver [Ambientes 3D](/guia/ambientes))
+- `ambiente: 'cuarto-gamer' | 'sala' | 'arcade'`: sets 3D completos como fondo de cualquier video, con vida propia (tele que alumbra, LED, lluvia, polvo, un gato) y sonido de fondo.
+- Persona en el set que reacciona a lo que se dice (pregunta, sorpresa, festejo).
+- Postproceso 3D (`post: 'cine' | 'miniatura' | 'suave'`): fondo desenfocado, brillo y viñeta.
+
+**Cámara con ritmo**
+- Un ángulo distinto en cada escena y corte en seco en la palabra clave de las escenas largas (`plano`, `cortes`).
+- Golpe de cámara cuando cae un rótulo `sello` o `pixel` (`golpe`).
+- Lente despejado: la cámara avanza si algo le tapa el lente. `tomaA()` calcula una toma donde el objeto cabe completo.
+- Etiquetas 3D con `en: 'palabra'`: salen junto con su objeto.
+
+**Revisar sin rehacer todo**
+- `npx morfeo animatica <id>`: todo el video a 1/3 de tamaño y su hoja. `render --escenas 5-7`: solo esas escenas.
+- `revisar` avisa el riesgo de "diapositiva" y, en el MP4, cuadros negros, tapados, lisos o quietos.
+- Plantilla con `gustos.md`: tus reglas de estilo, que la IA sigue en cada video.
+- Piezas nuevas del kit: `Tele3D`, `Gato3D`, `Chip`, `Ventilador`, `Escritorio`, `Puerta`, `Audifonos`, `Nube3D`.
+
+**Arreglos**
+- Un objeto 3D que no existe ahora busca su versión 2D antes que una realista (no más estatuas fotorrealistas en un video plano).
+- La sugerencia de rayos X en "demuéstralo" solo aparece si el guion habla de lo de adentro.
+
 ## 0.5.1 {#v0-5-1}
 
 <p class="fecha-version">13 de noviembre de 2026</p>

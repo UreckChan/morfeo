@@ -83,6 +83,7 @@ export default defineConfig({
 					{text: 'Escenas', link: '/guia/escenas'},
 					{text: 'Capas', link: '/guia/capas'},
 					{text: 'Animación y cámara', link: '/guia/animacion'},
+					{text: 'Ambientes 3D (fondo vivo)', link: '/guia/ambientes'},
 					{text: 'Mundo, anotaciones y estructura', link: '/guia/mundo'},
 					{text: 'Maqueta 3D (diorama)', link: '/guia/maqueta'},
 					{text: 'Historias, series y fórmulas', link: '/guia/historias'},
