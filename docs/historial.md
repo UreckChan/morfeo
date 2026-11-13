@@ -14,6 +14,19 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 0.5.0 {#v0-5-0}
+
+<p class="fecha-version">13 de noviembre de 2026</p>
+
+**Del tema al reel terminado** (ver [la guía](/guia/estudio))
+- Cada proyecto trae instrucciones para Claude Code y Codex: «Configúrame» y «Hazme un video sobre…».
+- `npx morfeo estilo`: página para crear tu estilo (nombre, siglas, colores, letra, voz, ritmo y cierre) con vista previa.
+- `npx morfeo guion "tema" --investigar`: cada dato con su fuente, buscado en la web.
+- `npx morfeo previa <id>`: solo el gancho, para aprobarlo antes del render completo.
+- `revisar` comprueba que la voz dijo el guion y que nada quede bajo los botones de las apps; `hoja --zona` las pinta.
+- Portada con tu marca (`<título> (portada).jpg`) y texto del post con fuentes y 3 ganchos de reserva.
+- Capa `linea` (línea de tiempo), `tierra` que vuela al lugar y 8 efectos de sonido nuevos.
+
 ## 0.4.0 {#v0-4-0}
 
 <p class="fecha-version">12 de noviembre de 2026</p>

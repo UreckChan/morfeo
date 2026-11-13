@@ -9,14 +9,16 @@ npx morfeo <comando> [opciones]
 | `nuevo <carpeta>` | Crea un proyecto con videos de ejemplo |
 | `nuevo-video <id>` | Crea un video desde una base que ya renderiza. `--look 2d`, `3d`, `serie`, `mito`, `escalada`, `biografia` o `construiste` (o `--formula`) |
 | `formulas` | Lista las fórmulas de historia con su gancho de ejemplo |
+| `estilo` | Abre la página para crear tu estilo (guarda `estilo.json`) |
+| `previa <id>` | Solo el gancho (~8 s) para aprobarlo. `--hasta 5` |
 | `instalar` | Prepara la computadora: Python, voces, navegador y Whisper (opcional). `--si`, `--whisper`, `--sin-whisper` |
 | `doctor` | Revisa qué está instalado y qué falta |
 | `lista` | Muestra los videos del proyecto y cuáles ya están hechos |
 | `render [id...]` | Genera los que faltan, o los que indiques. `--todos` regenera todos, `--gpu` usa la tarjeta de video, `--solo-fallidos` reintenta los que fallaron en el último lote |
 | `revisar [id...]` | Revisa la estructura (gancho, ritmo, preguntas, rótulos, cierre). Ver [Estructura](../guia/mundo#revisar-la-estructura) |
-| `hoja <id>` | Hoja de contacto PNG para revisar un video de un vistazo. `--desde 8 --hasta 11`, `--cols 5 --filas 3` |
+| `hoja <id>` | Hoja de contacto PNG para revisar un video de un vistazo. `--desde 8 --hasta 11`, `--cols 5 --filas 3`, `--zona` (zonas que tapan las apps) |
 | `studio` | Abre el editor en el navegador con los videos ya preparados. `--puerto 3001` |
-| `guion "tema"` | Claude escribe un video. `--formula serie` sigue una fórmula. Ver [Guiones](../guia/ia#guiones) |
+| `guion "tema"` | Claude escribe un video. `--formula serie` sigue una fórmula; `--investigar` busca cada dato con su fuente. Ver [Guiones](../guia/ia#guiones) |
 | `guion --desde f.txt` | Convierte tu guion en escenas (`--sin-ia`: una escena por frase) |
 | `estilos` | Lista los estilos visuales |
 | `recursos temas` | Diccionario de objetos 2D/3D por temática |

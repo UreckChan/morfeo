@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '0.5.0',
+		fecha: '2026-11-13',
+		titulo: 'Del tema al reel terminado',
+		resumen: 'Tu estilo en una página, investigación con fuentes, previa del gancho, revisión de voz y zona segura, portada y proyectos listos para Claude Code y Codex.',
+		tipo: 'mayor',
+	},
+	{
 		v: '0.4.0',
 		fecha: '2026-11-12',
 		titulo: 'Todas las fórmulas de historia',
