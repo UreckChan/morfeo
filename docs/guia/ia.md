@@ -15,15 +15,18 @@ npx morfeo guion "la leyenda de la llorona" --estilo historia --duracion 50
 npx morfeo guion "el día 31 de Neto" --estilo serie --tono "comedia"
 npx morfeo guion --desde mi-guion.txt                 # tu texto, convertido en escenas
 npx morfeo guion --desde mi-guion.txt --sin-ia        # sin IA: una escena por frase
+npx morfeo guion "la fuga más famosa" --formula misterio --investigar
 ```
 
 Claude escribe el video completo: escenas variadas, números con letras para la voz, palabras clave resaltadas, el
-momento exacto de cada animación y el título para publicar. El resultado queda en `guiones/<id>.json` para que lo
+momento exacto de cada animación, rótulos (sello, paso, pixel), rayos X donde explica "por dentro", el título, la descripción, las etiquetas y 3 ganchos de reserva. El resultado queda en `guiones/<id>.json` para que lo
 revises y lo edites; luego corre `npx morfeo render <id>`.
 
 | Opción | Para qué |
 |---|---|
 | `--estilo` | Estilo visual (por defecto, el de tu proyecto) |
+| `--formula` | Fórmula de historia (`npx morfeo formulas`): la IA sigue su esqueleto. Sin ella, elige la que mejor le quede |
+| `--investigar` | Busca cada dato en la web con su fuente antes de escribir; las fuentes van al texto del post |
 | `--imagenes` | Que pida ilustraciones con IA en lugar de emojis |
 | `--duracion` | Segundos aproximados |
 | `--idioma` | "inglés", "portugués"… |

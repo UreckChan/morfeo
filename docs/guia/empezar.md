@@ -11,8 +11,13 @@ cd mi-canal
 npm install
 ```
 
-El proyecto trae tres videos de ejemplo (uno clásico, uno documental y uno explicativo), tu configuración y un componente
-propio de muestra.
+El proyecto trae videos de ejemplo (clásico, explicativo, 2D y 3D), tu configuración, un componente propio de
+muestra y las instrucciones para tu IA (`AGENTS.md` y `CLAUDE.md`).
+
+::: tip Con Claude Code o Codex
+Abre la carpeta con tu IA y escribe **«Configúrame»**: instala lo que falte y te abre la página de tu estilo. Después,
+**«Hazme un video sobre…»**. Ver [Del tema al reel terminado](./estudio).
+:::
 
 ## 2. Prepara tu computadora (una sola vez)
 
@@ -36,13 +41,22 @@ Opciones: `--si` responde que sí a todo; `--whisper` o `--sin-whisper` deciden 
 `npx morfeo doctor` revisa cada pieza y te dice cómo arreglar lo que falte.
 :::
 
-## 3. Genera tus videos
+## 3. Crea tu estilo
+
+```bash
+npx morfeo estilo
+```
+
+Una página con vista previa para tu nombre, siglas, colores, letra, voz, ritmo y frase de cierre. Ver
+[Tu estilo](./estudio#tu-estilo).
+
+## 4. Genera tus videos
 
 ```bash
 npx morfeo render
 ```
 
-Los `.mp4` y sus miniaturas `.jpg` quedan en `salida/`. Cada video tarda de 30 segundos a 3 minutos, según tu computadora.
+Los `.mp4`, sus miniaturas, portadas y el texto del post quedan en `salida/` con el título del video como nombre. Cada video tarda de 30 segundos a 3 minutos, según tu computadora.
 Si tienes tarjeta de video, prueba `npx morfeo render --gpu`.
 
 Para verlos y ajustarlos en vivo:

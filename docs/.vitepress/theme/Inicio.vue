@@ -3,6 +3,7 @@ import {onMounted, onBeforeUnmount, ref} from 'vue';
 import {withBase} from 'vitepress';
 import Icono from './Icono.vue';
 import Versiones from './Versiones.vue';
+import Apoyo from './Apoyo.vue';
 import {VERSIONES} from './versiones';
 
 const actual = VERSIONES[0].v;
@@ -230,6 +231,11 @@ onBeforeUnmount(() => {
 				</ol>
 				<a :href="b('/guia/primer-video')" class="boton principal">Tu primer video <Icono nombre="flecha" /></a>
 			</div>
+		</section>
+
+		<!-- APOYO -->
+		<section class="bloque apoyo-bloque">
+			<Apoyo variante="grande" />
 		</section>
 	</div>
 </template>
@@ -762,6 +768,10 @@ section {
 	display: grid;
 	grid-template-columns: 1.1fr 1fr;
 	gap: 64px;
+	padding-bottom: 24px;
+}
+.apoyo-bloque {
+	padding-top: 56px;
 	padding-bottom: 120px;
 }
 .mas {

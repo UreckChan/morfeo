@@ -25,6 +25,7 @@ export default defineConfig({
 			{text: 'Referencia', link: '/referencia/config'},
 			{text: 'Versiones', link: '/historial'},
 			{text: 'npm', link: 'https://www.npmjs.com/package/morfeo'},
+			{text: 'Apoyar', link: 'https://buymeacoffee.com/ureck'},
 		],
 		sidebar: [
 			{
@@ -69,7 +70,10 @@ export default defineConfig({
 				],
 			},
 		],
-		socialLinks: [{icon: 'github', link: 'https://github.com/UreckChan/morfeo'}],
+		socialLinks: [
+			{icon: 'github', link: 'https://github.com/UreckChan/morfeo'},
+			{icon: 'buymeacoffee', link: 'https://buymeacoffee.com/ureck', ariaLabel: 'Invítame un café'},
+		],
 		search: {
 			provider: 'local',
 			options: {
@@ -86,6 +90,6 @@ export default defineConfig({
 		returnToTopLabel: 'Volver arriba',
 		sidebarMenuLabel: 'Menú',
 		darkModeSwitchLabel: 'Tema',
-		footer: {message: 'Uso gratuito para crear videos, incluso comerciales. Código propiedad de Uriel Gómez.', copyright: '© 2026 Uriel Gómez'},
+		footer: {message: 'Uso gratuito para crear videos, incluso comerciales. Código propiedad de Uriel Gómez. <a href="https://buymeacoffee.com/ureck" target="_blank" rel="noopener">Invítame un café</a>', copyright: '© 2026 Uriel Gómez'},
 	},
 });

@@ -3,7 +3,9 @@
 **Videos verticales animados desde código.** Escribes las escenas; Morfeo pone la voz, la música, los efectos,
 los subtítulos, las animaciones y la miniatura. Para YouTube Shorts, TikTok y Reels.
 
-**Documentación: [morfeo-docs-two.vercel.app](https://morfeo-docs-two.vercel.app/)**
+**Documentación: [morfeo-docs-two.vercel.app](https://morfeo-docs-two.vercel.app/)** · **[Invítame un café](https://buymeacoffee.com/ureck)**
+
+Morfeo es gratis. Si te ahorra horas de edición, puedes apoyarlo en [buymeacoffee.com/ureck](https://buymeacoffee.com/ureck).
 
 ![Estilos de Morfeo](docs/public/img/galeria.jpg)
 

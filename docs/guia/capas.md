@@ -82,6 +82,36 @@ Para mostrar el interior de algo (un submarino, una célula, un motor) con borde
 {tipo: 'ventana', diametro: 640, src: 'interior-submarino.png', zoom: [1, 1.2], en: 'dentro'}
 ```
 
+## Tarjetas de datos
+
+| Tipo | Campos |
+|---|---|
+| `reloj` | `de`, `a`, `max` (24 por defecto), `segmentos: [[desde, hasta, color]]`, `etiqueta`: carátula que se llena |
+| `cronometro` | `de`, `a`, `max`, `color`: cuenta y su aro avanza |
+| `termometro` | `valor`, `max`, `color` |
+| `recipientes` | `n`, `forma` (`garrafon`, `vaso`), `total` ("50 L"): se llenan uno por uno |
+| `ficha` | `titulo`, `foto`, `campos: [[nombre, valor]]`: credencial |
+| `checklist` | `items: [{texto, en, pendiente}]`, `titulo`: se palomea en cada palabra |
+| `mapa` | `ruta: [[x, y]]`, `distancia` ("8 CUADRAS"), `inclinar`: plano con ruta que se dibuja |
+
+## Historias, series y documental
+
+Ver [Historias, series y fórmulas](./historias) con ejemplos.
+
+| Tipo | Campos |
+|---|---|
+| `bloqueo` | `hora`, `fecha`, `anio` (o `[2026, 2031]` con `anioEn` para que salte), `notificaciones: [{app, titulo, texto, en}]` |
+| `llamada` | `estado` (`entrante`, `curso`, `terminada`), `nombre`, `numero`, `desde`, `duracion` |
+| `recuento` | `cabecera`, `titulo`, `opciones: [{texto, valor, sub}]`: lo que votaron en el capítulo anterior |
+| `capitulo` | `serie`, `capitulo`, `pregunta`, `opciones: [{texto, sub}]`, `siguiente`, `horario`: fin de capítulo |
+| `vigilancia` | `hora`, `fecha`, `etiqueta`, `zoom`, `mira`: vista de cámara encima de todo |
+| `cintillo` | `nombre`, `cargo`, `color`: nombre de una persona, abajo a la izquierda |
+| `fecha` | `anio`, `de`, `pie`, `color`: tarjeta de año que cuenta |
+| `calendario` | `titulo`, `de`, `a`: hoja que voltea |
+| `linea` | `hitos: [{anio, texto, en}]`, `color`: línea de tiempo que avanza en cada palabra |
+| `tierra` | `lat`, `lon`, `etiqueta`, `acercar` (vuela al lugar, p. ej. `3`): globo que gira y clava un pin |
+| `dividida` | `izq` / `der` (o `arriba` / `abajo` con `vertical`): `{etiqueta, color, fondo, capas}` |
+
 ## Formas e íconos
 
 | Tipo | Campos |
@@ -120,3 +150,7 @@ Varias capas que se mueven juntas, o una capa repetida en una formación:
 - `personaje`: ver [Series y personajes](./series#personajes).
 - `modelo` y `escena3d`: ver [3D](./3d).
 - `componente`: ver [Componentes propios](./componentes).
+
+## Sonido
+
+Cada capa suena al entrar según cómo entra o qué es (un sello golpea, un dato hace tic, una notificación suena). `sonido` lo cambia y `false` lo apaga: `pop`, `whoosh`, `tick`, `glitch`, `ding`, `golpe`, `teclas`, `radio`, `obturador`, `notificacion`, `latido`, `alarma`, `reloj` y `caja`. Todos los genera Morfeo, sin derechos de terceros.
