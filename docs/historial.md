@@ -14,6 +14,26 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 0.4.0 {#v0-4-0}
+
+<p class="fecha-version">12 de noviembre de 2026</p>
+
+**Todas las fórmulas de historia, con su base lista** (ver [Historias, series y fórmulas](/guia/historias))
+- 11 fórmulas medidas en videos de referencia: `construiste`, `recomendable`, `escalada`, `supervivencia`, `experimento`, `misterio`, `demuestralo`, `mito`, `roast`, `serie` y `biografia`. `npx morfeo formulas` las lista.
+- `npx morfeo guion "tema" --formula serie`: la IA sigue el esqueleto de la fórmula (y ya usa sellos, pasos, pixel y rayos X). Sin `--formula`, elige la que mejor le quede.
+- `formula: 'serie'` en el guion: `morfeo revisar` da consejos propios de cada fórmula.
+- `npx morfeo nuevo-video mi-video --look serie` (o `mito`, `escalada`, `biografia`, `construiste`): bases que ya renderizan.
+
+**Series interactivas y documental**
+- Capas nuevas: `bloqueo` (pantalla de bloqueo con salto de año y notificaciones), `llamada`, `recuento` (lo que votaron), `capitulo` (fin de capítulo con A/B y horario), `vigilancia`, `cintillo`, `fecha`, `calendario`, `dividida` (pantalla A | B) y `tierra` (globo que gira y clava un pin).
+- `lugares`: varios mundos en un video; cada escena elige el suyo con `lugar` y la cámara corta o usa la transición al cambiar.
+
+**Kit para armar** (`morfeo/kit`)
+- `Aparece` (piezas que caen con rebote o crecen en su palabra), `Multitud3D` (cientos de figuras en una sola pieza), `Mano3D` (mano en primera persona que aprieta un control), y `Rueda`, `Motor`, `Asiento`.
+
+**Arreglos**
+- Los rótulos `paso` y `pixel` ya no se enciman con los subtítulos de arriba, y el `sello` se aparta del subtítulo a media altura.
+
 ## 0.3.4 {#v0-3-4}
 
 <p class="fecha-version">12 de noviembre de 2026</p>

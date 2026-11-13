@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '0.4.0',
+		fecha: '2026-11-12',
+		titulo: 'Todas las fórmulas de historia',
+		resumen: '11 fórmulas (serie, biografía, construiste, mito…) con bases listas, capas de series y documental, varios lugares por video y kit para armar.',
+		tipo: 'mayor',
+	},
+	{
 		v: '0.3.4',
 		fecha: '2026-11-12',
 		titulo: 'Sellos y modos de imagen',

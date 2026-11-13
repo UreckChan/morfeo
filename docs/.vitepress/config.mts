@@ -43,6 +43,7 @@ export default defineConfig({
 					{text: 'Animación y cámara', link: '/guia/animacion'},
 					{text: 'Mundo, anotaciones y estructura', link: '/guia/mundo'},
 					{text: 'Maqueta 3D (diorama)', link: '/guia/maqueta'},
+					{text: 'Historias, series y fórmulas', link: '/guia/historias'},
 					{text: 'Series, HUD y personajes', link: '/guia/series'},
 					{text: 'Objetos 2D y 3D', link: '/guia/recursos'},
 					{text: '3D', link: '/guia/3d'},
