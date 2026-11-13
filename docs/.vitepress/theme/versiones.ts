@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '0.3.4',
+		fecha: '2026-11-12',
+		titulo: 'Sellos y modos de imagen',
+		resumen: 'Rótulos `sello`, `paso` y `pixel`, colores que rotan en los subtítulos y escenas que cambian a rayos X, plano u holograma en una palabra.',
+		tipo: 'menor',
+	},
+	{
 		v: '0.3.3',
 		fecha: '2026-11-11',
 		titulo: 'Archivos con el título y render limpio',

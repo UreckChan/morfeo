@@ -83,6 +83,45 @@ Señalan y explican lo que hay en pantalla. Son capas como cualquier otra (`en`,
 - **Rótulo**: 2–4 palabras grandes que resumen el momento: `rotulo: '¿CUÁNTO *SUBIÓ*?'`, `rotuloEn: 'palabra'`.
 - **Serie**: `serie: 'MI SERIE · PARTE 5'` en el video pone una pastilla fija arriba.
 
+### Estilos de rótulo
+
+| `rotuloEstilo` | Cómo se ve | Opciones |
+|---|---|---|
+| `normal` / `contorno` | Grande al centro; con contorno, blanco con borde oscuro | `rotuloInclinar` |
+| `pastilla` | Caja oscura inclinada: "¡CUIDADO!" | `rotuloInclinar` |
+| `sello` | Sello de goma inclinado con tinta gastada que cae de golpe (y suena): "¡SIN LUZ!" | `rotuloColor` (rojo por defecto), `rotuloInclinar`, `rotuloY` |
+| `paso` | Titular arriba a la izquierda con la clave en color e insignia numerada | `rotuloPaso: 3`, `rotuloColor` |
+| `pixel` | Letra de videojuego en una caja de color; las letras salen una por una | `rotuloColor: 'verde'` (bien) o `'rojo'` (mal) |
+
+`rotuloColor` acepta `rojo`, `verde`, `azul`, `amarillo`, `naranja`, `gris`, `negro`, `morado` o cualquier color CSS.
+
+```js
+{say: 'Y el portón se fue rodando por la calle.', rotulo: '¡SE FUE RODANDO!', rotuloEstilo: 'sello', rotuloEn: 'rodando'}
+{say: 'Primero, un sensor bajo el pavimento.', rotulo: 'UN *SENSOR* BAJO TIERRA', rotuloEstilo: 'paso', rotuloPaso: 1}
+{say: 'Diez años después, duerme mejor.', rotulo: 'RESULTADO', rotuloEstilo: 'pixel', rotuloColor: 'verde'}
+```
+
+Con subtítulo `palabra` o `pop`, `tema: {subtitulos: {coloresClave: ['#FF3B30', '#FF9F0A', '#FFD60A', '#34C759']}}`
+pinta cada palabra clave del siguiente color de la lista.
+
+## Rayos X, plano y holograma
+
+Para "abrir" algo y mostrar lo de adentro, una escena cambia la imagen con un barrido justo en una palabra:
+
+```js
+{say: 'Si lo vieras por dentro, su corazón no para.', modo: 'rayosx', modoEn: 'dentro', modoHasta: 'para+0.4'}
+{say: 'Así que dibujamos el plano de la cueva.', modo: 'plano', modoEn: 'plano'}
+{say: 'Imagina la ciudad entera conectada.', modo: 'holograma'}
+```
+
+- `rayosx`: cian brillante sobre negro. `plano`: azul de plano con líneas blancas y rejilla. `holograma`: azul
+  translúcido con rejilla y escaneo.
+- Cambia el mundo, el fondo y las capas; el rótulo y los subtítulos se quedan igual. Funciona en 2D, en 3D y con tus componentes.
+- Si la escena siguiente tiene el mismo `modo`, sigue sin volver a barrer. `modoHasta` vuelve a la imagen normal.
+- En los estilos claros (`3d`, `maqueta`, `explicativo`, `infografia`, `minimal`) la imagen se invierte para que el
+  fondo quede oscuro; `modoInvertir: true | false` lo fuerza.
+- Se luce más en tomas con objetos que en un primer plano liso.
+
 ## Cierre que pide algo
 
 ```js

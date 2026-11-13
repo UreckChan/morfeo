@@ -14,6 +14,16 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 0.3.4 {#v0-3-4}
+
+<p class="fecha-version">12 de noviembre de 2026</p>
+
+**Sellos y modos de imagen** (ver [Rayos X, plano y holograma](/guia/mundo#rayos-x-plano-y-holograma))
+- Rótulos nuevos: `sello` (sello de goma inclinado que cae de golpe, con su sonido), `paso` (titular arriba a la izquierda con insignia numerada, `rotuloPaso`) y `pixel` (letra de videojuego en caja de color). `rotuloColor` y `rotuloY` para todos.
+- Modos de imagen por escena: `modo: 'rayosx' | 'plano' | 'holograma'`, con `modoEn` y `modoHasta` por palabra y un barrido de entrada. Funcionan en 2D, 3D y componentes propios.
+- Subtítulos `palabra` y `pop`: `coloresClave` rota colores entre las palabras clave.
+- Validación: estilos de rótulo y modos que no existen, `rotuloPaso` sin `paso` y `modoEn` sin `modo` se avisan antes de renderizar.
+
 ## 0.3.3 {#v0-3-3}
 
 <p class="fecha-version">11 de noviembre de 2026 · incluye los cambios de 0.3.2, que no se publicó por separado</p>
