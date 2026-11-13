@@ -1,3 +1,7 @@
+---
+description: 'Series, HUD y personajes en Morfeo: contadores que persisten, personajes con poses y capítulos.'
+---
+
 # Series, HUD y personajes
 
 Todo lo que necesitas para series con personaje y capítulos ("Día 30", "¿qué hace Neto? ¡comenta!") y para historias

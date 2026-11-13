@@ -1,3 +1,7 @@
+---
+description: 'Los 11 estilos visuales de Morfeo para Shorts, TikTok y Reels: datos curiosos, documental, ilustrado, 3D, maqueta y más.'
+---
+
 # Estilos
 
 El estilo define el fondo, los colores, las fuentes, el tipo de subtítulos, las transiciones y el movimiento de cámara.

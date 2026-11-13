@@ -1,3 +1,7 @@
+---
+description: 'Del tema al reel terminado con Morfeo y tu IA: estilo propio, investigación con fuentes, previa del gancho, revisión automática y portada.'
+---
+
 # Del tema al reel terminado
 
 Morfeo hace el ciclo completo: investiga, escribe, te enseña el gancho, renderiza, se revisa solo y te entrega el

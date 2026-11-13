@@ -1,3 +1,7 @@
+---
+description: 'Referencia de morfeo.config.mjs y estilo.json: marca, voces, estilos, render, campos de un video y de una escena.'
+---
+
 # morfeo.config.mjs
 
 ```js

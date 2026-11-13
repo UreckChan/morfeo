@@ -1,3 +1,7 @@
+---
+description: 'Usa Morfeo desde código: preparar, renderizar y revisar videos desde Node.js.'
+---
+
 # Uso desde código
 
 Todo lo que hace la línea de comandos también se puede usar desde Node.js:

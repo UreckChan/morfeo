@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://morfeo-docs-two.vercel.app/sitemap.xml

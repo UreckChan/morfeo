@@ -1,3 +1,7 @@
+---
+description: 'Tu primer video vertical con Morfeo: escribe las escenas, renderiza y obtén el MP4 con voz, música y subtítulos.'
+---
+
 # Tu primer video
 
 Un video es una lista de **escenas**. Cada escena dice algo (`say`) y lo ilustra en pantalla.

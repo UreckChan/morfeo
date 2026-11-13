@@ -1,3 +1,7 @@
+---
+description: 'Fórmulas de historia para videos virales (serie interactiva, biografía, construiste, mito…) con bases listas en Morfeo.'
+---
+
 # Historias, series y fórmulas
 
 Morfeo trae las **fórmulas de historia** medidas en videos de referencia, las **piezas** que cada una necesita

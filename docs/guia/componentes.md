@@ -1,3 +1,7 @@
+---
+description: 'Componentes propios en React para Morfeo: escenas a medida en 2D (SVG) o 3D (Three.js) que reaccionan a la voz.'
+---
+
 # Componentes propios
 
 Cuando algo no cabe en las capas, escríbelo en React. En `morfeo.config.mjs`:

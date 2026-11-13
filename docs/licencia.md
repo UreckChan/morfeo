@@ -1,3 +1,7 @@
+---
+description: 'Licencia de Morfeo: uso gratuito para crear videos, incluso comerciales.'
+---
+
 # Licencia
 
 **Puedes usar Morfeo gratis para crear videos, incluidos los comerciales.** Los videos que generes son tuyos.

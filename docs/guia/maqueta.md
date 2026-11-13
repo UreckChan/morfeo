@@ -1,3 +1,7 @@
+---
+description: 'Explicadores en un diorama 3D low-poly con Morfeo: maqueta con corte de tierra, tráfico, rayos X, etiquetas 3D y tarjetas de datos.'
+---
+
 # Maqueta 3D (diorama)
 
 Explicadores largos (90–130 s) dentro de **una sola maqueta 3D low-poly**: una isla flotante con el corte de la tierra

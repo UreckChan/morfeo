@@ -1,3 +1,7 @@
+---
+description: 'Un mundo por video en Morfeo: cámara que viaja, anotaciones pegadas a los objetos, rótulos, rayos X y revisión de estructura.'
+---
+
 # Mundo, anotaciones y estructura
 
 Novedad de la 0.2. Lo que hace que un video se vea "producido" y no como objetos sueltos al centro de un fondo.

@@ -1,11 +1,14 @@
 import {defineConfig} from 'vitepress';
 
+const SITIO = 'https://morfeo-docs-two.vercel.app';
+
 export default defineConfig({
 	lang: 'es-MX',
 	title: 'Morfeo',
 	description: 'Videos verticales animados desde código: voz, música, subtítulos, 11 estilos y mundos 3D.',
 	appearance: 'dark',
 		cleanUrls: true,
+	sitemap: {hostname: SITIO},
 	lastUpdated: true,
 	head: [
 		['link', {rel: 'icon', href: '/logo.svg'}],
@@ -13,9 +16,46 @@ export default defineConfig({
 		['link', {rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: ''}],
 		['link', {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;600&display=swap'}],
 		['meta', {name: 'theme-color', content: '#0f0d15'}],
-		['meta', {property: 'og:title', content: 'Morfeo: videos verticales animados desde código'}],
-		['meta', {property: 'og:image', content: 'https://morfeo-docs.vercel.app/img/galeria.jpg'}],
+		['meta', {property: 'og:image', content: `${SITIO}/img/galeria.jpg`}],
+		['meta', {property: 'og:type', content: 'website'}],
+		['meta', {property: 'og:site_name', content: 'Morfeo'}],
+		['meta', {property: 'og:locale', content: 'es_MX'}],
+		['meta', {name: 'twitter:card', content: 'summary_large_image'}],
+		['meta', {name: 'twitter:image', content: `${SITIO}/img/galeria.jpg`}],
+		// verificación de Google Search Console: pega aquí el código que te da (meta google-site-verification)
+		...(process.env.GOOGLE_VERIFICACION ? [['meta', {name: 'google-site-verification', content: process.env.GOOGLE_VERIFICACION}] as [string, Record<string, string>]] : []),
+		// datos estructurados: Google entiende que es una aplicación gratuita
+		[
+			'script',
+			{type: 'application/ld+json'},
+			JSON.stringify({
+				'@context': 'https://schema.org',
+				'@type': 'SoftwareApplication',
+				name: 'Morfeo',
+				applicationCategory: 'MultimediaApplication',
+				operatingSystem: 'Windows, macOS, Linux',
+				description: 'Crea videos verticales animados (YouTube Shorts, TikTok, Reels) desde código o con tu IA: voz, música, subtítulos, 11 estilos, mundos 3D y fórmulas de historia.',
+				url: SITIO,
+				downloadUrl: 'https://www.npmjs.com/package/morfeo',
+				inLanguage: 'es',
+				offers: {'@type': 'Offer', price: '0', priceCurrency: 'USD'},
+				author: {'@type': 'Person', name: 'Uriel Gómez'},
+			}),
+		],
 	],
+	// por página: URL canónica y título/descripción para compartir (Google, WhatsApp, X)
+	transformHead({pageData, title, description}) {
+		const ruta = pageData.relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '');
+		const url = `${SITIO}/${ruta}`;
+		return [
+			['link', {rel: 'canonical', href: url}],
+			['meta', {property: 'og:url', content: url}],
+			['meta', {property: 'og:title', content: title}],
+			['meta', {property: 'og:description', content: description}],
+			['meta', {name: 'twitter:title', content: title}],
+			['meta', {name: 'twitter:description', content: description}],
+		];
+	},
 	themeConfig: {
 		logo: '/logo.svg',
 		nav: [

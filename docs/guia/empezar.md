@@ -1,3 +1,7 @@
+---
+description: 'Instala Morfeo y crea tu primer proyecto de videos verticales animados: Node, Python, voces gratis y render en tu computadora.'
+---
+
 # Instalación
 
 Necesitas **Node.js 18 o más nuevo** ([nodejs.org](https://nodejs.org), versión LTS). Python también, pero el instalador

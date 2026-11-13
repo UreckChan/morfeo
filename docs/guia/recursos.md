@@ -1,3 +1,7 @@
+---
+description: 'Objetos 2D y 3D sin dibujar: escribe "tubería" o "pizza" y Morfeo trae el modelo de Kenney, Poly Haven o Iconify, con créditos.'
+---
+
 # Objetos 2D y 3D
 
 Para ilustrar un video no hace falta dibujar nada. Usa, en este orden:

@@ -1,4 +1,5 @@
 ---
+description: 'Historial de versiones de Morfeo: qué trae cada versión publicada en npm.'
 outline: [2, 2]
 ---
 

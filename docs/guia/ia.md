@@ -1,3 +1,7 @@
+---
+description: 'Guiones con Claude en Morfeo: elige una fórmula, investiga cada dato con su fuente e ilustraciones con IA.'
+---
+
 # Guiones e imágenes con IA
 
 Pon tus claves en el `.env` de tu proyecto (copia `.env.example`):

@@ -1,3 +1,7 @@
+---
+description: 'Escenas de Morfeo: lo que dice la voz, lo que aparece en pantalla y los tipos de escena (titular, dato, lista, comparar, elección).'
+---
+
 # Escenas
 
 Toda escena lleva `say` (lo que dice la voz). El `type` elige una escena lista para usar; sin `type`, la escena es

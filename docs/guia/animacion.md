@@ -1,3 +1,7 @@
+---
+description: 'Animaciones y cámara en Morfeo: entradas, salidas, curvas, movimiento por palabra y transiciones entre escenas.'
+---
+
 # Animación y cámara
 
 ## Cuándo aparece cada capa

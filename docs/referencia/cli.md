@@ -1,3 +1,7 @@
+---
+description: 'Todos los comandos de Morfeo: nuevo, instalar, estilo, nuevo-video, guion, previa, render, revisar, hoja y más.'
+---
+
 # Comandos
 
 ```bash

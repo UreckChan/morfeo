@@ -1,3 +1,7 @@
+---
+description: 'Todas las capas de Morfeo: texto, cifras, tarjetas de datos, teléfono, llamada, votación, globo terráqueo, línea de tiempo y más.'
+---
+
 # Capas
 
 Una capa es cualquier cosa que aparece en pantalla. Todas comparten la posición y las
