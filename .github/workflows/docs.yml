@@ -1,6 +1,6 @@
 name: Redirección a Vercel
 
-# La documentación vive en Vercel (https://morfeo-docs-two.vercel.app). GitHub Pages solo redirige
+# La documentación vive en Vercel (https://morfeo.ureck.dev). GitHub Pages solo redirige
 # las direcciones viejas (ureckchan.github.io/morfeo/...) a la página equivalente.
 on:
   push:
@@ -31,14 +31,14 @@ jobs:
           <!doctype html><html lang="es"><head><meta charset="utf-8">
           <title>Morfeo se mudó</title>
           <meta name="robots" content="noindex">
-          <link rel="canonical" href="https://morfeo-docs-two.vercel.app/">
+          <link rel="canonical" href="https://morfeo.ureck.dev/">
           <script>
             var p = location.pathname.replace(/^\/morfeo/, '').replace(/\.html$/, '') || '/';
             if (p === '/novedades') p = '/historial';
-            location.replace('https://morfeo-docs-two.vercel.app' + p + location.search + location.hash);
+            location.replace('https://morfeo.ureck.dev' + p + location.search + location.hash);
           </script>
-          <meta http-equiv="refresh" content="0; url=https://morfeo-docs-two.vercel.app/">
-          </head><body><p>La documentación de Morfeo ahora está en <a href="https://morfeo-docs-two.vercel.app/">https://morfeo-docs-two.vercel.app</a>.</p></body></html>
+          <meta http-equiv="refresh" content="0; url=https://morfeo.ureck.dev/">
+          </head><body><p>La documentación de Morfeo ahora está en <a href="https://morfeo.ureck.dev/">https://morfeo.ureck.dev</a>.</p></body></html>
           HTML
           cp sitio/index.html sitio/404.html
       - uses: actions/configure-pages@v5

@@ -1,6 +1,6 @@
 import {defineConfig} from 'vitepress';
 
-const SITIO = 'https://morfeo-docs-two.vercel.app';
+const SITIO = 'https://morfeo.ureck.dev';
 
 export default defineConfig({
 	lang: 'es-MX',
