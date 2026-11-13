@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '0.5.1',
+		fecha: '2026-11-13',
+		titulo: 'Videos 3D sin textos fantasma',
+		resumen: 'Los videos 3D renderizan máximo 3 cuadros a la vez con GPU, `revisar` reconoce "tú" y la página de npm apunta a morfeo.ureck.dev.',
+		tipo: 'arreglo',
+	},
+	{
 		v: '0.5.0',
 		fecha: '2026-11-13',
 		titulo: 'Del tema al reel terminado',

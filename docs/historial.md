@@ -15,6 +15,16 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 0.5.1 {#v0-5-1}
+
+<p class="fecha-version">13 de noviembre de 2026</p>
+
+**Arreglos**
+- Videos 3D sin textos fantasma: con la tarjeta de video, los videos que usan 3D renderizan como máximo 3 cuadros a la vez (con más, algunos cuadros salían con rótulos o subtítulos de cuadros anteriores). Casi igual de rápido; `render.concurrencia` o `MORFEO_CONCURRENCIA` lo siguen cambiando.
+- `morfeo revisar` ya reconoce "tú" y otras formas en segunda persona con acento.
+- Los consejos de duración de formato largo nombran la fórmula y su rango (por ejemplo, biografía 90–180 s).
+- La página del paquete en npm apunta a la documentación en morfeo.ureck.dev.
+
 ## 0.5.0 {#v0-5-0}
 
 <p class="fecha-version">13 de noviembre de 2026</p>
