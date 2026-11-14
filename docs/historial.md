@@ -15,6 +15,16 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 0.7.0 {#v0-7-0}
+
+<p class="fecha-version">14 de noviembre de 2026</p>
+
+- [Skills para tu IA](/guia/skills) dentro del paquete: `morfeo-guion` (ganchos, historia por retención, cierre), `morfeo-animacion` (tiempos, curvas, escalonado, cámara), `morfeo-3d` (luz, materiales, encuadre) y `morfeo-video` (la ruta completa).
+- Comando `npx morfeo skills` para instalarlas o ponerlas al día; `npx morfeo nuevo` ya las trae.
+- `AGENTS.md` de la plantilla dice qué guía abrir en cada paso, para Claude Code, Codex u otra IA.
+- `revisar` mira los ganchos de reserva: sugiere dejar tres y avisa si repiten el arranque del principal. También reconoce ganchos de hallazgo y de experimento ("Dentro de tu…", "Probé…").
+- `guion` con IA escribe los ganchos de reserva de arquetipos distintos.
+
 ## 0.6.7 {#v0-6-7}
 
 <p class="fecha-version">14 de noviembre de 2026</p>

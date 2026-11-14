@@ -16,6 +16,9 @@ con tu IA y escribe:
 - **«Hazme un video sobre la Fórmula 1 en México»**: investiga cada dato con su fuente, elige la fórmula, te enseña el
   guion para aprobarlo, luego el gancho ya animado, renderiza y revisa. Nada se publica solo.
 
+Para hacerlo bien, la IA se apoya en cuatro [skills](./skills) que vienen con Morfeo: guion, animación, 3D y la
+ruta completa del video.
+
 ## Tu estilo
 
 ```bash
@@ -43,7 +46,7 @@ npx morfeo previa mi-video          # los primeros ~8 s, en segundos
 npx morfeo previa mi-video --hasta 5
 ```
 
-Si no te convence, cambia la primera frase (el guion trae 3 ganchos de reserva en `hooks`) y vuelve a probar.
+Si no te convence, cambia la primera frase (el guion trae 3 ganchos de reserva en `hooks`, cada uno de un [arquetipo](./skills) distinto) y vuelve a probar.
 
 ## Aprobar tomas y ritmo sin esperar el render completo
 
@@ -63,6 +66,7 @@ npx morfeo hoja mi-video --zona
 - **Zona segura**: avisa si un texto o dato queda bajo los botones de TikTok, Reels o Shorts. `hoja --zona` pinta
   en rojo esas zonas sobre los cuadros del video.
 - **Estructura**: gancho, ritmo, preguntas, cierre y lo propio de la [fórmula](./historias).
+- **Ganchos de reserva**: sugiere dejar tres en `hooks` y avisa si repiten el arranque del principal.
 - **Riesgo de "diapositiva"**: escenas con solo el subtítulo, puro texto o sin fondo. La salida es un
   [ambiente](./ambientes).
 - **Cuadros** (cuando ya existe el MP4): cuadros casi negros, tapados (la cámara pegada a una pantalla, una pared o un

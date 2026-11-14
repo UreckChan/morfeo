@@ -16,7 +16,7 @@ npm install
 ```
 
 El proyecto trae videos de ejemplo (clásico, explicativo, 2D y 3D), tu configuración, un componente propio de
-muestra y las instrucciones para tu IA (`AGENTS.md` y `CLAUDE.md`).
+muestra, las instrucciones para tu IA (`AGENTS.md` y `CLAUDE.md`) y sus [skills](./skills) de guion, animación y 3D.
 
 ::: tip Con Claude Code o Codex
 Abre la carpeta con tu IA y escribe **«Configúrame»**: instala lo que falte y te abre la página de tu estilo. Después,

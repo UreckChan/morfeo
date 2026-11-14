@@ -98,6 +98,7 @@ export default defineConfig({
 				items: [
 					{text: 'Voces y música', link: '/guia/voces-musica'},
 					{text: 'Guiones e imágenes con IA', link: '/guia/ia'},
+					{text: 'Skills para tu IA', link: '/guia/skills'},
 				],
 			},
 			{

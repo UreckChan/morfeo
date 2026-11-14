@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '0.7.0',
+		fecha: '2026-11-14',
+		titulo: 'Skills para tu IA',
+		resumen: 'Cuatro guías de oficio dentro del paquete: guion (ganchos e historia), animación, 3D y la ruta completa del video.',
+		tipo: 'mayor',
+	},
+	{
 		v: '0.6.7',
 		fecha: '2026-11-14',
 		titulo: 'Las piezas que faltaban',

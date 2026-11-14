@@ -4,6 +4,9 @@ description: 'Animaciones y cámara en Morfeo: entradas, salidas, curvas, movimi
 
 # Animación y cámara
 
+Esta página lista lo que existe. Cuándo usar cada cosa (tiempos, curvas, escalonado, ritmo de cámara) está en la
+skill [`morfeo-animacion`](./skills), que tu IA lee sola.
+
 ## Cuándo aparece cada capa
 
 `en` y `hasta` aceptan:

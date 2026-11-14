@@ -13,6 +13,7 @@ npx morfeo <comando> [opciones]
 | `nuevo <carpeta>` | Crea un proyecto con videos de ejemplo |
 | `nuevo-video <id>` | Crea un video desde una base que ya renderiza. `--look 2d`, `3d`, `serie`, `mito`, `escalada`, `biografia` o `construiste` (o `--formula`) |
 | `formulas` | Lista las fórmulas de historia con su gancho de ejemplo |
+| `skills` | Instala o actualiza las [guías para tu IA](../guia/skills) en `.claude/skills/` (`--lista` solo las muestra) |
 | `estilo` | Abre la página para crear tu estilo (guarda `estilo.json`) |
 | `previa <id>` | Solo el gancho (~8 s) para aprobarlo. `--hasta 5` |
 | `animatica <id>` | Todo el video a 1/3 de tamaño (más rápido) y su hoja, para aprobar tomas y ritmo antes del render final |

@@ -136,7 +136,7 @@ Para "abrir" algo y mostrar lo de adentro, una escena cambia la imagen con un ba
 ## Revisar la estructura
 
 ```bash
-npx morfeo revisar [id]   # gancho, ritmo, preguntas, rótulos y cierre
+npx morfeo revisar [id]   # gancho y ganchos de reserva, ritmo, preguntas, rótulos y cierre
 npx morfeo hoja <id>      # hoja de contacto PNG en salida/<id>-hoja.png (--desde 8 --hasta 11)
 ```
 
