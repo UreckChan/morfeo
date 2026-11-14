@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '0.6.2',
+		fecha: '2026-11-14',
+		titulo: 'Texto legible sobre ambientes',
+		resumen: 'Los estilos de papel se leen sobre un ambiente, titulares de dos renglones sin encimarse y sellos con caja.',
+		tipo: 'arreglo',
+	},
+	{
 		v: '0.6.1',
 		fecha: '2026-11-13',
 		titulo: 'Taller y oficina',

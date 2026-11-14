@@ -15,6 +15,17 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 0.6.2 {#v0-6-2}
+
+<p class="fecha-version">14 de noviembre de 2026</p>
+
+- Los estilos de texto oscuro (como `explicativo`) se pueden usar con un [ambiente](/guia/ambientes): el texto pasa solo a claro. Tus ajustes de `tema` siguen mandando.
+- Con ambiente, una sombra suave arriba (subtítulos y titular) y el cierre oscurecido: el texto blanco se lee aunque el set sea claro, como la oficina.
+- El `titular` de dos renglones ya no tapa su etiqueta: mide el texto con la fuente real y la sube lo necesario.
+- En el arcade, las escenas con un ícono al centro usan planos sin la persona detrás.
+- `sello` acepta `fondo` para ponerle una caja detrás sobre fondos claros.
+- `revisar` ya no marca como "tapado" una escena de día con cielo pastel.
+
 ## 0.6.1 {#v0-6-1}
 
 <p class="fecha-version">13 de noviembre de 2026</p>

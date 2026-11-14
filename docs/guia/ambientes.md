@@ -19,6 +19,8 @@ export default {
 };
 ```
 
+Los ambientes son de noche: con un estilo de texto oscuro (como `explicativo`), el texto pasa solo a claro, y una sombra suave arriba deja leer subtítulos y titular aunque el set sea claro.
+
 | Ambiente | Qué trae | Planos |
 |---|---|---|
 | `cuarto-gamer` | Escritorio con tele encendida, consola y control, silla gamer, estante con juegos, pósters, tira LED, ventana con lluvia, cama, polvo en la luz | `general`, `persona`, `escritorio`, `tele`, `consola`, `estante`, `ventana`, `contrapicado`, `cenital` |
