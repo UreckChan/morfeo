@@ -38,7 +38,7 @@ Si no hay nada en ese estilo, prueba solo en los otros.
 ### Piezas de ingeniería
 
 Para explicar cómo funciona una casa, una ciudad o una consola hacen falta piezas que ninguna biblioteca libre trae.
-Morfeo incluye 85 hechas en código; `recurso` las encuentra primero, y también se piden directo con
+Morfeo incluye 136 hechas en código; `recurso` las encuentra primero, y también se piden directo con
 `{tipo: 'modelo', forma: 'valvula'}`.
 
 | Área | Piezas (`buscar` o `forma`) |
@@ -57,6 +57,17 @@ Y otras 50 para ciencia, tecnología y ciudad:
 | Casa y ciudad | `tanque_gas`, `calentador_solar`, `termostato`, `detector_humo`, `camara_seguridad`, `antena_celular`, `presa`, `torre_enfriamiento` (planta nuclear), `ascensor`, `fusible`, `fibra_optica`, `buzon` |
 | Transporte | `autobus`, `helicoptero`, `submarino`, `bicicleta` |
 | Escuela y objetos | `lapiz`, `regla`, `dado`, `ancla`, `paraguas` |
+
+Y 51 más de uso general:
+
+| Área | Piezas (`buscar` o `forma`) |
+|---|---|
+| Música y ropa | `guitarra`, `piano`, `tambor`, `trompeta`, `zapato` (tenis), `camisa` (playera) |
+| Animales | `pulpo`, `medusa`, `tortuga`, `pajaro`, `buho` |
+| Transporte y deporte | `moto`, `pesa`, `caminadora`, `raqueta`, `silbato`, `golf` |
+| Oficina, escuela y casa | `tijeras`, `mapa`, `sobre`, `tetera`, `periodico`, `pasaporte`, `ropero`, `tarjeta` (de crédito), `alcancia`, `grafica` (barras; `valores: [..]`), `calculadora`, `pluma`, `diploma`, `birrete`, `estetoscopio`, `gota` (sangre o agua con `color`), `ramen` |
+| Industria y ciudad | `planta_tratamiento`, `refineria`, `pozo_petrolero`, `subestacion`, `fosa_septica`, `tubo_pvc`, `granero`, `parada` (de autobús), `hospital` |
+| Naturaleza y espacio | `galaxia`, `cometa`, `lluvia`, `fosil`, `wifi`, `huella`, `telarana`, `arbol_navidad` |
 
 Varias se mueven solas: giran el engrane, la turbina, el eje del motor y los ventiladores; gotea el grifo; parpadean
 el router y el servidor. `color` cambia el color principal y `velocidad` el ritmo. Opciones propias: `nivel` (0 a 1)

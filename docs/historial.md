@@ -15,6 +15,13 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 0.6.6 {#v0-6-6}
+
+<p class="fecha-version">14 de noviembre de 2026</p>
+
+- 51 [piezas en código](/guia/recursos#piezas-de-ingenieria) más, para lo que ninguna biblioteca traía: música (guitarra, piano, tambor, trompeta), animales (pulpo, medusa, tortuga, pájaro, búho), moto, deporte, oficina y escuela (tijeras, mapa, calculadora, diploma, birrete), industria (planta de tratamiento, refinería, pozo petrolero, subestación) y espacio (galaxia, cometa). Con las anteriores ya son 136.
+- El cerebro y la presa se rehicieron: se reconocen mejor.
+
 ## 0.6.5 {#v0-6-5}
 
 <p class="fecha-version">14 de noviembre de 2026</p>

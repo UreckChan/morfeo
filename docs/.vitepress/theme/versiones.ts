@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '0.6.6',
+		fecha: '2026-11-14',
+		titulo: '51 piezas más',
+		resumen: 'Música, animales, deporte, oficina, industria y espacio hechos en código: ya son 136 piezas propias.',
+		tipo: 'menor',
+	},
+	{
 		v: '0.6.5',
 		fecha: '2026-11-14',
 		titulo: 'Piezas de ingeniería y 5.500 modelos más',
