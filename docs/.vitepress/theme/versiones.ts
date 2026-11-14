@@ -13,7 +13,7 @@ export const VERSIONES: Version[] = [
 		v: '0.6.5',
 		fecha: '2026-11-14',
 		titulo: 'Piezas de ingeniería y 5.500 modelos más',
-		resumen: '35 piezas de plomería, electricidad, electrónica y mecánica hechas en código, y las bibliotecas Quaternius, KayKit y Kenney completo en `recurso`.',
+		resumen: '85 piezas hechas en código (plomería, electricidad, electrónica, ciencia, ciudad), y las bibliotecas Quaternius, KayKit y Kenney completo en `recurso`.',
 		tipo: 'menor',
 	},
 	{

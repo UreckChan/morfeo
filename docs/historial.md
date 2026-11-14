@@ -20,6 +20,7 @@ npm install morfeo@latest
 <p class="fecha-version">14 de noviembre de 2026</p>
 
 - 35 [piezas de ingeniería](/guia/recursos#piezas-de-ingenieria) hechas en código, para explicar cómo funciona una casa, una ciudad o una consola: válvula, llave de agua, tinaco, boiler, interruptor, enchufe, tablero, transformador, chip, placa madre, tarjeta gráfica, engranes, motor… `recurso` las encuentra por su nombre en español.
+- Otras 50 piezas en código para ciencia y cuerpo (átomo, ADN, célula, virus, cerebro, pulmones), consola (disco, USB, cable HDMI, visor VR), casa y ciudad (tanque de gas, cámara de seguridad, antena celular, presa, ascensor) y transporte (autobús, helicóptero, submarino, bicicleta).
 - Kenney pasa de 12 a 49 kits (unos 3.100 modelos más): fábrica con bandas y brazos robot, ciudad industrial y comercial, edificios modulares, trenes, estación espacial.
 - Dos bibliotecas nuevas para [`recurso`](/guia/recursos) en estilo `3d`, las dos CC0: Quaternius (unos 1.500 modelos: animales, dinosaurios, peces, naves, robots, objetos de rol, interiores) y KayKit (unos 900: personajes, calabozo, ciudad, muebles, restaurante, base espacial).
 - Buscar por tema trae el paquete completo: `dinosaurio` devuelve los seis del paquete aunque el archivo se llame "Trex".

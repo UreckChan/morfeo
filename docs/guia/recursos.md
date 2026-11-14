@@ -38,7 +38,7 @@ Si no hay nada en ese estilo, prueba solo en los otros.
 ### Piezas de ingeniería
 
 Para explicar cómo funciona una casa, una ciudad o una consola hacen falta piezas que ninguna biblioteca libre trae.
-Morfeo incluye 35 hechas en código; `recurso` las encuentra primero, y también se piden directo con
+Morfeo incluye 85 hechas en código; `recurso` las encuentra primero, y también se piden directo con
 `{tipo: 'modelo', forma: 'valvula'}`.
 
 | Área | Piezas (`buscar` o `forma`) |
@@ -47,6 +47,16 @@ Morfeo incluye 35 hechas en código; `recurso` las encuentra primero, y también
 | Electricidad | `interruptor` (apagador), `enchufe`, `tablero` (centro de carga), `medidor`, `transformador`, `poste`, `bateria`, `turbina`, `torre_electrica`, `aire` (aire acondicionado) |
 | Electrónica | `chip` (procesador), `placa` (placa madre), `resistor`, `capacitor`, `led`, `disco_duro`, `tarjeta_grafica`, `disipador`, `ram`, `router`, `servidor`, `fuente_poder` |
 | Mecánica | `engrane` (`par: true` para dos que engranan), `tornillo`, `tuerca`, `motor`, `resorte`, `piston` |
+
+Y otras 50 para ciencia, tecnología y ciudad:
+
+| Área | Piezas (`buscar` o `forma`) |
+|---|---|
+| Ciencia y cuerpo | `atomo`, `molecula`, `adn`, `celula`, `virus`, `cerebro`, `neurona`, `pulmon`, `ojo`, `diente`, `hueso`, `jeringa`, `matraz`, `telescopio`, `iman`, `sol`, `tierra`, `volcan`, `tornado`, `iceberg`, `agujero_negro` |
+| Consola y tecnología | `disco` (CD o disco de juego), `usb`, `tarjeta_sd`, `cable_hdmi`, `microfono`, `visor_vr`, `cargador`, `dron` |
+| Casa y ciudad | `tanque_gas`, `calentador_solar`, `termostato`, `detector_humo`, `camara_seguridad`, `antena_celular`, `presa`, `torre_enfriamiento` (planta nuclear), `ascensor`, `fusible`, `fibra_optica`, `buzon` |
+| Transporte | `autobus`, `helicoptero`, `submarino`, `bicicleta` |
+| Escuela y objetos | `lapiz`, `regla`, `dado`, `ancla`, `paraguas` |
 
 Varias se mueven solas: giran el engrane, la turbina, el eje del motor y los ventiladores; gotea el grifo; parpadean
 el router y el servidor. `color` cambia el color principal y `velocidad` el ritmo. Opciones propias: `nivel` (0 a 1)
