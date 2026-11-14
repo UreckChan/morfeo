@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '0.6.1',
+		fecha: '2026-11-13',
+		titulo: 'Taller y oficina',
+		resumen: 'Dos ambientes nuevos (taller y oficina), corte seco entre planos, whoosh en cada corte y planos mejor encuadrados.',
+		tipo: 'menor',
+	},
+	{
 		v: '0.6.0',
 		fecha: '2026-11-13',
 		titulo: 'Fondo vivo y cámara con ritmo',

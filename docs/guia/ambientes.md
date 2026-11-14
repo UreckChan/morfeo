@@ -24,17 +24,20 @@ export default {
 | `cuarto-gamer` | Escritorio con tele encendida, consola y control, silla gamer, estante con juegos, pósters, tira LED, ventana con lluvia, cama, polvo en la luz | `general`, `persona`, `escritorio`, `tele`, `consola`, `estante`, `ventana`, `contrapicado`, `cenital` |
 | `sala` | Sillón frente a la tele, mesa de centro, lámpara de pie, plantas, cuadros, ventana con lluvia y un gato que respira | `general`, `persona`, `espalda`, `tele`, `sillon`, `gato`, `ventana`, `lampara` |
 | `arcade` | Filas de maquinitas con pantallas animadas, alfombra que brilla, letreros de neón y focos de techo | `general`, `persona`, `maquina`, `espalda`, `pasillo`, `contrapicado` |
+| `taller` | Mesa de reparación con un control abierto, cautín humeando, lupa con brazo, tablero de herramientas, lámpara de brazo y repisa con cajas | `general`, `persona`, `mesa`, `control`, `tablero`, `repisa`, `cenital` |
+| `oficina` | Dos escritorios con monitor, ventanal de atardecer con la ciudad, pizarrón con gráfica, garrafón y plantas | `general`, `persona`, `monitor`, `ventana`, `pizarron`, `companero` |
 
 Todo se mueve aunque la escena no haga nada: la tele parpadea y alumbra la pared, el LED cambia de color, llueve en la
 ventana, flota polvo en la luz.
 
 ## Cámara
 
-- **Un ángulo por escena**: sin `plano`, cada escena toma el siguiente de la lista sin repetir el anterior.
+- **Un ángulo por escena**: sin `plano`, cada escena toma el siguiente de la lista sin repetir el anterior. Entre
+  escenas la cámara corta en seco (sin viajar a través de los muebles).
 - **Escenas con capas al centro** (contador, checklist, tarjeta…) usan planos abiertos, sin una cara que tape la capa.
 - **Cortes en la palabra clave**: si una escena dura más de 3,5 s, la cámara corta en seco a otro ángulo del mismo set
   en la primera de sus `claves` (en las de más de 7 s sin claves, a la mitad). `cortes: [2.1]` los fija y
-  `cortes: false` los apaga.
+  `cortes: false` los apaga. Cada corte suena con un whoosh suave.
 - **Lente despejado**: si algo queda pegado a la cámara (una cabeza o un mueble), la cámara avanza hasta pasarlo.
 - **Golpe de énfasis**: cuando cae un rótulo `sello` o `pixel`, todo el cuadro da un pequeño zoom con sacudida.
   `golpe: false` en la escena lo quita, y `golpe: true` lo pone en cualquier rótulo.
@@ -50,7 +53,8 @@ feliz con "felicidades". `persona: {ropa: '#E5484D'}` cambia su ropa y `reaccion
 - Los ambientes llevan el postproceso `'cine'`: el fondo se desenfoca y lo que mira la toma queda nítido, las pantallas
   y luces brillan, y hay viñeta. `ambiente: {nombre: 'sala', post: 'suave'}` lo cambia (`'miniatura'` = efecto
   maqueta, `false` = sin postproceso).
-- Cada ambiente suena: lluvia y el juego de la tele en el cuarto, lluvia y murmullo en la sala, maquinitas en el arcade.
+- Cada ambiente suena: lluvia y el juego de la tele en el cuarto, lluvia y murmullo en la sala, maquinitas en el arcade,
+  herramientas en el taller y teclas con aire acondicionado en la oficina.
   Va bajito y se aparta cuando habla la voz. `ambiente: {nombre: 'arcade', sonido: false}` lo apaga.
 
 ## En tu propio componente

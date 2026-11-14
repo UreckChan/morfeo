@@ -15,6 +15,15 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 0.6.1 {#v0-6-1}
+
+<p class="fecha-version">13 de noviembre de 2026</p>
+
+- Dos [ambientes](/guia/ambientes) nuevos: `taller` (mesa de reparación con un control abierto, cautín, lupa y herramientas) y `oficina` (escritorios con monitor, ventanal al atardecer y pizarrón), cada uno con su sonido de fondo.
+- Entre escenas la cámara del ambiente corta en seco: el viaje de un plano a otro podía cruzar paredes y muebles.
+- Cada corte de cámara suena con un whoosh suave.
+- Planos mejor encuadrados: la tele del cuarto con el jugador de espaldas, la cara a más distancia y nada de respaldos tapando la toma.
+
 ## 0.6.0 {#v0-6-0}
 
 <p class="fecha-version">13 de noviembre de 2026</p>
