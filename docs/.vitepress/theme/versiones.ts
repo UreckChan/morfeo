@@ -12,8 +12,8 @@ export const VERSIONES: Version[] = [
 	{
 		v: '0.6.5',
 		fecha: '2026-11-14',
-		titulo: 'Más de 2.400 modelos 3D nuevos',
-		resumen: 'Las bibliotecas Quaternius y KayKit se suman a `recurso`: animales, personajes, naves, calabozos y más.',
+		titulo: 'Piezas de ingeniería y 5.500 modelos más',
+		resumen: '35 piezas de plomería, electricidad, electrónica y mecánica hechas en código, y las bibliotecas Quaternius, KayKit y Kenney completo en `recurso`.',
 		tipo: 'menor',
 	},
 	{
