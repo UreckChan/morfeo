@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '0.6.4',
+		fecha: '2026-11-14',
+		titulo: 'El render ya no llena el disco',
+		resumen: 'Borra el empaquetado temporal de cada render y los cachés viejos, que sumaban varios GB.',
+		tipo: 'arreglo',
+	},
+	{
 		v: '0.6.3',
 		fecha: '2026-11-14',
 		titulo: 'Tienda, calle y render más ágil',

@@ -15,6 +15,13 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 0.6.4 {#v0-6-4}
+
+<p class="fecha-version">14 de noviembre de 2026</p>
+
+- `render` borra al terminar el empaquetado temporal que deja Remotion (unos 350 MB por render, que antes se quedaban en la carpeta temporal del sistema) y, al empezar, los que tengan más de un día.
+- Conserva solo los dos cachés de empaquetado más recientes en `node_modules/.cache`; antes se acumulaba uno de unos 300 MB por cada actualización de Morfeo.
+
 ## 0.6.3 {#v0-6-3}
 
 <p class="fecha-version">14 de noviembre de 2026</p>
