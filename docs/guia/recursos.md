@@ -1,5 +1,5 @@
 ---
-description: 'Objetos 2D y 3D sin dibujar: escribe "tubería" o "pizza" y Morfeo trae el modelo de Kenney, Poly Haven o Iconify, con créditos.'
+description: 'Objetos 2D y 3D sin dibujar: escribe "tubería" o "pizza" y Morfeo trae el modelo de Kenney, Quaternius, KayKit, Poly Haven o Iconify, con créditos.'
 ---
 
 # Objetos 2D y 3D
@@ -29,9 +29,13 @@ Si no hay nada en ese estilo, prueba solo en los otros.
 | Estilo | Fuente | Qué hay | Licencia |
 |---|---|---|---|
 | `3d` | [Kenney](https://kenney.nl) | ~1.400 modelos low-poly: vehículos, comida, muebles, naturaleza, pueblo, edificios, cementerio, juegos… | CC0 |
+| `3d` | [Quaternius](https://quaternius.com) | ~1.500 modelos low-poly: animales, dinosaurios, peces, naves y planetas, robots, armas y objetos de rol, interiores de casa, calles, ciudad futurista… | CC0 |
+| `3d` | [KayKit](https://kaylousberg.com) | ~900 modelos low-poly: personajes (caballero, mago, esqueletos), calabozo, ciudad y coches, muebles, restaurante, Halloween, base espacial… | CC0 |
 | `realista` | [Poly Haven](https://polyhaven.com) | ~500 modelos con texturas: herramientas, industria, tuberías, muebles, plantas, rocas, iluminación… | CC0 |
 | `2d` | [Iconify](https://iconify.design) | más de 200 mil íconos e ilustraciones de sets abiertos | MIT, Apache, CC0 o CC BY según el set |
 | `3d` (opcional) | [Poly Pizza](https://poly.pizza) | 10 mil+ modelos (incluye Quaternius) con `POLYPIZZA_API_KEY` en `.env` | CC0 o CC-BY |
+
+Para elegir biblioteca, `fuente: 'kenney' | 'quaternius' | 'kaykit' | 'polyhaven'`. En la terminal: `npx morfeo recursos buscar "dinosaurio" --fuente quaternius`.
 
 ### Variantes 2D
 

@@ -15,6 +15,15 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 0.6.5 {#v0-6-5}
+
+<p class="fecha-version">14 de noviembre de 2026</p>
+
+- Dos bibliotecas nuevas para [`recurso`](/guia/recursos) en estilo `3d`, las dos CC0: Quaternius (unos 1.500 modelos: animales, dinosaurios, peces, naves, robots, objetos de rol, interiores) y KayKit (unos 900: personajes, calabozo, ciudad, muebles, restaurante, base espacial).
+- Buscar por tema trae el paquete completo: `dinosaurio` devuelve los seis del paquete aunque el archivo se llame "Trex".
+- Los modelos con esqueleto (animales, personajes) ya se centran y escalan como los demás; antes podían salir enormes y recortados.
+- El diccionario suma animales, fantasía, espacio y barcos: `rana`, `venado`, `caballero`, `esqueleto`, `torreta`, `velero`, `panel solar`…
+
 ## 0.6.4 {#v0-6-4}
 
 <p class="fecha-version">14 de noviembre de 2026</p>

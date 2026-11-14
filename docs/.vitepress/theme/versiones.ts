@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '0.6.5',
+		fecha: '2026-11-14',
+		titulo: 'Más de 2.400 modelos 3D nuevos',
+		resumen: 'Las bibliotecas Quaternius y KayKit se suman a `recurso`: animales, personajes, naves, calabozos y más.',
+		tipo: 'menor',
+	},
+	{
 		v: '0.6.4',
 		fecha: '2026-11-14',
 		titulo: 'El render ya no llena el disco',
