@@ -28,6 +28,8 @@ Los ambientes son de noche: con un estilo de texto oscuro (como `explicativo`), 
 | `arcade` | Filas de maquinitas con pantallas animadas, alfombra que brilla, letreros de neón y focos de techo | `general`, `persona`, `maquina`, `espalda`, `pasillo`, `contrapicado` |
 | `taller` | Mesa de reparación con un control abierto, cautín humeando, lupa con brazo, tablero de herramientas, lámpara de brazo y repisa con cajas | `general`, `persona`, `mesa`, `control`, `tablero`, `repisa`, `cenital` |
 | `oficina` | Dos escritorios con monitor, ventanal de atardecer con la ciudad, pizarrón con gráfica, garrafón y plantas | `general`, `persona`, `monitor`, `ventana`, `pizarron`, `companero` |
+| `tienda` | Tienda de videojuegos: pared de juegos, mostrador con caja y vitrina, tele de demostración, isla de ofertas y letrero de neón | `general`, `persona`, `estantes`, `mostrador`, `tele`, `isla` |
+| `calle` | Calle de noche con lluvia: fachadas con ventanas encendidas, un local con vitrina, toldo y letrero, farola, banca y un coche estacionado | `general`, `persona`, `vitrina`, `edificios`, `coche`, `farola` |
 
 Todo se mueve aunque la escena no haga nada: la tele parpadea y alumbra la pared, el LED cambia de color, llueve en la
 ventana, flota polvo en la luz.
@@ -56,7 +58,8 @@ feliz con "felicidades". `persona: {ropa: '#E5484D'}` cambia su ropa y `reaccion
   y luces brillan, y hay viñeta. `ambiente: {nombre: 'sala', post: 'suave'}` lo cambia (`'miniatura'` = efecto
   maqueta, `false` = sin postproceso).
 - Cada ambiente suena: lluvia y el juego de la tele en el cuarto, lluvia y murmullo en la sala, maquinitas en el arcade,
-  herramientas en el taller y teclas con aire acondicionado en la oficina.
+  herramientas en el taller, teclas con aire acondicionado en la oficina, murmullo y la tele de demostración en la
+  tienda, y lluvia, viento y algún coche lejano en la calle.
   Va bajito y se aparta cuando habla la voz. `ambiente: {nombre: 'arcade', sonido: false}` lo apaga.
 
 ## En tu propio componente

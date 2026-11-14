@@ -19,7 +19,7 @@ npx morfeo <comando> [opciones]
 | `instalar` | Prepara la computadora: Python, voces, navegador y Whisper (opcional). `--si`, `--whisper`, `--sin-whisper` |
 | `doctor` | Revisa qué está instalado y qué falta |
 | `lista` | Muestra los videos del proyecto y cuáles ya están hechos |
-| `render [id...]` | Genera los que faltan, o los que indiques. `--todos` regenera todos, `--gpu` usa la tarjeta de video, `--solo-fallidos` reintenta los que fallaron en el último lote, `--escenas 5-7` solo esas escenas (para corregir una toma) |
+| `render [id...]` | Genera los que faltan, o los que indiques. `--todos` regenera todos, `--gpu` usa la tarjeta de video, `--solo-fallidos` reintenta los que fallaron en el último lote, `--cambiados` rehace solo los videos cuyo guion o componentes cambiaron desde su último render, `--revisar` saca la hoja y revisa cada video al terminar, `--escenas 5-7` solo esas escenas (para corregir una toma) |
 | `revisar [id...]` | Revisa la estructura (gancho, ritmo, preguntas, rótulos, cierre), la voz, la zona segura, el riesgo de "diapositiva" y, si ya está el MP4, cuadros negros, tapados, lisos o quietos. `--sin-cuadros` salta lo último. Ver [Estructura](../guia/mundo#revisar-la-estructura) |
 | `hoja <id>` | Hoja de contacto PNG para revisar un video de un vistazo. `--desde 8 --hasta 11`, `--cols 5 --filas 3`, `--zona` (zonas que tapan las apps) |
 | `studio` | Abre el editor en el navegador con los videos ya preparados. `--puerto 3001` |

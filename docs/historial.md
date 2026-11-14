@@ -15,6 +15,18 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 0.6.3 {#v0-6-3}
+
+<p class="fecha-version">14 de noviembre de 2026</p>
+
+- Dos [ambientes](/guia/ambientes) nuevos: `tienda` (tienda de videojuegos con pared de juegos, mostrador, tele de demostración y neón) y `calle` (calle de noche con lluvia, un local con vitrina, farola y un coche), cada uno con su sonido de fondo.
+- `render --revisar`: al terminar cada video saca su hoja y lo revisa, en un solo paso.
+- `render --cambiados`: rehace solo los videos cuyo guion o componentes cambiaron desde su último render.
+- Los videos con postproceso (ambientes, `post: 'cine'`) se renderizan alrededor de 14 % más rápido, sin cambio visible.
+- Con ambiente, los titulares de las plantillas llevan contorno oscuro: se leen sobre cualquier fondo del set.
+- El cierre "Escribe PALABRA" de dos renglones ya no se encima con el texto de abajo.
+- `MORFEO_TIEMPOS=1` muestra cuánto tardó cada fase del render (audio, empaquetado, video, miniatura).
+
 ## 0.6.2 {#v0-6-2}
 
 <p class="fecha-version">14 de noviembre de 2026</p>

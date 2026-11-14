@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '0.6.3',
+		fecha: '2026-11-14',
+		titulo: 'Tienda, calle y render más ágil',
+		resumen: 'Ambientes tienda y calle, render --revisar y --cambiados, y postproceso ~14 % más rápido.',
+		tipo: 'menor',
+	},
+	{
 		v: '0.6.2',
 		fecha: '2026-11-14',
 		titulo: 'Texto legible sobre ambientes',
