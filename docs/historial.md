@@ -15,6 +15,12 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 0.6.7 {#v0-6-7}
+
+<p class="fecha-version">14 de noviembre de 2026</p>
+
+- Nueve [piezas en código](/guia/recursos#piezas-de-ingenieria) más, las que seguían sin modelo: lago, burbuja, código, músculo, doctor, bicicleta estática, confeti, registro sanitario y cable submarino. Ya son 145.
+
 ## 0.6.6 {#v0-6-6}
 
 <p class="fecha-version">14 de noviembre de 2026</p>

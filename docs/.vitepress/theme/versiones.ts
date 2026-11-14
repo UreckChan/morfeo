@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '0.6.7',
+		fecha: '2026-11-14',
+		titulo: 'Las piezas que faltaban',
+		resumen: 'Lago, burbuja, código, músculo, doctor, bicicleta estática, confeti, registro y cable submarino: 145 piezas propias.',
+		tipo: 'menor',
+	},
+	{
 		v: '0.6.6',
 		fecha: '2026-11-14',
 		titulo: '51 piezas más',
