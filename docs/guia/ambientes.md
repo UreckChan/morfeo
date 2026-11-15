@@ -46,6 +46,15 @@ ventana, flota polvo en la luz.
 - **Golpe de énfasis**: cuando cae un rótulo `sello` o `pixel`, todo el cuadro da un pequeño zoom con sacudida.
   `golpe: false` en la escena lo quita, y `golpe: true` lo pone en cualquier rótulo.
 
+## Textos y capas encima
+
+- Con ambiente, los **subtítulos van más abajo** (cerca de y 1380) y arriba hay una sombra para el rótulo. Pon `fecha`,
+  `cintillo` y tarjetas en la parte de arriba o en medio (y 560–640): abajo se enciman con el subtítulo.
+- El rótulo `pixel` usa una letra de videojuego que no trae flechas (↑ ↓ ← →): salen como rayas. Para flechas, usa
+  `rotuloEstilo: 'pastilla'` o `'contorno'`.
+- En una capa `modelo` (por ejemplo `{tipo: 'modelo', forma: 'alcancia'}`), el tamaño en pantalla es `ancho` (en px);
+  `tamano` es la escala del objeto (1 = normal).
+
 ## Persona
 
 Con `persona: true` aparece una persona en su lugar del set (sentada frente a la tele, en el sillón o parada en la
