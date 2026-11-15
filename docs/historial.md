@@ -15,6 +15,13 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 0.7.1 {#v0-7-1}
+
+<p class="fecha-version">14 de noviembre de 2026</p>
+
+- Los videos con [ambiente](/guia/ambientes) y postproceso `'cine'` ya renderizan en Windows: el desenfoque de fondo agotaba la tarjeta de video a los ~30 segundos.
+- `tamano` muy grande en una capa `modelo` o `recurso` ahora es un error con explicación: es la escala del objeto (1 = normal); el tamaño en pantalla se pone con `ancho`.
+
 ## 0.7.0 {#v0-7-0}
 
 <p class="fecha-version">14 de noviembre de 2026</p>

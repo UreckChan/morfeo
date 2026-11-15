@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '0.7.1',
+		fecha: '2026-11-14',
+		titulo: 'Ambientes en Windows',
+		resumen: 'Los videos con ambiente y desenfoque ya renderizan en Windows; aviso claro cuando `tamano` se usa como tamaño en pantalla.',
+		tipo: 'arreglo',
+	},
+	{
 		v: '0.7.0',
 		fecha: '2026-11-14',
 		titulo: 'Skills para tu IA',
