@@ -70,12 +70,12 @@ const SKILLS = [
 ];
 
 const CIFRAS = [
-	{n: '145', de: 'piezas 3D hechas en código', nota: 'De un grifo a un cable submarino'},
+	{n: '157', de: 'piezas 3D hechas en código', nota: 'De un grifo a un cable submarino'},
 	{n: '7.000', de: 'modelos libres al escribir su nombre', nota: 'Kenney, Quaternius y KayKit, sin derechos'},
 	{n: '7', de: 'ambientes con vida de fondo', nota: 'Cuarto gamer, sala, arcade, taller…'},
 	{n: '11', de: 'fórmulas de historia', nota: 'Mito, misterio, experimento, biografía…'},
 ];
-const BUSCA = ['tubería', 'ambulancia', 'placa madre', 'dinosaurio', 'guitarra', 'turbina', 'cerebro', 'refinería', 'pulpo', 'cable submarino'];
+const BUSCA = ['tubería', 'ambulancia', 'placa madre', 'dinosaurio', 'guitarra', 'turbina', 'cerebro', 'refinería', 'pulpo', 'control', 'cable submarino'];
 
 const PASOS = [
 	{cmd: 'npx morfeo nuevo mi-canal', nota: 'Proyecto con videos de ejemplo en 2D y 3D'},
@@ -146,7 +146,7 @@ onBeforeUnmount(() => {
 				</div>
 				<ul class="datos">
 					<li><b>11</b> estilos</li>
-					<li><b>145</b> piezas 3D</li>
+					<li><b>157</b> piezas 3D</li>
 					<li><b>4</b> guías para tu IA</li>
 					<li><b>Gratis</b> incluso para uso comercial</li>
 				</ul>

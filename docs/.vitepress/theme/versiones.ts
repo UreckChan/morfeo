@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '0.7.2',
+		fecha: '2026-11-15',
+		titulo: 'El control ya es un control',
+		resumen: 'Búsqueda de modelos más precisa y 12 piezas nuevas de videojuegos y casa: ya son 157.',
+		tipo: 'arreglo',
+	},
+	{
 		v: '0.7.1',
 		fecha: '2026-11-14',
 		titulo: 'Ambientes en Windows',

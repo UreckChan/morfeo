@@ -15,6 +15,13 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 0.7.2 {#v0-7-2}
+
+<p class="fecha-version">15 de noviembre de 2026</p>
+
+- Buscar "control" ya da un control de videojuegos y no una canasta de arcade. La búsqueda de modelos dejó de tomar palabras que solo empiezan igual ("gamepad" no es "game"); también se corrigieron mariposa, béisbol, cartera, maleta y otros.
+- 12 [piezas en código](/guia/recursos#piezas-de-ingenieria) más: control, consola, cartucho, audífonos, cronómetro, termómetro, pincel, cartera, caja fuerte, pastilla, fuegos artificiales y etiqueta. Ya son 157.
+
 ## 0.7.1 {#v0-7-1}
 
 <p class="fecha-version">14 de noviembre de 2026</p>
