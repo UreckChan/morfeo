@@ -15,6 +15,16 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 0.8.0 {#v0-8-0}
+
+<p class="fecha-version">15 de noviembre de 2026</p>
+
+- [Salidas](/guia/animacion#entrada-y-salida) con los mismos tipos que las entradas (`rebote`, `caer`, `girar`, `enfocar`, `bajar`, deslizar hacia arriba o abajo). Ahora salen acelerando, como algo que se va, y aceptan `duracionSalida` y `curvaSalida`.
+- `enfasis`: golpes puntuales en una palabra sin mover la capa de su sitio (`pop`, `sacudir`, `saltar`, `girar`).
+- `anticipar`: antes de `mover` o `escalar`, la capa toma impulso en sentido contrario.
+- `mover` y `escalar` aceptan `curva: 'resorte'` (sobrepasa y asienta) y `'seca'`.
+- [`escalonar`](/guia/animacion#escalonado) en la escena (o en el estilo): las capas que entran a la vez lo hacen una tras otra.
+
 ## 0.7.2 {#v0-7-2}
 
 <p class="fecha-version">15 de noviembre de 2026</p>

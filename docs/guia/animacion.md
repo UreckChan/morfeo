@@ -29,14 +29,34 @@ Con Whisper instalado, las palabras caen exactas. Sin Whisper, se reparten dentr
 `entrada`: `escala` (por defecto), `rebote`, `aparecer`, `subir`, `caer`, `girar`, `deslizar-izq`, `deslizar-der`,
 `deslizar-arriba`, `deslizar-abajo` o `ninguna`. `duracionEntrada` cambia su duración (0.5 s por defecto).
 
-`salida` (cuando llega `hasta`): `aparecer` (se desvanece), `escala`, `subir`, `deslizar-izq`, `deslizar-der`.
+`salida` (cuando llega `hasta`): `aparecer` (se desvanece), `escala`, `rebote` (crece un poco y se va), `caer`,
+`subir`, `bajar`, `deslizar-izq`, `deslizar-der`, `deslizar-arriba`, `deslizar-abajo`, `girar`, `enfocar` (se
+desenfoca) o `ninguna`. Sale acelerando, al revés que la entrada; `duracionSalida` (0.35 s por defecto) y
+`curvaSalida` (`'acelera'`, `'seca'` o `'suave'`) la ajustan.
+
+### Escalonado
+
+Con `escalonar` en la escena, las capas que entran a la vez (mismo `en`) lo hacen una tras otra, en su orden:
+
+```js
+{say: 'Tres consolas que nadie compró.', escalonar: 0.1, capas: [
+  {tipo: 'recurso', buscar: 'consola', x: 270, en: 'consolas'},
+  {tipo: 'recurso', buscar: 'consola', x: 540, en: 'consolas'},
+  {tipo: 'recurso', buscar: 'consola', x: 810, en: 'consolas'},
+]}
+```
+
+`true` usa 0.08 s. El total nunca pasa de 0.5 s: con muchas capas el paso se acorta solo. Para todo el video, ponlo
+en el estilo: `movimiento: {escalonar: 0.08}`.
 
 ## Movimiento
 
 | Campo | Ejemplo | Qué hace |
 |---|---|---|
-| `mover` | `{a: [700, 900], en: 'luego', duracion: 1.2}` | Va a otra posición (suave, o `curva: 'lineal'`) |
-| `escalar` | `{a: 1.5, en: 'crece'}` | Cambia de tamaño |
+| `mover` | `{a: [700, 900], en: 'luego', duracion: 1.2}` | Va a otra posición. `curva`: `'suave'`, `'lineal'`, `'resorte'` o `'seca'` |
+| `escalar` | `{a: 1.5, en: 'crece'}` | Cambia de tamaño (con las mismas curvas) |
+| `anticipar` | `true` o `0.25` | Antes de `mover` o `escalar`, toma impulso en sentido contrario |
+| `enfasis` | `{en: 'roto', tipo: 'sacudir'}` | Golpe puntual: `'pop'`, `'sacudir'`, `'saltar'` o `'girar'`; `fuerza`, `duracion`; varios en lista |
 | `girar` | `30` | Grados por segundo |
 | `rotar` | `-6` | Inclinación fija |
 | `flotar` | `true` o `20` | Sube y baja suavemente |

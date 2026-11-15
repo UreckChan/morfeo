@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '0.8.0',
+		fecha: '2026-11-15',
+		titulo: 'Motor de animación completo',
+		resumen: 'Salidas de todos los tipos, énfasis en una palabra, anticipación, curvas con resorte y escalonado automático.',
+		tipo: 'menor',
+	},
+	{
 		v: '0.7.2',
 		fecha: '2026-11-15',
 		titulo: 'El control ya es un control',
