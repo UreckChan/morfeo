@@ -42,11 +42,40 @@ const CAPACIDADES = [
 	{icono: 'subtitulos', titulo: 'Subtítulos al ritmo', texto: 'Karaoke, palabra por palabra o pop. Con Whisper caen justo cuando se dicen.'},
 	{icono: 'musica', titulo: 'Música y efectos', texto: 'Música sin derechos generada al momento, con ducking bajo la voz y sonidos automáticos.'},
 	{icono: 'capas', titulo: 'Motor de capas', texto: 'Texto, contadores, tarjetas, chats, gráficas y mapas que entran en la palabra exacta.'},
-	{icono: 'cubo', titulo: '2D y 3D sin dibujar', texto: 'Escribe "tubería" o "ambulancia": llegan de Kenney, Poly Haven o Iconify, con créditos.'},
+	{icono: 'cubo', titulo: '2D y 3D sin dibujar', texto: 'Escribe "tubería" o "ambulancia": 145 piezas propias y unos 7.000 modelos libres, con créditos.'},
 	{icono: 'camara', titulo: 'Un mundo por video', texto: 'La cámara viaja por un mismo escenario en vez de cambiar de fondo cada escena.'},
-	{icono: 'ia', titulo: 'Guiones con IA', texto: 'Claude escribe el video completo; tú lo revisas y lo ajustas en código.'},
-	{icono: 'revisar', titulo: 'Revisión de estructura', texto: 'Gancho, ritmo, preguntas y cierre medidos en videos virales, antes de publicar.'},
+	{icono: 'ia', titulo: 'Hecho para tu IA', texto: 'Claude Code o Codex investigan, escriben y renderizan con las guías que trae Morfeo.'},
+	{icono: 'revisar', titulo: 'Revisión de estructura', texto: 'Gancho, ritmo y cierre; que la voz diga el guion; cuadros vacíos, tapados o quietos.'},
 ];
+
+const CHAT = [
+	{quien: 'tu', texto: 'Hazme un video sobre por qué vibra el control'},
+	{
+		quien: 'ia',
+		pasos: [
+			'Busqué los datos y guardé cada fuente',
+			'Escribí 8 ganchos y elegí el de hallazgo',
+			'Aquí está el guion: ¿lo apruebas?',
+		],
+	},
+	{quien: 'tu', texto: 'Sí, pero más corto'},
+	{quien: 'ia', pasos: ['Renderizado y revisado: 34 s, sin avisos', 'Video, miniatura y texto del post en salida/']},
+];
+
+const SKILLS = [
+	{nombre: 'morfeo-guion', titulo: 'Guion', texto: 'Varios ganchos de arquetipos distintos, historia armada desde el pago y cierre que pide algo.'},
+	{nombre: 'morfeo-animacion', titulo: 'Animación', texto: 'Tiempos, curvas y escalonado; cada cosa entra en la palabra que la nombra.'},
+	{nombre: 'morfeo-3d', titulo: '3D', texto: 'Luz, materiales, paleta y encuadre vertical para mundos y piezas.'},
+	{nombre: 'morfeo-video', titulo: 'Ruta completa', texto: 'Del tema al archivo terminado, con revisión antes de entregar.'},
+];
+
+const CIFRAS = [
+	{n: '145', de: 'piezas 3D hechas en código', nota: 'De un grifo a un cable submarino'},
+	{n: '7.000', de: 'modelos libres al escribir su nombre', nota: 'Kenney, Quaternius y KayKit, sin derechos'},
+	{n: '7', de: 'ambientes con vida de fondo', nota: 'Cuarto gamer, sala, arcade, taller…'},
+	{n: '11', de: 'fórmulas de historia', nota: 'Mito, misterio, experimento, biografía…'},
+];
+const BUSCA = ['tubería', 'ambulancia', 'placa madre', 'dinosaurio', 'guitarra', 'turbina', 'cerebro', 'refinería', 'pulpo', 'cable submarino'];
 
 const PASOS = [
 	{cmd: 'npx morfeo nuevo mi-canal', nota: 'Proyecto con videos de ejemplo en 2D y 3D'},
@@ -117,7 +146,8 @@ onBeforeUnmount(() => {
 				</div>
 				<ul class="datos">
 					<li><b>11</b> estilos</li>
-					<li><b>1080×1920</b> a 30 fps</li>
+					<li><b>145</b> piezas 3D</li>
+					<li><b>4</b> guías para tu IA</li>
 					<li><b>Gratis</b> incluso para uso comercial</li>
 				</ul>
 			</div>
@@ -173,6 +203,36 @@ onBeforeUnmount(() => {
 			</div>
 		</section>
 
+		<!-- CON TU IA -->
+		<section class="bloque">
+			<div class="encabezado">
+				<p class="ceja">Con tu IA</p>
+				<h2>Pídelo con una frase.</h2>
+				<p>Abre tu proyecto en Claude Code o Codex. Morfeo trae las guías de oficio que tu IA sigue para escribir, animar y revisar; tú apruebas el guion y recibes el video.</p>
+			</div>
+			<div class="ia-par">
+				<div class="chat" aria-label="Ejemplo de conversación">
+					<div class="codigo-barra"><span /><span /><span /><em>mi-canal</em></div>
+					<div class="chat-cuerpo">
+						<template v-for="(m, i) in CHAT" :key="i">
+							<p v-if="m.quien === 'tu'" class="globo">{{ m.texto }}</p>
+							<ul v-else class="hecho">
+								<li v-for="p in m.pasos" :key="p"><Icono nombre="listo" /> {{ p }}</li>
+							</ul>
+						</template>
+					</div>
+				</div>
+				<div class="skills">
+					<a v-for="k in SKILLS" :key="k.nombre" :href="b('/guia/skills')" class="skill">
+						<code>{{ k.nombre }}</code>
+						<h3>{{ k.titulo }}</h3>
+						<p>{{ k.texto }}</p>
+					</a>
+					<a :href="b('/guia/skills')" class="enlace skills-mas">Cómo funcionan las skills <Icono nombre="flecha" /></a>
+				</div>
+			</div>
+		</section>
+
 		<!-- ESTILOS -->
 		<section class="bloque">
 			<div class="encabezado fila-enc">
@@ -191,6 +251,30 @@ onBeforeUnmount(() => {
 					<code class="nombre-estilo">{{ e.nombre }}</code>
 					<span class="desc-estilo">{{ e.desc }}</span>
 				</a>
+			</div>
+		</section>
+
+		<!-- CATÁLOGO -->
+		<section class="bloque">
+			<div class="encabezado fila-enc">
+				<div>
+					<p class="ceja">Catálogo</p>
+					<h2>Nómbralo y aparece.</h2>
+				</div>
+				<a :href="b('/guia/recursos')" class="enlace">Ver objetos 2D y 3D <Icono nombre="flecha" /></a>
+			</div>
+			<div class="cifras">
+				<div v-for="c in CIFRAS" :key="c.de" class="cifra">
+					<b>{{ c.n }}</b>
+					<span>{{ c.de }}</span>
+					<small>{{ c.nota }}</small>
+				</div>
+			</div>
+			<div class="busca">
+				<code class="busca-codigo">{ tipo: <span class="s">'recurso'</span>, buscar: <span class="s">'…'</span>, estilo: <span class="s">'3d'</span> }</code>
+				<ul>
+					<li v-for="t in BUSCA" :key="t">{{ t }}</li>
+				</ul>
 			</div>
 		</section>
 
@@ -763,6 +847,172 @@ section {
 	color: var(--m-tenue);
 }
 
+/* con tu IA */
+.ia-par {
+	display: grid;
+	grid-template-columns: 1fr 1.05fr;
+	gap: 32px;
+	align-items: start;
+}
+.chat {
+	border-radius: 20px;
+	background: #15121c;
+	border: 1px solid var(--m-linea-fuerte);
+	overflow: hidden;
+	box-shadow: 0 24px 60px -30px rgba(0, 0, 0, 0.5);
+}
+.chat-cuerpo {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	padding: 22px 22px 26px;
+}
+.globo {
+	align-self: flex-end;
+	max-width: 85%;
+	margin: 0;
+	padding: 10px 16px;
+	border-radius: 16px 16px 4px 16px;
+	background: var(--m-acento);
+	color: #fff;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 1.4;
+}
+.hecho {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: 8px;
+}
+.hecho li {
+	display: flex;
+	align-items: baseline;
+	gap: 10px;
+	margin: 0;
+	font-size: 14.5px;
+	line-height: 1.45;
+	color: #d9d3e2;
+}
+.hecho li :deep(svg) {
+	flex: none;
+	color: #5adc6e;
+	transform: translateY(2px);
+}
+.skills {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 14px;
+}
+.skill {
+	display: block;
+	padding: 22px 20px 20px;
+	border-radius: 18px;
+	background: var(--m-panel);
+	border: 1px solid var(--m-linea);
+	text-decoration: none !important;
+	transition: border-color 0.2s, transform 0.2s;
+}
+.skill:hover {
+	border-color: var(--m-acento);
+	transform: translateY(-2px);
+}
+.skill code {
+	font-family: var(--m-mono);
+	font-size: 12px;
+	color: var(--m-acento);
+	background: color-mix(in srgb, var(--m-acento) 10%, transparent);
+	padding: 3px 8px;
+	border-radius: 6px;
+}
+.skill h3 {
+	font-family: var(--m-display);
+	font-size: 19px;
+	font-weight: 700;
+	margin: 14px 0 6px;
+	color: var(--m-tinta);
+}
+.skill p {
+	margin: 0;
+	font-size: 14.5px;
+	line-height: 1.5;
+	color: var(--m-tenue);
+}
+.skills-mas {
+	grid-column: 1 / -1;
+	justify-self: start;
+	margin-top: 8px;
+}
+
+/* catálogo */
+.cifras {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	border-top: 1px solid var(--m-linea);
+	border-left: 1px solid var(--m-linea);
+}
+.cifra {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	padding: 30px 24px 28px;
+	border-right: 1px solid var(--m-linea);
+	border-bottom: 1px solid var(--m-linea);
+}
+.cifra b {
+	font-family: var(--m-display);
+	font-weight: 800;
+	font-size: clamp(44px, 5.4vw, 68px);
+	line-height: 1;
+	letter-spacing: -0.04em;
+	color: var(--m-tinta);
+	font-variant-numeric: tabular-nums;
+}
+.cifra span {
+	font-weight: 600;
+	font-size: 15.5px;
+	line-height: 1.35;
+	color: var(--m-tinta);
+}
+.cifra small {
+	font-size: 13.5px;
+	line-height: 1.45;
+	color: var(--m-tenue);
+}
+.busca {
+	display: flex;
+	align-items: center;
+	gap: 18px 22px;
+	flex-wrap: wrap;
+	margin-top: 26px;
+}
+.busca-codigo {
+	font-family: var(--m-mono);
+	font-size: 13.5px;
+	padding: 10px 14px;
+	border-radius: 10px;
+	background: #15121c;
+	color: #d9d3e2;
+	white-space: nowrap;
+}
+.busca ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.busca li {
+	margin: 0;
+	padding: 6px 13px;
+	border-radius: 99px;
+	border: 1px solid var(--m-linea-fuerte);
+	font-size: 13.5px;
+	color: var(--m-tenue);
+}
+
 /* versiones + instalar */
 .dos {
 	display: grid;
@@ -860,8 +1110,12 @@ section {
 		width: 100%;
 		margin: 0 auto;
 	}
-	.rejilla {
+	.rejilla,
+	.cifras {
 		grid-template-columns: repeat(2, 1fr);
+	}
+	.ia-par {
+		grid-template-columns: 1fr;
 	}
 	.dos {
 		grid-template-columns: 1fr;
@@ -898,8 +1152,12 @@ section {
 	.tel-der {
 		right: -4%;
 	}
-	.rejilla {
+	.rejilla,
+	.skills {
 		grid-template-columns: 1fr;
+	}
+	.busca-codigo {
+		white-space: normal;
 	}
 	.bajada {
 		font-size: 17px;
