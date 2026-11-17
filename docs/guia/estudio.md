@@ -84,7 +84,11 @@ En `salida/`, con el título del video como nombre:
 | `<título>.mp4` | El video 1080×1920 con voz, música, efectos y subtítulos |
 | `<título>.jpg` | La miniatura (cuadro limpio) |
 | `<título> (portada).jpg` | La portada: título grande con tu letra y tu color, y tu marca |
-| `<título>.txt` | Título, descripción, etiquetas, fuentes y 3 ganchos de reserva |
+| `<título>.txt` | Título, descripción, etiquetas, fuentes, un texto listo para cada red (TikTok, YouTube Shorts e Instagram Reels) y 3 ganchos de reserva |
+
+Cada red premia algo distinto: TikTok, un texto corto con pocas etiquetas; YouTube, título y descripción con fuentes
+y `#shorts`; Instagram, un texto más largo con más etiquetas. Si quieres otro texto para una red, ponlo en el guion:
+`redes: {tiktok: {texto: '…', tags: ['…']}, youtube: {titulo: '…'}, instagram: {texto: '…'}}`.
 
 ## Piezas para explicar
 

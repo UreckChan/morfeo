@@ -15,6 +15,17 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 0.9.0 {#v0-9-0}
+
+<p class="fecha-version">17 de noviembre de 2026</p>
+
+- [Efectos de sonido grabados](/guia/capas#sonido): 44 de Kenney (CC0), que se bajan solos. Suenan en sellos, contadores, monedas, objetos de videojuegos, cada `enfasis` y el cierre; se pide uno con `sonido: 'moneda'`, `'error'`, `'victoria'`…
+- Cierre «¿ya lo sabías?»: `{type: 'cta', pide: 'sabias', si: 'PINZA', no: 'CABLE'}`.
+- Capas `marcador` (el chiste que va sumando) y `hora` (reloj con lugar para series), y `habla` en la escena para poner el nombre de quien habla sobre el subtítulo.
+- Pieza `cuerpo`: cuerpo humano en rayos X que resalta un órgano y puede correr. Ya son 158.
+- Fórmulas `dia` ("Un día en la vida de…") y `reto` (meta colectiva con los seguidores).
+- El `.txt` de cada video trae un texto listo para TikTok, YouTube Shorts e Instagram Reels.
+
 ## 0.8.0 {#v0-8-0}
 
 <p class="fecha-version">15 de noviembre de 2026</p>

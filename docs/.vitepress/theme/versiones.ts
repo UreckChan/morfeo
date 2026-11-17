@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '0.9.0',
+		fecha: '2026-11-17',
+		titulo: 'Sonido y formatos nuevos',
+		resumen: 'Efectos grabados CC0 que suenan solos, cierre ¿ya lo sabías?, marcador, reloj con lugar, cuerpo en rayos X y textos por red.',
+		tipo: 'menor',
+	},
+	{
 		v: '0.8.0',
 		fecha: '2026-11-15',
 		titulo: 'Motor de animación completo',

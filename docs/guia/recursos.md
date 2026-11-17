@@ -38,7 +38,7 @@ Si no hay nada en ese estilo, prueba solo en los otros.
 ### Piezas de ingeniería
 
 Para explicar cómo funciona una casa, una ciudad o una consola hacen falta piezas que ninguna biblioteca libre trae.
-Morfeo incluye 157 hechas en código; `recurso` las encuentra primero, y también se piden directo con
+Morfeo incluye 158 hechas en código; `recurso` las encuentra primero, y también se piden directo con
 `{tipo: 'modelo', forma: 'valvula'}`.
 
 | Área | Piezas (`buscar` o `forma`) |
@@ -58,7 +58,7 @@ Y otras 50 para ciencia, tecnología y ciudad:
 | Transporte | `autobus`, `helicoptero`, `submarino`, `bicicleta` |
 | Escuela y objetos | `lapiz`, `regla`, `dado`, `ancla`, `paraguas` |
 
-Y 72 más de uso general:
+Y 73 más de uso general:
 
 | Área | Piezas (`buscar` o `forma`) |
 |---|---|
@@ -70,6 +70,7 @@ Y 72 más de uso general:
 | Naturaleza y espacio | `galaxia`, `cometa`, `lluvia`, `fosil`, `wifi`, `huella`, `telarana`, `arbol_navidad`, `lago`, `burbuja`, `confeti` |
 | Cuerpo, deporte y tecnología | `musculo`, `doctor`, `bicicleta_estatica`, `codigo` (ventana de editor), `registro` (sanitario, en corte), `cable_submarino` |
 | Videojuegos y casa | `control` (mando, joystick), `consola`, `cartucho`, `audifonos`, `cronometro`, `termometro`, `pincel`, `cartera`, `caja_fuerte`, `pastilla`, `fuegos_artificiales`, `etiqueta` |
+| Cuerpo humano | `cuerpo`: rayos X con esqueleto, corazón que late y pulmones que respiran. `opciones: {resaltar: 'corazon' \| 'pulmones' \| 'cerebro' \| 'huesos' \| 'estomago' \| 'musculos', correr: true, latidos: 150}` |
 
 Varias se mueven solas: giran el engrane, la turbina, el eje del motor y los ventiladores; gotea el grifo; parpadean
 el router y el servidor. `color` cambia el color principal y `velocidad` el ritmo. Opciones propias: `nivel` (0 a 1)

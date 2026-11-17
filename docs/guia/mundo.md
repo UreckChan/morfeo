@@ -131,6 +131,7 @@ Para "abrir" algo y mostrar lo de adentro, una escena cambia la imagen con un ba
 ```js
 {type: 'cta', pide: 'comenta', palabra: 'CAJA', say: 'Escribe CAJA si todavía las guardas.'}
 {type: 'cta', pide: 'comparte', a: 'tu amigo gamer', say: 'Mándaselo a tu amigo gamer.'}
+{type: 'cta', pide: 'sabias', si: 'PINZA', no: 'CABLE', say: '¿Ya lo sabías? Comenta tu palabra.'}   // «¿ya lo sabías?»
 ```
 
 ## Revisar la estructura

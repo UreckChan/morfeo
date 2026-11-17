@@ -40,7 +40,7 @@ const ESTILOS = [
 const CAPACIDADES = [
 	{icono: 'voz', titulo: 'Voz', texto: 'Kokoro gratis en tu computadora, ElevenLabs, OpenAI o tu propia grabación.'},
 	{icono: 'subtitulos', titulo: 'Subtítulos al ritmo', texto: 'Karaoke, palabra por palabra o pop. Con Whisper caen justo cuando se dicen.'},
-	{icono: 'musica', titulo: 'Música y efectos', texto: 'Música sin derechos generada al momento, con ducking bajo la voz y sonidos automáticos.'},
+	{icono: 'musica', titulo: 'Música y efectos', texto: 'Música generada sin derechos y más de 40 efectos grabados (CC0) que suenan solos en cada golpe.'},
 	{icono: 'capas', titulo: 'Motor de capas', texto: 'Texto, contadores, tarjetas, chats, gráficas y mapas que entran en la palabra exacta.'},
 	{icono: 'cubo', titulo: '2D y 3D sin dibujar', texto: 'Escribe "tubería" o "ambulancia": 145 piezas propias y unos 7.000 modelos libres, con créditos.'},
 	{icono: 'camara', titulo: 'Un mundo por video', texto: 'La cámara viaja por un mismo escenario en vez de cambiar de fondo cada escena.'},
@@ -70,7 +70,7 @@ const SKILLS = [
 ];
 
 const CIFRAS = [
-	{n: '157', de: 'piezas 3D hechas en código', nota: 'De un grifo a un cable submarino'},
+	{n: '158', de: 'piezas 3D hechas en código', nota: 'De un grifo a un cable submarino'},
 	{n: '7.000', de: 'modelos libres al escribir su nombre', nota: 'Kenney, Quaternius y KayKit, sin derechos'},
 	{n: '7', de: 'ambientes con vida de fondo', nota: 'Cuarto gamer, sala, arcade, taller…'},
 	{n: '11', de: 'fórmulas de historia', nota: 'Mito, misterio, experimento, biografía…'},
@@ -146,7 +146,7 @@ onBeforeUnmount(() => {
 				</div>
 				<ul class="datos">
 					<li><b>11</b> estilos</li>
-					<li><b>157</b> piezas 3D</li>
+					<li><b>158</b> piezas 3D</li>
 					<li><b>4</b> guías para tu IA</li>
 					<li><b>Gratis</b> incluso para uso comercial</li>
 				</ul>

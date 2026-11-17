@@ -115,6 +115,11 @@ Ver [Historias, series y fórmulas](./historias) con ejemplos.
 | `linea` | `hitos: [{anio, texto, en}]`, `color`: línea de tiempo que avanza en cada palabra |
 | `tierra` | `lat`, `lon`, `etiqueta`, `acercar` (vuela al lugar, p. ej. `3`): globo que gira y clava un pin |
 | `dividida` | `izq` / `der` (o `arriba` / `abajo` con `vertical`): `{etiqueta, color, fondo, capas}` |
+| `marcador` | `filas: [{texto, valor, color, pasos: [{en, valor}]}]`: marcador que va sumando (el chiste que se repite). `en` acepta `{escena: 3}`. Ponlo en `hud`, lejos de los subtítulos |
+| `hora` | `etiqueta` (`'NOCHE 1 · PARTE 2'`), `hora`, `de` (`'de la mañana'`), `lugar`: reloj con lugar para series. Cambia la hora con `cambios: [{en, hora}]` |
+
+Para los diálogos, `habla` en la escena pone el nombre de quien habla sobre el subtítulo: `habla: 'Mamá'` o
+`habla: {nombre: 'Tavo', nota: 'por radio', color: '#FFD23F'}`.
 
 ## Formas e íconos
 
@@ -157,4 +162,18 @@ Varias capas que se mueven juntas, o una capa repetida en una formación:
 
 ## Sonido
 
-Cada capa suena al entrar según cómo entra o qué es (un sello golpea, un dato hace tic, una notificación suena). `sonido` lo cambia y `false` lo apaga: `pop`, `whoosh`, `tick`, `glitch`, `ding`, `golpe`, `teclas`, `radio`, `obturador`, `notificacion`, `latido`, `alarma`, `reloj` y `caja`. Todos los genera Morfeo, sin derechos de terceros.
+Cada capa suena al entrar según cómo entra o qué es: un sello golpea, un dato hace tic, una moneda suena a moneda.
+Cada `enfasis` también suena, y el cierre tiene su sonido. `sonido` lo cambia y `false` lo apaga.
+
+Los efectos son grabaciones de [Kenney](https://kenney.nl) con licencia CC0 (gratis, también para uso comercial, sin
+dar crédito). Se bajan solos la primera vez, unos 570 KB. Si no hay internet, Morfeo usa sus sonidos sintetizados y el
+video sale igual.
+
+| Para | Sonidos |
+|---|---|
+| Interfaz | `clic`, `correcto`, `error`, `pregunta`, `abrir`, `cerrar`, `sube`, `baja`, `interruptor`, `raspon`, `campanita`, `cristal` |
+| Golpes | `golpe`, `puno`, `metal`, `vidrio`, `madera`, `suave`, `campana`, `plato`, `paso` |
+| Videojuegos | `laser`, `zap`, `poder`, `subida`, `arcade`, `bip`, `perder` |
+| Objetos | `moneda`, `monedas`, `fichas`, `carta`, `dado`, `pagina`, `rechinido`, `puerta` |
+| Jingles cortos | `victoria`, `nivel`, `revelacion`, `chiste` |
+| De siempre | `pop`, `tick`, `ding`, `glitch`, `whoosh`, `teclas`, `radio`, `obturador`, `notificacion`, `latido`, `alarma`, `reloj`, `caja` |

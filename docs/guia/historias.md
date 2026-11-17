@@ -29,6 +29,8 @@ npx morfeo nuevo-video mi-serie --look serie         # una base que ya renderiza
 | `roast` | una conducta explicada con un animal ("tu amigo el rata y el pavo real") | — | 45–60 s |
 | `serie` | capítulos donde el público vota A o B | `serie` | 70–115 s |
 | `biografia` | una vida año por año con un secreto como gancho | `biografia` | 90–180 s |
+| `dia` | "Un día en la vida de…" en segunda persona, con un `marcador` del chiste que se repite | — | 60–110 s |
+| `reto` | una meta colectiva enorme que avanza con cada seguidor ("cada persona que nos sigue entra en la fila") | — | 30–50 s |
 
 Pon `formula: 'serie'` en el guion y `npx morfeo revisar` te da consejos propios de esa fórmula (por ejemplo, que
 la serie termine con una decisión A/B o que "construiste" tenga suficientes "pero").
