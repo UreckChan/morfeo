@@ -62,7 +62,7 @@ objeto entero y por su cara buena, y un fondo con algo que se mueve.
 
 ## Tus propias reglas mandan
 
-Las skills son el punto de partida. Lo que escribas en `gustos.md` tiene prioridad, y puedes agregar skills tuyas en
+Las skills son el punto de partida. Lo que escribas en [`gustos.md`](./esencia) tiene prioridad, y puedes agregar skills tuyas en
 `.claude/skills/` con otro nombre.
 
 Son recomendaciones basadas en patrones de videos que funcionan: suben las probabilidades, no garantizan resultados.

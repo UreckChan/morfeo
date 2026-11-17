@@ -16,6 +16,25 @@ let reloj: ReturnType<typeof setInterval> | undefined;
 
 const comando = 'npx morfeo nuevo mi-canal';
 const copiado = ref(false);
+
+// descargas de npm y estrellas de GitHub, en vivo (si falla la red, se queda la última cifra conocida)
+const REPO = 'https://github.com/UreckChan/morfeo';
+const NPM = 'https://www.npmjs.com/package/morfeo';
+const descargas = ref(5487);
+const estrellas = ref(1);
+const miles = (n: number) => n.toLocaleString('es-MX');
+async function contadores() {
+	try {
+		const r = await fetch('https://api.npmjs.org/downloads/point/last-year/morfeo');
+		const d = await r.json();
+		if (typeof d.downloads === 'number') descargas.value = d.downloads;
+	} catch {}
+	try {
+		const r = await fetch('https://api.github.com/repos/UreckChan/morfeo');
+		const d = await r.json();
+		if (typeof d.stargazers_count === 'number') estrellas.value = d.stargazers_count;
+	} catch {}
+}
 async function copiar() {
 	try {
 		await navigator.clipboard.writeText(comando);
@@ -88,6 +107,7 @@ const tira = ref<HTMLElement | null>(null);
 let observador: IntersectionObserver | undefined;
 
 onMounted(() => {
+	contadores();
 	const quieto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 	if (!quieto) {
 		let i = 0;
@@ -143,6 +163,16 @@ onBeforeUnmount(() => {
 						<code>{{ comando }}</code>
 						<span class="copiar"><Icono :nombre="copiado ? 'listo' : 'copiar'" /></span>
 					</button>
+				</div>
+				<div class="cuentas">
+					<a :href="NPM" target="_blank" rel="noopener" class="cuenta">
+						<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+						<b>{{ miles(descargas) }}</b><span>descargas en npm</span>
+					</a>
+					<a :href="REPO" target="_blank" rel="noopener" class="cuenta estrella">
+						<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8L12 3.5Z" fill="currentColor" /></svg>
+						<b>{{ miles(estrellas) }}</b><span>{{ estrellas === 1 ? 'estrella' : 'estrellas' }} · Dale una en GitHub</span>
+					</a>
 				</div>
 				<ul class="datos">
 					<li><b>11</b> estilos</li>
@@ -498,6 +528,46 @@ section {
 	border-radius: 8px;
 	background: var(--m-hover);
 	font-size: 16px;
+	color: var(--m-tenue);
+}
+.cuentas {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 22px;
+	animation: subir 0.8s 0.28s both;
+}
+.cuenta {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 9px 16px 9px 12px;
+	border-radius: 99px;
+	border: 1px solid var(--m-linea-fuerte);
+	background: var(--m-panel);
+	color: var(--m-tinta) !important;
+	text-decoration: none !important;
+	font-size: 14px;
+	transition: border-color 0.2s, transform 0.2s;
+}
+.cuenta:hover {
+	border-color: var(--m-acento);
+	transform: translateY(-1px);
+}
+.cuenta svg {
+	width: 18px;
+	height: 18px;
+	color: var(--m-acento);
+}
+.cuenta.estrella svg {
+	color: #f5b301;
+}
+.cuenta b {
+	font-family: var(--m-display);
+	font-size: 17px;
+	font-variant-numeric: tabular-nums;
+}
+.cuenta span {
 	color: var(--m-tenue);
 }
 .datos {

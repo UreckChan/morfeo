@@ -73,7 +73,7 @@ npx morfeo hoja mi-video --zona
   objeto), fondos lisos y tramos de más de 3 s en los que nada se mueve, con la escena y el segundo exactos.
 
 Tu proyecto trae `gustos.md`: escribe ahí las reglas de estilo de tu canal ("siempre fondo con ambiente", "sin
-emojis") y la IA las sigue en todos los videos.
+emojis") y la IA las sigue en todos los videos. Cómo darle tu esencia: [Tu esencia: gustos y configuración](./esencia).
 
 ## Lo que te entrega
 

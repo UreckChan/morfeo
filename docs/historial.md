@@ -15,6 +15,15 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 0.10.0 {#v0-10-0}
+
+<p class="fecha-version">17 de noviembre de 2026</p>
+
+- Estilo `caricatura`: personajes 2D de cabeza grande (capa `caricatura`) y subtítulos en mayúsculas.
+- Primera persona: `ambiente: {nombre, pov: {sostiene: 'movil', manos: 'ambas'}}` pone tus manos en cámara.
+- Capa `fila`: personas de la mano que crece, para retos colectivos.
+- Página nueva: [Tu esencia: gustos y configuración](/guia/esencia).
+
 ## 0.9.0 {#v0-9-0}
 
 <p class="fecha-version">17 de noviembre de 2026</p>
