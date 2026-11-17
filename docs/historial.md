@@ -15,6 +15,15 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 1.1.0 {#v1-1-0}
+
+<p class="fecha-version">17 de noviembre de 2026</p>
+
+- **[Voz de borrador](/guia/estudio#aprobar-sin-gastar-tu-voz-de-pago)**: `previa` y `animatica` usan una voz gratis aunque el video lleve ElevenLabs u OpenAI, así no gastas créditos mientras apruebas. `--voz-final` y `render --borrador`.
+- `npx morfeo voces --elevenlabs`: las voces más usadas en español con su ID, por acento y género, con muestras opcionales.
+- `npx morfeo estilo --desde https://tusitio.com`: colores y letra de tu web en `estilo.json`.
+- `revisar` también avisa de franjas vacías en los bordes y de destellos blancos en los cortes.
+
 ## 1.0.0 {#v1-0-0}
 
 <p class="fecha-version">17 de noviembre de 2026</p>

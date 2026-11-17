@@ -48,6 +48,13 @@ npx morfeo previa mi-video --hasta 5
 
 Si no te convence, cambia la primera frase (el guion trae 3 ganchos de reserva en `hooks`, cada uno de un [arquetipo](./skills) distinto) y vuelve a probar.
 
+## Aprobar sin gastar tu voz de pago
+
+Si usas ElevenLabs u OpenAI, `previa` y `animatica` salen con una **voz de borrador gratis** (Kokoro, en tu
+computadora): apruebas el gancho, las tomas y el ritmo sin gastar créditos, y la voz de pago solo se pide en el render
+final. `--voz-final` las hace con tu voz de pago, y `npx morfeo render mi-video --borrador` saca el video completo con
+la voz gratis en "<título> (borrador).mp4". Cambia la voz de borrador con `vozBorrador` en `morfeo.config.mjs`.
+
 ## Aprobar tomas y ritmo sin esperar el render completo
 
 ```bash
@@ -70,7 +77,8 @@ npx morfeo hoja mi-video --zona
 - **Riesgo de "diapositiva"**: escenas con solo el subtítulo, puro texto o sin fondo. La salida es un
   [ambiente](./ambientes).
 - **Cuadros** (cuando ya existe el MP4): cuadros casi negros, tapados (la cámara pegada a una pantalla, una pared o un
-  objeto), fondos lisos y tramos de más de 3 s en los que nada se mueve, con la escena y el segundo exactos.
+  objeto), fondos lisos, tramos de más de 3 s en los que nada se mueve, franjas vacías en los bordes (la imagen no llena
+  el cuadro) y destellos blancos en los cortes entre escenas, con la escena y el segundo exactos.
 
 Tu proyecto trae `gustos.md`: escribe ahí las reglas de estilo de tu canal ("siempre fondo con ambiente", "sin
 emojis") y la IA las sigue en todos los videos. Cómo darle tu esencia: [Tu esencia: gustos y configuración](./esencia).

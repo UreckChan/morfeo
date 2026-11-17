@@ -68,8 +68,11 @@ El mismo Morfeo, tres `gustos.md` distintos:
 npx morfeo estilo
 ```
 
-Abre una página en tu computadora con vista previa: nombre y siglas del canal, colores, letra de títulos, voz, ritmo
-(pausado, natural o ágil) y la frase de cierre. Guarda `estilo.json` y desde ahí todos tus videos salen así. Un
+¿Ya tienes una página web? `npx morfeo estilo --desde https://tusitio.com` toma sus colores (el de tu marca primero) y
+elige la letra de títulos más parecida, y los guarda en `estilo.json`.
+
+`npx morfeo estilo` abre una página en tu computadora con vista previa: nombre y siglas del canal, colores, letra de
+títulos, voz, ritmo (pausado, natural o ágil) y la frase de cierre. Guarda `estilo.json` y desde ahí todos tus videos salen así. Un
 video puede cambiar cualquier cosa con su propio `estilo`, `voice` o `speed`.
 
 ## morfeo.config.mjs: tus voces, tu música y tus piezas

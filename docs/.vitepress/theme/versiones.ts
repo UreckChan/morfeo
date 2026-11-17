@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '1.1.0',
+		fecha: '2026-11-17',
+		titulo: 'Aprueba sin gastar',
+		resumen: 'Voz de borrador gratis en previa y animática, voces de ElevenLabs más usadas, estilo desde tu web y revisión de destellos y franjas.',
+		tipo: 'menor',
+	},
+	{
 		v: '1.0.0',
 		fecha: '2026-11-17',
 		titulo: 'Primera versión estable',

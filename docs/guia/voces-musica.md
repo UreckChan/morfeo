@@ -34,6 +34,16 @@ y en el video usa `voice: 'narrador'`.
 
 ## ElevenLabs, OpenAI o tu servicio
 
+Para elegir voz en ElevenLabs sin buscar a mano:
+
+```bash
+npx morfeo voces --elevenlabs                     # las 20 más usadas en español, con su ID
+npx morfeo voces --elevenlabs --acento mexicano --muestras 5   # y una muestra de las 5 primeras en salida/voces/
+```
+
+Las muestras gastan unos 60 caracteres cada una; la lista no gasta nada. Mientras apruebas un video, `previa` y
+`animatica` usan una voz de borrador gratis ([cómo](./estudio#aprobar-sin-gastar-tu-voz-de-pago)).
+
 ```js
 voice: {proveedor: 'elevenlabs', voz: 'TU_VOICE_ID', modelo: 'eleven_multilingual_v2'}   // ELEVENLABS_API_KEY
 voice: {proveedor: 'openai', voz: 'nova', instrucciones: 'tono entusiasta'}                // OPENAI_API_KEY
