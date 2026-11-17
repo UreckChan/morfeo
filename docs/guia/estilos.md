@@ -1,5 +1,5 @@
 ---
-description: 'Los 11 estilos visuales de Morfeo para Shorts, TikTok y Reels: datos curiosos, documental, ilustrado, 3D, maqueta y más.'
+description: 'Los 12 estilos visuales de Morfeo para Shorts, TikTok y Reels: datos curiosos, documental, ilustrado, 3D, maqueta y más.'
 ---
 
 # Estilos
@@ -22,6 +22,7 @@ Se elige por video (`estilo: 'documental'`) o para todo el proyecto en `morfeo.c
 | ![](/img/ilustrado.jpg) | **`ilustrado`** | Cuentos y animales: el bosque animado por defecto, o tu escenario ilustrado |
 | | **`maqueta`** | Explicadores largos (90–130 s) en un diorama 3D low-poly con corte de tierra: una palabra a la vez al centro, rótulos con contorno, etiquetas con flecha pegadas a los objetos. Ver [Maqueta 3D](./maqueta) |
 | | **`minimal`** | Oscuro y limpio, para lo que sea |
+| | **`caricatura`** | Historias de "¿qué harías tú?" y relatos en POV: personajes 2D de cabeza grande con contorno grueso (capa `caricatura`), subtítulos en mayúsculas con la palabra que suena en amarillo, cortes secos |
 
 </div>
 

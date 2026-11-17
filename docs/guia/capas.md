@@ -116,6 +116,8 @@ Ver [Historias, series y fórmulas](./historias) con ejemplos.
 | `tierra` | `lat`, `lon`, `etiqueta`, `acercar` (vuela al lugar, p. ej. `3`): globo que gira y clava un pin |
 | `dividida` | `izq` / `der` (o `arriba` / `abajo` con `vertical`): `{etiqueta, color, fondo, capas}` |
 | `marcador` | `filas: [{texto, valor, color, pasos: [{en, valor}]}]`: marcador que va sumando (el chiste que se repite). `en` acepta `{escena: 3}`. Ponlo en `hud`, lejos de los subtítulos |
+| `caricatura` | Personaje 2D de cabeza grande: `expresion` (`neutral`, `feliz`, `triste`, `sorpresa`, `enojado`, `miedo`, `aburrido`, `sospecha`), `pose` (`parado`, `senalar`, `brazosArriba`, `radio`, `manosAtras`), `gorra`, `sombrero`, `lentes`, `bigote`, `ropa`, `piel`, `estados: [{en, expresion, pose}]`, `habla: true` (mueve la boca con la voz). `(x, y)` = sus pies |
+| `fila` | Personas de la mano: `n`, y con `de` + `crece: 'palabra'` va sumando una cada `cada` segundos hasta `n`; `numeros: true` las numera. Para retos colectivos |
 | `hora` | `etiqueta` (`'NOCHE 1 · PARTE 2'`), `hora`, `de` (`'de la mañana'`), `lugar`: reloj con lugar para series. Cambia la hora con `cambios: [{en, hora}]` |
 
 Para los diálogos, `habla` en la escena pone el nombre de quien habla sobre el subtítulo: `habla: 'Mamá'` o

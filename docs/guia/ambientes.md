@@ -61,12 +61,24 @@ Con `persona: true` aparece una persona en su lugar del set (sentada frente a la
 maquinita) y **reacciona a lo que se dice**: pensativa en las preguntas, sorprendida con cifras o exclamaciones y
 feliz con "felicidades". `persona: {ropa: '#E5484D'}` cambia su ropa y `reaccionar: false` la deja quieta.
 
+## Primera persona (POV)
+
+Para que el espectador sea el protagonista, `pov` pone sus manos en cámara en todas las tomas:
+
+```js
+ambiente: {nombre: 'cuarto-gamer', pov: {sostiene: 'movil', manos: 'ambas'}}
+```
+
+`sostiene`: `'movil'`, `'control'` o `'nada'`; `manos`: `'derecha'` o `'ambas'`; `camina: true` las mece al paso.
+Combínalo con `hora` (reloj con lugar) y `habla` para series narradas en segunda persona. En un mundo propio, el
+componente `ManosPOV` de `morfeo/kit` hace lo mismo con tus `tomas`.
+
 ## Postproceso y sonido
 
 - Los ambientes llevan el postproceso `'cine'`: el fondo se desenfoca y lo que mira la toma queda nítido, las pantallas
   y luces brillan, y hay viñeta. `ambiente: {nombre: 'sala', post: 'suave'}` lo cambia (`'miniatura'` = efecto
   maqueta, `false` = sin postproceso).
-- Cada ambiente suena: lluvia y el juego de la tele en el cuarto, lluvia y murmullo en la sala, maquinitas en el arcade,
+- Cada ambiente suena, muy bajito: lluvia y el juego de la tele en el cuarto, lluvia y murmullo en la sala, maquinitas en el arcade,
   herramientas en el taller, teclas con aire acondicionado en la oficina, murmullo y la tele de demostración en la
   tienda, y lluvia, viento y algún coche lejano en la calle.
   Va bajito y se aparta cuando habla la voz. `ambiente: {nombre: 'arcade', sonido: false}` lo apaga.

@@ -15,14 +15,25 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
-## 0.10.0 {#v0-10-0}
+## 1.0.0 {#v1-0-0}
 
 <p class="fecha-version">17 de noviembre de 2026</p>
 
-- Estilo `caricatura`: personajes 2D de cabeza grande (capa `caricatura`) y subtítulos en mayúsculas.
-- Primera persona: `ambiente: {nombre, pov: {sostiene: 'movil', manos: 'ambas'}}` pone tus manos en cámara.
-- Capa `fila`: personas de la mano que crece, para retos colectivos.
-- Página nueva: [Tu esencia: gustos y configuración](/guia/esencia).
+La primera versión estable: todo lo de las 0.x junto, probado de punta a punta (un video por estilo, un lote
+completo y un proyecto nuevo instalado desde el paquete).
+
+- **Música sin estática.** Los platillos y aplausos de la música generada eran ruido blanco hasta 22 kHz y la lluvia de
+  fondo de los ambientes sonaba casi tan fuerte como la música. Ahora van filtrados y la lluvia va mucho más baja: el
+  siseo bajó de 2.7 % a 0.03 % de la potencia en `chillpop`.
+- **Estilo `caricatura`**: personajes 2D de cabeza grande (capa `caricatura`, con expresiones, poses y boca que habla)
+  y subtítulos en mayúsculas.
+- **Primera persona**: `ambiente: {nombre, pov: {sostiene: 'movil', manos: 'ambas'}}` pone tus manos en cámara.
+- **Capa `fila`**: personas de la mano que van entrando, para retos colectivos.
+- **[Tu esencia: gustos y configuración](/guia/esencia)**: cómo hacer que tus videos suenen y se vean como tú, y un
+  `gustos.md` más completo en los proyectos nuevos.
+- **Arreglo:** los proyectos guardados tras un enlace simbólico (como las carpetas temporales de macOS) no encontraban
+  los archivos de Morfeo al renderizar con componentes propios.
+- La portada muestra las descargas de npm y las estrellas de GitHub en vivo.
 
 ## 0.9.0 {#v0-9-0}
 

@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '1.0.0',
+		fecha: '2026-11-17',
+		titulo: 'Primera versión estable',
+		resumen: 'Música sin estática, estilo caricatura, primera persona, fila de personas y tu esencia en gustos.md; probada de punta a punta.',
+		tipo: 'mayor',
+	},
+	{
 		v: '0.9.0',
 		fecha: '2026-11-17',
 		titulo: 'Sonido y formatos nuevos',

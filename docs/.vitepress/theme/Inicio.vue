@@ -92,7 +92,7 @@ const CIFRAS = [
 	{n: '158', de: 'piezas 3D hechas en código', nota: 'De un grifo a un cable submarino'},
 	{n: '7.000', de: 'modelos libres al escribir su nombre', nota: 'Kenney, Quaternius y KayKit, sin derechos'},
 	{n: '7', de: 'ambientes con vida de fondo', nota: 'Cuarto gamer, sala, arcade, taller…'},
-	{n: '11', de: 'fórmulas de historia', nota: 'Mito, misterio, experimento, biografía…'},
+	{n: '13', de: 'fórmulas de historia', nota: 'Mito, misterio, un día en la vida, reto…'},
 ];
 const BUSCA = ['tubería', 'ambulancia', 'placa madre', 'dinosaurio', 'guitarra', 'turbina', 'cerebro', 'refinería', 'pulpo', 'control', 'cable submarino'];
 
@@ -175,7 +175,7 @@ onBeforeUnmount(() => {
 					</a>
 				</div>
 				<ul class="datos">
-					<li><b>11</b> estilos</li>
+					<li><b>12</b> estilos</li>
 					<li><b>158</b> piezas 3D</li>
 					<li><b>4</b> guías para tu IA</li>
 					<li><b>Gratis</b> incluso para uso comercial</li>
@@ -268,7 +268,7 @@ onBeforeUnmount(() => {
 			<div class="encabezado fila-enc">
 				<div>
 					<p class="ceja">Estilos</p>
-					<h2>Once looks listos, y los tuyos.</h2>
+					<h2>Doce looks listos, y los tuyos.</h2>
 				</div>
 				<a :href="b('/guia/estilos')" class="enlace">Ver todos los estilos <Icono nombre="flecha" /></a>
 			</div>
