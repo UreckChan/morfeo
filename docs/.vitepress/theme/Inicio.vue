@@ -56,15 +56,36 @@ const ESTILOS = [
 	{nombre: 'infografia', desc: 'Datos, barras y comparaciones', img: 'infografia'},
 ];
 
+const LUGARES = [
+	{clip: 'isla', nombre: 'isla', desc: 'Palmeras, mar y un barco, con cámara de dron'},
+	{clip: 'montana', nombre: 'montana', desc: 'Cima nevada, pinos y nieve que cae'},
+	{clip: 'laboratorio', nombre: 'laboratorio', desc: 'Matraces que burbujean; la persona con su nombre'},
+	{clip: 'cueva', nombre: 'cueva', desc: 'Antorchas, cristales y el objeto de la escena'},
+	{clip: 'plano', nombre: 'plano', desc: 'Plano técnico: el edificio se arma piso por piso'},
+	{clip: 'estudio', nombre: 'estudio', desc: 'Pedestal de exhibición para el objeto protagonista'},
+	{clip: 'inundacion', nombre: 'desastre', desc: 'Tormenta, inundación, incendio, sismo, volcán…'},
+	{clip: 'otono', nombre: 'estacion', desc: 'Primavera, otoño o invierno cambian todo el set'},
+];
+
+const SE_VE = [
+	{clip: 'juego', titulo: 'El juego, en pantalla', codigo: "{tipo: 'juego', juego: 'tetris'}"},
+	{clip: 'documento', titulo: 'La hoja, con su texto', codigo: "{tipo: 'documento', sello: 'Firmado'}"},
+	{clip: 'banderas', titulo: 'Banderas que ondean', codigo: "{tipo: 'bandera', pais: 'jp'}"},
+	{clip: 'fila', titulo: 'La fila y el letrero', codigo: "fila: 7, letrero: 'VIDEOJUEGOS'"},
+	{clip: 'fantasmas', titulo: 'Varios, no uno solo', codigo: "buscar: 'pac-man', cantidad: 4"},
+];
+
 const CAPACIDADES = [
 	{icono: 'voz', titulo: 'Voz', texto: 'Kokoro gratis en tu computadora, ElevenLabs, OpenAI o tu propia grabación.'},
 	{icono: 'subtitulos', titulo: 'Subtítulos al ritmo', texto: 'Karaoke, palabra por palabra o pop. Con Whisper caen justo cuando se dicen.'},
 	{icono: 'musica', titulo: 'Música y efectos', texto: 'Música generada sin derechos y más de 40 efectos grabados (CC0) que suenan solos en cada golpe.'},
 	{icono: 'capas', titulo: 'Motor de capas', texto: 'Texto, contadores, tarjetas, chats, gráficas y mapas que entran en la palabra exacta.'},
-	{icono: 'cubo', titulo: '2D y 3D sin dibujar', texto: 'Escribe "tubería" o "ambulancia": 145 piezas propias y unos 7.000 modelos libres, con créditos.'},
-	{icono: 'camara', titulo: 'Un mundo por video', texto: 'La cámara viaja por un mismo escenario en vez de cambiar de fondo cada escena.'},
+	{icono: 'cubo', titulo: '2D y 3D sin dibujar', texto: 'Escribe "tubería", "pac-man" o "bandera de japón": 177 piezas propias y unos 7.000 modelos libres, con créditos.'},
+	{icono: 'lugar', titulo: 'El lugar sigue a la historia', texto: 'Con ambiente auto, si la voz dice isla, cueva o laboratorio, la escena va ahí. 22 lugares con vida de fondo.'},
+	{icono: 'clima', titulo: 'Clima y desastres', texto: 'Lluvia, nieve, tormenta; primavera, otoño, invierno; inundación, incendio, sismo o volcán, con su sonido.'},
 	{icono: 'ia', titulo: 'Hecho para tu IA', texto: 'Claude Code o Codex investigan, escriben y renderizan con las guías que trae Morfeo.'},
-	{icono: 'revisar', titulo: 'Revisión de estructura', texto: 'Gancho, ritmo y cierre; que la voz diga el guion; cuadros vacíos, tapados o quietos.'},
+	{icono: 'revisar', titulo: 'Revisión de estructura', texto: 'Gancho, ritmo y cierre; que la voz diga el guion; cuadros vacíos, tapados, quietos o con destellos.'},
+	{icono: 'calendario', titulo: 'Publicar todos los días', texto: 'Calendario de temas que no se repiten, series encadenadas y un carrusel con hilo de cada video.'},
 ];
 
 const CHAT = [
@@ -89,12 +110,12 @@ const SKILLS = [
 ];
 
 const CIFRAS = [
-	{n: '158', de: 'piezas 3D hechas en código', nota: 'De un grifo a un cable submarino'},
+	{n: '177', de: 'piezas 3D hechas en código', nota: 'De un grifo a un comecocos'},
 	{n: '7.000', de: 'modelos libres al escribir su nombre', nota: 'Kenney, Quaternius y KayKit, sin derechos'},
-	{n: '7', de: 'ambientes con vida de fondo', nota: 'Cuarto gamer, sala, arcade, taller…'},
+	{n: '22', de: 'lugares con vida de fondo', nota: 'Isla, cueva, laboratorio, plano técnico…'},
 	{n: '13', de: 'fórmulas de historia', nota: 'Mito, misterio, un día en la vida, reto…'},
 ];
-const BUSCA = ['tubería', 'ambulancia', 'placa madre', 'dinosaurio', 'guitarra', 'turbina', 'cerebro', 'refinería', 'pulpo', 'control', 'cable submarino'];
+const BUSCA = ['tubería', 'ambulancia', 'pac-man', 'placa madre', 'bandera de japón', 'dinosaurio', 'guitarra', 'tetris', 'cerebro', 'refinería', 'control', 'cable submarino'];
 
 const PASOS = [
 	{cmd: 'npx morfeo nuevo mi-canal', nota: 'Proyecto con videos de ejemplo en 2D y 3D'},
@@ -280,6 +301,48 @@ onBeforeUnmount(() => {
 					</div>
 					<code class="nombre-estilo">{{ e.nombre }}</code>
 					<span class="desc-estilo">{{ e.desc }}</span>
+				</a>
+			</div>
+		</section>
+
+		<!-- LUGARES -->
+		<section class="bloque">
+			<div class="encabezado fila-enc">
+				<div>
+					<p class="ceja">Lugares</p>
+					<h2>El lugar sigue a la historia.</h2>
+					<p class="sub-enc">Si la voz dice isla, montaña o laboratorio, la escena va ahí. Con clima, estación o desastre cuando la historia lo pide.</p>
+				</div>
+				<a :href="b('/guia/ambientes')" class="enlace">Ver los 22 lugares <Icono nombre="flecha" /></a>
+			</div>
+			<div class="tira">
+				<a v-for="l in LUGARES" :key="l.clip" :href="b('/guia/ambientes')" class="tarjeta-estilo">
+					<div class="marco">
+						<video :src="b(`/clips/${l.clip}.mp4`)" :poster="b(`/clips/${l.clip}.jpg`)" muted loop playsinline preload="none" />
+					</div>
+					<code class="nombre-estilo">{{ l.nombre }}</code>
+					<span class="desc-estilo">{{ l.desc }}</span>
+				</a>
+			</div>
+		</section>
+
+		<!-- LO QUE SE DICE, SE VE -->
+		<section class="bloque">
+			<div class="encabezado fila-enc">
+				<div>
+					<p class="ceja">Coherencia</p>
+					<h2>Lo que se dice, se ve.</h2>
+					<p class="sub-enc">Nada de un 3D encimado sobre un cuarto que no tiene que ver: el objeto, el juego, la hoja o la bandera de la que habla la voz.</p>
+				</div>
+				<a :href="b('/guia/capas#juegos-documentos-y-banderas')" class="enlace">Juegos, documentos y banderas <Icono nombre="flecha" /></a>
+			</div>
+			<div class="se-ve">
+				<a v-for="s in SE_VE" :key="s.clip" :href="b('/guia/capas#juegos-documentos-y-banderas')" class="se-ve-tarjeta">
+					<div class="marco">
+						<video :src="b(`/clips/${s.clip}.mp4`)" :poster="b(`/clips/${s.clip}.jpg`)" muted loop playsinline preload="none" />
+					</div>
+					<h3>{{ s.titulo }}</h3>
+					<code>{{ s.codigo }}</code>
 				</a>
 			</div>
 		</section>
@@ -876,10 +939,63 @@ section {
 	margin-top: 4px;
 }
 
+/* lugares y coherencia */
+.sub-enc {
+	max-width: 620px;
+	margin: 10px 0 0;
+	color: var(--m-tenue);
+	font-size: 15.5px;
+	line-height: 1.55;
+}
+.se-ve {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 18px;
+}
+.se-ve-tarjeta {
+	text-decoration: none !important;
+	color: inherit !important;
+}
+.se-ve-tarjeta:hover .marco {
+	transform: translateY(-4px);
+	box-shadow: 0 24px 40px -24px rgba(0, 0, 0, 0.5);
+}
+.se-ve-tarjeta h3 {
+	font-family: var(--m-display);
+	font-size: 16px;
+	font-weight: 700;
+	margin: 14px 0 6px;
+	color: var(--m-tinta);
+}
+.se-ve-tarjeta code {
+	display: block;
+	font-family: var(--m-mono);
+	font-size: 12px !important;
+	line-height: 1.45;
+	color: var(--m-tenue) !important;
+	background: none !important;
+	padding: 0 !important;
+	word-break: break-word;
+}
+@media (max-width: 900px) {
+	.se-ve {
+		grid-auto-flow: column;
+		grid-template-columns: none;
+		grid-auto-columns: 200px;
+		overflow-x: auto;
+		padding: 4px 24px 24px;
+		margin: 0 -24px;
+		scroll-snap-type: x mandatory;
+	}
+	.se-ve-tarjeta {
+		scroll-snap-align: start;
+	}
+}
+
 /* capacidades */
 .rejilla {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(5, 1fr);
 	border-top: 1px solid var(--m-linea);
 	border-left: 1px solid var(--m-linea);
 }

@@ -31,6 +31,19 @@ Hay ambientes de noche y de día. En los de noche, con un estilo de texto oscuro
 | `tienda` | Tienda de videojuegos: pared de juegos, mostrador con caja y vitrina, tele de demostración, isla de ofertas y letrero de neón | `general`, `persona`, `estantes`, `mostrador`, `tele`, `isla` |
 | `calle` | Calle de noche con lluvia: fachadas con ventanas encendidas, un local con vitrina, toldo y letrero, farola, banca y un coche estacionado | `general`, `persona`, `vitrina`, `edificios`, `coche`, `farola` |
 
+**Algunos de los lugares:**
+
+<div class="galeria-docs">
+<figure><img src="/img/isla.jpg" alt="<code>isla</code>" loading="lazy"><figcaption><code>isla</code></figcaption></figure>
+<figure><img src="/img/montana.jpg" alt="<code>montana</code> con nieve" loading="lazy"><figcaption><code>montana</code> con nieve</figcaption></figure>
+<figure><img src="/img/laboratorio.jpg" alt="<code>laboratorio</code> con nombre" loading="lazy"><figcaption><code>laboratorio</code> con nombre</figcaption></figure>
+<figure><img src="/img/cueva.jpg" alt="<code>cueva</code> con su objeto" loading="lazy"><figcaption><code>cueva</code> con su objeto</figcaption></figure>
+<figure><img src="/img/plano.jpg" alt="<code>plano</code> técnico" loading="lazy"><figcaption><code>plano</code> técnico</figcaption></figure>
+<figure><img src="/img/estudio.jpg" alt="<code>estudio</code>" loading="lazy"><figcaption><code>estudio</code></figcaption></figure>
+<figure><img src="/img/inundacion.jpg" alt="<code>barrio</code> inundado" loading="lazy"><figcaption><code>barrio</code> inundado</figcaption></figure>
+<figure><img src="/img/otono.jpg" alt="<code>parque</code> en otoño" loading="lazy"><figcaption><code>parque</code> en otoño</figcaption></figure>
+</div>
+
 **De día:**
 
 | Ambiente | Qué trae | Planos |
@@ -102,6 +115,12 @@ queda donde iba. `ambiente: {nombre: 'auto', persona: 'ana'}` lleva la misma per
 
 ## Clima, estaciones y desastres
 
+<div class="galeria-docs">
+<figure><img src="/img/inundacion.jpg" alt="tormenta e inundación" loading="lazy"><figcaption>tormenta e inundación</figcaption></figure>
+<figure><img src="/img/montana.jpg" alt="nieve" loading="lazy"><figcaption>nieve</figcaption></figure>
+<figure><img src="/img/otono.jpg" alt="otoño" loading="lazy"><figcaption>otoño</figcaption></figure>
+</div>
+
 ```js
 ambiente: {nombre: 'barrio', estacion: 'otono', clima: 'lluvia'}
 {say: 'Y entonces se inundó todo.', ambiente: {nombre: 'barrio', clima: 'tormenta', desastre: 'inundacion', desastreEn: 'inundó'}}
@@ -136,6 +155,10 @@ exhibición. Sus planos son `frente`, `detalle`, `arriba`, `rodear` y `contra`.
 **`cueva`**: roca, estalactitas, cristales que brillan, antorchas y la entrada con luz de día al fondo.
 
 ## Filas y letreros
+
+<div class="galeria-docs">
+<figure><img src="/img/fila.jpg" alt="<code>fila: 7</code> y <code>letrero</code>" loading="lazy"><figcaption><code>fila: 7</code> y <code>letrero</code></figcaption></figure>
+</div>
 
 - `fila: 6` forma una fila de personas distintas (en la tienda frente al mostrador, en el barrio hacia la tiendita…)
   y agrega el plano `fila` para verla de lado.

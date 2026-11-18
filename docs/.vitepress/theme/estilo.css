@@ -315,3 +315,31 @@ body {
 	font-size: 12.5px;
 	color: var(--vp-c-text-3);
 }
+
+/* galería de imágenes verticales dentro de las guías */
+.vp-doc .galeria-docs {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	gap: 14px;
+	margin: 20px 0 28px;
+}
+.vp-doc .galeria-docs figure {
+	margin: 0;
+}
+.vp-doc .galeria-docs img {
+	width: 100%;
+	aspect-ratio: 9 / 16;
+	object-fit: cover;
+	border-radius: 14px;
+	border: 1px solid var(--vp-c-divider);
+	display: block;
+}
+.vp-doc .galeria-docs figcaption {
+	font-size: 13px;
+	line-height: 1.4;
+	color: var(--vp-c-text-2);
+	margin-top: 6px;
+}
+.vp-doc .galeria-docs figcaption code {
+	font-size: 12px;
+}

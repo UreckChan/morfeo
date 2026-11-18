@@ -158,6 +158,10 @@ Varias capas que se mueven juntas, o una capa repetida en una formación:
 
 ## Varias copias
 
+<div class="galeria-docs">
+<figure><img src="/img/fantasmas.jpg" alt="<code>cantidad: 4</code>: fantasmas de colores" loading="lazy"><figcaption><code>cantidad: 4</code>: fantasmas de colores</figcaption></figure>
+</div>
+
 `cantidad: n` en una capa `recurso`, `modelo`, `emoji`, `icono` o `imagen` la repite acomodada, cada copia entra un
 poquito después de la anterior y sale distinta cuando la pieza lo permite (fantasmas de colores, tetrominós de otra
 forma, banderas de otros países):
@@ -173,6 +177,12 @@ forma, banderas de otros países):
 ## Juegos, documentos y banderas
 
 Que se vea lo que se cuenta: si el guion habla de un juego, el juego; si habla de un tratado o un recibo, la hoja.
+
+<div class="galeria-docs">
+<figure><img src="/img/juego.jpg" alt="<code>juego</code>: tetris en la maquinita" loading="lazy"><figcaption><code>juego</code>: tetris en la maquinita</figcaption></figure>
+<figure><img src="/img/documento.jpg" alt="<code>documento</code> con firma y sello" loading="lazy"><figcaption><code>documento</code> con firma y sello</figcaption></figure>
+<figure><img src="/img/banderas.jpg" alt="<code>bandera</code>: mx y jp" loading="lazy"><figcaption><code>bandera</code>: mx y jp</figcaption></figure>
+</div>
 
 | Tipo | Campos |
 |---|---|

@@ -25,6 +25,18 @@ defineProps<{nombre: string}>();
 			<path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Z" />
 			<path d="M4 7.5 12 12l8-4.5M12 12v9" />
 		</template>
+		<template v-else-if="nombre === 'clima'">
+			<path d="M7 16a4 4 0 1 1 .6-7.95A5 5 0 0 1 17 9a3.5 3.5 0 0 1 0 7H7Z" />
+			<path d="M9 19l-1 2M13 19l-1 2M17 19l-1 2" />
+		</template>
+		<template v-else-if="nombre === 'calendario'">
+			<rect x="3.5" y="5" width="17" height="15" rx="2.5" />
+			<path d="M3.5 10h17M8 3v4M16 3v4M8 14h2M12 14h2M16 14h0.5M8 17h2" />
+		</template>
+		<template v-else-if="nombre === 'lugar'">
+			<path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.8-6.5 11-6.5 11Z" />
+			<circle cx="12" cy="10" r="2.4" />
+		</template>
 		<template v-else-if="nombre === 'ia'">
 			<path d="M12 3v3M12 18v3M3 12h3M18 12h3" />
 			<path d="M8 8c2 1.2 2.8 2 4 4 1.2-2 2-2.8 4-4-2-1.2-2.8-2-4-4-1.2 2-2 2.8-4 4Z" transform="translate(0 4)" />
