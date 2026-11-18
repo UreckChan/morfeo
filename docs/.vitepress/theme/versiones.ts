@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '1.2.1',
+		fecha: '2026-11-17',
+		titulo: 'Plano técnico',
+		resumen: 'Ambiente plano: un edificio de alambre que se arma piso por piso con anotaciones de CAD; placa de fecha dorada.',
+		tipo: 'menor',
+	},
+	{
 		v: '1.2.0',
 		fecha: '2026-11-17',
 		titulo: 'El lugar sigue a la historia',
