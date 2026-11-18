@@ -10,6 +10,27 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '1.6.0',
+		fecha: '2026-11-18',
+		titulo: 'De día, de noche y en la fogata',
+		resumen: 'Campamento y recámara, correr por la calle, hora y clima en todos los lugares.',
+		tipo: 'menor',
+	},
+	{
+		v: '1.5.0',
+		fecha: '2026-11-18',
+		titulo: 'Historias en primera persona',
+		resumen: 'Combi, gente sentada, tu teléfono con pantallas, monstruos, 22 personajes, suspenso y voces con emoción.',
+		tipo: 'menor',
+	},
+	{
+		v: '1.4.0',
+		fecha: '2026-11-18',
+		titulo: 'Reparto y series que se votan',
+		resumen: 'Una voz por personaje y series interactivas que esperan el voto del público.',
+		tipo: 'menor',
+	},
+	{
 		v: '1.3.0',
 		fecha: '2026-11-18',
 		titulo: 'Publicar todos los días',

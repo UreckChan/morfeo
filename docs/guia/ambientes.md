@@ -165,6 +165,22 @@ exhibición. Sus planos son `frente`, `detalle`, `arriba`, `rodear` y `contra`.
 - `letrero: 'VIDEOJUEGOS'` pone el nombre de la tienda o marca en su letrero (`{texto, fondo, color}` para cambiar
   colores).
 
+**Para historias** (ver [Historias en primera persona](./primera-persona)): `combi` (pesero de noche con gente
+sentada), `campamento` (fogata con amigos), `recamara` (solo en tu cama) y la `sala` con sus tres lugares en el sillón.
+
+## De día o de noche, con lluvia o nieve
+
+Todos los lugares aceptan `hora` y `clima`:
+
+```js
+ambiente: {nombre: 'calle', hora: 'dia'}                       // la calle a mediodía
+{say: '…', ambiente: {nombre: 'salon', hora: 'noche', clima: 'tormenta'}}
+```
+
+- Un lugar de noche a mediodía se ilumina de día, y uno de día a las 22 h se oscurece.
+- `hora`: un número de 0 a 24 o `'amanecer'`, `'mañana'`, `'dia'`, `'tarde'`, `'atardecer'`, `'noche'`.
+- Adentro no cae la lluvia ni la nieve, pero los relámpagos de una tormenta alumbran el cuarto.
+
 ## Cambiar de lugar dentro de un video
 
 Una escena con su propio `ambiente` cambia de lugar ahí, y las siguientes se quedan en él hasta que otra diga otro.

@@ -15,6 +15,32 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 1.6.0 {#v1-6-0}
+
+<p class="fecha-version">18 de noviembre de 2026</p>
+
+- **Lugares para historias**: `campamento` (fogata con amigos que miran al fuego) y `recamara` (solo en tu cama: puerta, clóset, ventana). Plano `correr` en la calle y el barrio (la cámara rebota al paso).
+- **Día y noche en todos los lugares**: `hora` ilumina de día un lugar de noche y oscurece uno de día; los relámpagos alumbran los interiores.
+- `plano: 'quien'` también en la sala y el campamento, y con la gente del lugar donde pasa la escena. El teléfono baja en la elección aunque la historia cambie de lugar.
+- El aviso de voz faltante dice qué escena no tiene `quien`. «Son las tres…» cuenta como gancho.
+
+## 1.5.0 {#v1-5-0}
+
+<p class="fecha-version">18 de noviembre de 2026</p>
+
+- **[Historias en primera persona](/guia/primera-persona)**: la `combi` por dentro, gente sentada con nombre y cambios por escena, tu teléfono con pantallas (chat, llamada, galería, foto, ubicación y cámara de seguridad) y `acercar`.
+- 22 personajes, 19 atuendos, caras expresivas y gestos (`shh`, `saludar`, `señalar`, `cubrirse`).
+- Monstruos y animales en el set (`figuras`), luces de suspenso por escena, música `suspenso` y `terror` y `sonidos` por escena.
+- Voces: ElevenLabs v3 con emoción por línea, búsqueda de voces por tono, edad y uso, y `morfeo costo` con `--tope`.
+
+## 1.4.0 {#v1-4-0}
+
+<p class="fecha-version">18 de noviembre de 2026</p>
+
+- **Reparto**: una voz por personaje (final y de borrador), con nombre y color; la escena dice `quien` habla.
+- **Series interactivas**: `morfeo serie iniciar / estado / voto / terminar`; la parte con elección espera el voto antes de la siguiente.
+- `morfeo perfil` hace la foto de perfil de la cuenta con IA.
+
 ## 1.3.0 {#v1-3-0}
 
 <p class="fecha-version">18 de noviembre de 2026</p>

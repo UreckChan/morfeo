@@ -60,6 +60,8 @@ const LUGARES = [
 	{clip: 'isla', nombre: 'isla', desc: 'Palmeras, mar y un barco, con cámara de dron'},
 	{clip: 'montana', nombre: 'montana', desc: 'Cima nevada, pinos y nieve que cae'},
 	{clip: 'laboratorio', nombre: 'laboratorio', desc: 'Matraces que burbujean; la persona con su nombre'},
+	{clip: 'combi', nombre: 'combi', desc: 'Historias en primera persona: tu teléfono y la gente'},
+	{clip: 'campamento', nombre: 'campamento', desc: 'La fogata con amigos que miran al fuego'},
 	{clip: 'cueva', nombre: 'cueva', desc: 'Antorchas, cristales y el objeto de la escena'},
 	{clip: 'plano', nombre: 'plano', desc: 'Plano técnico: el edificio se arma piso por piso'},
 	{clip: 'estudio', nombre: 'estudio', desc: 'Pedestal de exhibición para el objeto protagonista'},
@@ -81,7 +83,7 @@ const CAPACIDADES = [
 	{icono: 'musica', titulo: 'Música y efectos', texto: 'Música generada sin derechos y más de 40 efectos grabados (CC0) que suenan solos en cada golpe.'},
 	{icono: 'capas', titulo: 'Motor de capas', texto: 'Texto, contadores, tarjetas, chats, gráficas y mapas que entran en la palabra exacta.'},
 	{icono: 'cubo', titulo: '2D y 3D sin dibujar', texto: 'Escribe "tubería", "pac-man" o "bandera de japón": 177 piezas propias y unos 7.000 modelos libres, con créditos.'},
-	{icono: 'lugar', titulo: 'El lugar sigue a la historia', texto: 'Con ambiente auto, si la voz dice isla, cueva o laboratorio, la escena va ahí. 22 lugares con vida de fondo.'},
+	{icono: 'lugar', titulo: 'El lugar sigue a la historia', texto: 'Con ambiente auto, si la voz dice isla, cueva o laboratorio, la escena va ahí. 25 lugares con vida de fondo, de día o de noche.'},
 	{icono: 'clima', titulo: 'Clima y desastres', texto: 'Lluvia, nieve, tormenta; primavera, otoño, invierno; inundación, incendio, sismo o volcán, con su sonido.'},
 	{icono: 'ia', titulo: 'Hecho para tu IA', texto: 'Claude Code o Codex investigan, escriben y renderizan con las guías que trae Morfeo.'},
 	{icono: 'revisar', titulo: 'Revisión de estructura', texto: 'Gancho, ritmo y cierre; que la voz diga el guion; cuadros vacíos, tapados, quietos o con destellos.'},
@@ -112,7 +114,7 @@ const SKILLS = [
 const CIFRAS = [
 	{n: '177', de: 'piezas 3D hechas en código', nota: 'De un grifo a un comecocos'},
 	{n: '7.000', de: 'modelos libres al escribir su nombre', nota: 'Kenney, Quaternius y KayKit, sin derechos'},
-	{n: '22', de: 'lugares con vida de fondo', nota: 'Isla, cueva, laboratorio, plano técnico…'},
+	{n: '25', de: 'lugares con vida de fondo', nota: 'Isla, cueva, combi, fogata, plano técnico…'},
 	{n: '13', de: 'fórmulas de historia', nota: 'Mito, misterio, un día en la vida, reto…'},
 ];
 const BUSCA = ['tubería', 'ambulancia', 'pac-man', 'placa madre', 'bandera de japón', 'dinosaurio', 'guitarra', 'tetris', 'cerebro', 'refinería', 'control', 'cable submarino'];
@@ -313,7 +315,7 @@ onBeforeUnmount(() => {
 					<h2>El lugar sigue a la historia.</h2>
 					<p class="sub-enc">Si la voz dice isla, montaña o laboratorio, la escena va ahí. Con clima, estación o desastre cuando la historia lo pide.</p>
 				</div>
-				<a :href="b('/guia/ambientes')" class="enlace">Ver los 22 lugares <Icono nombre="flecha" /></a>
+				<a :href="b('/guia/ambientes')" class="enlace">Ver los 25 lugares <Icono nombre="flecha" /></a>
 			</div>
 			<div class="tira">
 				<a v-for="l in LUGARES" :key="l.clip" :href="b('/guia/ambientes')" class="tarjeta-estilo">

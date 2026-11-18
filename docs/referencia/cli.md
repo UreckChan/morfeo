@@ -13,12 +13,15 @@ npx morfeo <comando> [opciones]
 | `nuevo <carpeta>` | Crea un proyecto con videos de ejemplo |
 | `nuevo-video <id>` | Crea un video desde una base que ya renderiza. `--look 2d`, `3d`, `serie`, `mito`, `escalada`, `biografia` o `construiste` (o `--formula`) |
 | `formulas` | Lista las fórmulas de historia con su gancho de ejemplo |
+| `serie iniciar "Nombre"` / `estado` / `voto <n>` / `terminar` | Serie interactiva: cada parte termina en elección y espera el voto (`--nota "61% en comentarios"`); `terminar` la archiva en `series/` |
+| `costo [ids]` | Cuántos caracteres de voz de pago gastaría el render (lo que está en caché no cuenta). En `render`, `--tope 2000` lo detiene si se pasa |
+| `perfil "descripción"` | Foto de perfil de la cuenta con IA (`perfil.png`; necesita `OPENAI_API_KEY` o tu proveedor de imágenes) |
 | `calendario` | `calendario.md` con un tema por día: fórmula y lugar rotando, sin repetir lo hecho. `--dias 30`, `--desde 2026-12-01`, `--ia` (Claude propone los temas) |
 | `serie "tema"` | Varios videos encadenados (`--partes 4`), cada uno abre recordando el anterior y cierra pidiendo el siguiente. `--ia`, `--investigar`, `--voz` |
 | `carrusel <id>` | Del video hecho: carrusel de imágenes de los momentos clave (`--formato 9:16`, `--max 8`) e hilo para X/Threads |
 | `skills` | Instala o actualiza las [guías para tu IA](../guia/skills) en `.claude/skills/` (`--lista` solo las muestra) |
 | `estilo` | Abre la página para crear tu estilo (guarda `estilo.json`). `--desde https://tusitio.com` toma los colores y la letra de tu web |
-| `voces` | Las voces gratis; `--elevenlabs` lista las más usadas de su biblioteca en español con su ID (`--acento mexicano`, `--genero mujer`, `--muestras 5` genera una muestra de cada una) |
+| `voces` | Las voces gratis; `--elevenlabs` lista las más usadas de su biblioteca en español con su ID (`--acento mexicano`, `--genero mujer`, `--muestras 5` genera una muestra de cada una; `--tono nervioso`, `--edad joven`, `--uso personajes`, `--buscar "texto"`, `--detalle`) |
 | `previa <id>` | Solo el gancho (~8 s) para aprobarlo, con la voz gratis de borrador. `--hasta 5`, `--voz-final` |
 | `animatica <id>` | Todo el video a 1/3 de tamaño (más rápido) y su hoja, con la voz gratis de borrador, para aprobar tomas y ritmo antes del render final. `--voz-final` |
 | `instalar` | Prepara la computadora: Python, voces, navegador y Whisper (opcional). `--si`, `--whisper`, `--sin-whisper` |
