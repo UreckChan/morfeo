@@ -56,6 +56,43 @@ Hay ambientes de noche y de día. En los de noche, con un estilo de texto oscuro
 Sus planos se mueven: `general`, `dron` (cruza de lado a lado), `acercar` (se acerca a lo importante), `persona`,
 `espalda`, `cielo` y `rodear`.
 
+## Plano técnico (`plano`)
+
+El look de plano de ingeniería o programa de CAD: fondo azul marino con cuadrícula, un rascacielos de alambre azul
+claro con caras translúcidas que **se arma piso por piso**, una grúa torre que sube con él, anotaciones en cajas
+naranjas con flecha y una barra de CAD abajo ("Comando: _LINE_", que va cambiando a EXTRUDE, ARRAY, COPY…).
+
+```js
+export default {
+	estilo: 'explicativo',
+	ambiente: {
+		nombre: 'plano',
+		etiquetas: [
+			{ancla: 'cimientos', texto: 'CIMIENTOS 40 M', lado: 'der', escena: 1},
+			{ancla: 'cima', texto: '381 M', lado: 'der', escena: 4, en: 'metros'},
+		],
+	},
+	scenes: [
+		{say: 'Así se arma un rascacielos, empezando por los cimientos.', plano: 'base'},
+		{say: 'Cada piso sube en acero y concreto.', plano: 'contrapicado'},
+		{say: 'Una grúa torre crece junto con el edificio.', plano: 'grua'},
+		{say: 'Hasta llegar a trescientos ochenta y un metros.', show: 'Hasta llegar a 381 metros.', plano: 'cima'},
+	],
+};
+```
+
+| Opción | Qué hace |
+|---|---|
+| `armado: {pisos, cada, en}` | Cuántos pisos (20 por defecto, hasta 60), segundos entre piso y piso y cuándo empieza (palabra o segundos). Sin `cada`, el edificio termina hacia el 80 % del video, antes del cierre |
+| `comando: 'LINE'` | Deja fijo el comando de la barra de CAD; sin él, va cambiando |
+| `etiquetas` | En este ambiente salen como cajas naranjas de CAD. Anclas: `cimientos`, `base`, `podio`, `piso`, `cima`, `aguja`, `grua` |
+
+Planos: `general`, `base`, `contrapicado`, `cima`, `grua`, `rodear`, `cenital`.
+
+No confundir con `modo: 'plano'` (un filtro azul que se pone sobre cualquier escena): el ambiente `plano` es un set
+propio, con la pieza que se arma. En tus componentes, `Alambre` (caja o cilindro de alambre que crece con `k` de 0 a 1),
+`Cuadricula` y `BarraCAD` vienen en `morfeo/kit`, y `Lienzo3D post="plano"` hace que las líneas brillen.
+
 ## Que el lugar siga a la historia: `ambiente: 'auto'`
 
 Con `ambiente: 'auto'` cada escena va al lugar del que habla: "llegaron a una **isla**" → isla, "subieron la

@@ -96,6 +96,7 @@ Señalan y explican lo que hay en pantalla. Son capas como cualquier otra (`en`,
 | `sello` | Sello de goma inclinado con tinta gastada que cae de golpe (y suena): "¡SIN LUZ!" | `rotuloColor` (rojo por defecto), `rotuloInclinar`, `rotuloY` |
 | `paso` | Titular arriba a la izquierda con la clave en color e insignia numerada | `rotuloPaso: 3`, `rotuloColor` |
 | `pixel` | Letra de videojuego en una caja de color; las letras salen una por una | `rotuloColor: 'verde'` (bien) o `'rojo'` (mal) |
+| `placa` | Placa de fecha de documental: marco dorado, fondo oscuro y letras de oro con un brillo que las cruza al entrar. `' / '` parte renglones: `'13 DE AGOSTO / DE 1971'` | `rotuloPie` (texto chico abajo), `rotuloColor` (el dorado), `rotuloY` |
 
 `rotuloColor` acepta `rojo`, `verde`, `azul`, `amarillo`, `naranja`, `gris`, `negro`, `morado` o cualquier color CSS.
 
@@ -103,6 +104,7 @@ Señalan y explican lo que hay en pantalla. Son capas como cualquier otra (`en`,
 {say: 'Y el portón se fue rodando por la calle.', rotulo: '¡SE FUE RODANDO!', rotuloEstilo: 'sello', rotuloEn: 'rodando'}
 {say: 'Primero, un sensor bajo el pavimento.', rotulo: 'UN *SENSOR* BAJO TIERRA', rotuloEstilo: 'paso', rotuloPaso: 1}
 {say: 'Diez años después, duerme mejor.', rotulo: 'RESULTADO', rotuloEstilo: 'pixel', rotuloColor: 'verde'}
+{say: 'Todo empezó en mil ochocientos noventa y ocho.', show: 'Todo empezó en 1898.', rotulo: '1898', rotuloEstilo: 'placa', rotuloPie: 'LA HABANA'}
 ```
 
 Con subtítulo `palabra` o `pop`, `tema: {subtitulos: {coloresClave: ['#FF3B30', '#FF9F0A', '#FFD60A', '#34C759']}}`

@@ -29,6 +29,8 @@ npm install morfeo@latest
 - **[Figuras de videojuegos](/guia/recursos)**: comecocos, fantasmas, tetrominós, invasores, hongo, bloque, tubo… y `buscar: 'bandera de japón'`.
 - **[Varias copias](/guia/capas#varias-copias)**: `cantidad: 4` repite un objeto acomodado (fila, cuadrícula, pila, círculo o regados).
 - **Persona con nombre**: `persona: {nombre: 'Satoru Iwata', sub: 'presidente de Nintendo'}`.
+- **[Plano técnico](/guia/ambientes#plano-tecnico-plano)**: ambiente `plano` con fondo azul y cuadrícula, un rascacielos de alambre que se arma piso por piso (`armado`), grúa torre, anotaciones naranjas de CAD y barra "Comando: _LINE_". En el kit: `Alambre`, `Cuadricula`, `BarraCAD` y `post: 'plano'`.
+- **[Placa de fecha dorada](/guia/mundo#estilos-de-rotulo)**: `rotuloEstilo: 'placa'` (con `rotuloPie`) y `fecha` con `estilo: 'placa'`, para fechas de documental: "1898", "13 DE AGOSTO / DE 1971".
 - **[Varios personajes](/guia/ambientes#persona)**: 10 personas con distinta piel, peinado, ropa, lentes o barba; cada video toma una distinta, o eliges con `persona: 'ana'`. `Persona3D` suma `peinado`, `lentes`, `barba` y `bata`.
 
 ## 1.1.0 {#v1-1-0}

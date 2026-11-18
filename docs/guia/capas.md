@@ -110,7 +110,7 @@ Ver [Historias, series y fórmulas](./historias) con ejemplos.
 | `capitulo` | `serie`, `capitulo`, `pregunta`, `opciones: [{texto, sub}]`, `siguiente`, `horario`: fin de capítulo |
 | `vigilancia` | `hora`, `fecha`, `etiqueta`, `zoom`, `mira`: vista de cámara encima de todo |
 | `cintillo` | `nombre`, `cargo`, `color`: nombre de una persona, abajo a la izquierda |
-| `fecha` | `anio`, `de`, `pie`, `color`: tarjeta de año que cuenta |
+| `fecha` | `anio`, `de`, `pie`, `color`: tarjeta de año que cuenta. `estilo: 'placa'` la vuelve placa dorada de documental (`texto: '13 DE AGOSTO / DE 1971'`, renglones con ` / `) |
 | `calendario` | `titulo`, `de`, `a`: hoja que voltea |
 | `linea` | `hitos: [{anio, texto, en}]`, `color`: línea de tiempo que avanza en cada palabra |
 | `tierra` | `lat`, `lon`, `etiqueta`, `acercar` (vuela al lugar, p. ej. `3`): globo que gira y clava un pin |

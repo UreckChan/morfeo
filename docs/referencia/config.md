@@ -110,7 +110,7 @@ Además de `say`, `show`, `type` y `capas` (ver [Escenas](../guia/escenas)):
 |---|---|
 | `claves` | Palabras que se resaltan en el subtítulo |
 | `rotulo`, `rotuloEn` | Texto grande del momento y la palabra en que entra |
-| `rotuloEstilo` | `normal`, `contorno`, `pastilla`, `sello`, `paso` (con `rotuloPaso`) o `pixel`; `rotuloColor`, `rotuloInclinar`, `rotuloY` |
+| `rotuloEstilo` | `normal`, `contorno`, `pastilla`, `sello`, `paso` (con `rotuloPaso`), `pixel` o `placa` (con `rotuloPie`); `rotuloColor`, `rotuloInclinar`, `rotuloY` |
 | `modo`, `modoEn`, `modoHasta` | `rayosx`, `plano` u `holograma` en una palabra. Ver [Rayos X](../guia/mundo#rayos-x-plano-y-holograma) |
 | `toma` | Cámara del mundo 2D. Ver [Mundo](../guia/mundo) |
 | `lugar` | En qué lugar de `lugares` pasa |

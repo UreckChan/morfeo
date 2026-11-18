@@ -60,7 +60,7 @@ la serie termine con una decisión A/B o que "construiste" tenga suficientes "pe
 |---|---|
 | `tierra` | Globo que gira hasta `lat`/`lon` y clava un pin con su `etiqueta` ("TAIWÁN · 1963") |
 | `cintillo` | Nombre y cargo de una persona, abajo a la izquierda |
-| `fecha` | Tarjeta de año que cuenta desde `de` hasta `anio`, con `pie` ("SE CASARON") |
+| `fecha` | Tarjeta de año que cuenta desde `de` hasta `anio`, con `pie` ("SE CASARON"). Con `estilo: 'placa'`, placa dorada de documental: `texto: '13 DE AGOSTO / DE 1971'` |
 | `calendario` | Hoja que voltea de `de` a `a` con su `titulo` ("MESES", "AÑOS") |
 | `dividida` | Pantalla A \| B (o arriba/abajo con `vertical`): cada mitad con su `etiqueta` y sus `capas` |
 
