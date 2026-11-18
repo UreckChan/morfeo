@@ -70,6 +70,8 @@ Y 73 más de uso general:
 | Naturaleza y espacio | `galaxia`, `cometa`, `lluvia`, `fosil`, `wifi`, `huella`, `telarana`, `arbol_navidad`, `lago`, `burbuja`, `confeti` |
 | Cuerpo, deporte y tecnología | `musculo`, `doctor`, `bicicleta_estatica`, `codigo` (ventana de editor), `registro` (sanitario, en corte), `cable_submarino` |
 | Videojuegos y casa | `control` (mando, joystick), `consola`, `cartucho`, `audifonos`, `cronometro`, `termometro`, `pincel`, `cartera`, `caja_fuerte`, `pastilla`, `fuegos_artificiales`, `etiqueta` |
+| Figuras de videojuegos | `comecocos` (pac-man), `fantasma_arcade` (de colores; `opciones: {asustado: true}`), `punto_poder`, `cereza`, `tetromino` (`opciones: {tipo: 'T'}`: I, O, T, L, J, S, Z), `invasor` (space invaders), `nave_arcade`, `hongo`, `bloque_pregunta`, `tubo_verde`, `moneda_juego`, `corazon_pixel` (vidas), `espada_pixel`, `pocion`, `maquinita` (arcade), `portatil` (game boy), `joystick_arcade`, `trofeo_pixel` (logros). Formas genéricas al estilo arcade |
+| Banderas | `bandera`: ondea en su asta. `buscar: 'bandera de japón'` elige el país solo; `opciones: {pais: 'jp'}` lo fija. 27 países (ver la capa [`bandera`](./capas#juegos-documentos-y-banderas)) |
 | Cuerpo humano | `cuerpo`: rayos X con esqueleto, corazón que late y pulmones que respiran. `opciones: {resaltar: 'corazon' \| 'pulmones' \| 'cerebro' \| 'huesos' \| 'estomago' \| 'musculos', correr: true, latidos: 150}` |
 
 Varias se mueven solas: giran el engrane, la turbina, el eje del motor y los ventiladores; gotea el grifo; parpadean

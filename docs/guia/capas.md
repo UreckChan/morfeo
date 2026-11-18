@@ -156,6 +156,34 @@ Varias capas que se mueven juntas, o una capa repetida en una formación:
 | `recurso` | `buscar` (palabra en español), `estilo` (`3d`, `realista`, `2d`), `variante`, `indice`: objeto de la biblioteca. Ver [Objetos 2D y 3D](./recursos) |
 | `escenario` | `nombre` (`bosque`, `cuarto`, `departamento`, `tunel`, `pasillo`), `parte: 'frente'` para el primer plano |
 
+## Varias copias
+
+`cantidad: n` en una capa `recurso`, `modelo`, `emoji`, `icono` o `imagen` la repite acomodada, cada copia entra un
+poquito después de la anterior y sale distinta cuando la pieza lo permite (fantasmas de colores, tetrominós de otra
+forma, banderas de otros países):
+
+```js
+{tipo: 'recurso', buscar: 'fantasma de pacman', cantidad: 4, ancho: 300}
+{tipo: 'recurso', buscar: 'tetris', cantidad: 6, acomodo: 'regados'}
+```
+
+`acomodo`: `'fila'`, `'cuadricula'`, `'pila'`, `'circulo'` o `'regados'` (por defecto: fila hasta 5, cuadrícula hasta
+9 y regados después). En 3D hasta 6 copias (cada una es un contexto WebGL); en 2D hasta 40.
+
+## Juegos, documentos y banderas
+
+Que se vea lo que se cuenta: si el guion habla de un juego, el juego; si habla de un tratado o un recibo, la hoja.
+
+| Tipo | Campos |
+|---|---|
+| `juego` | `juego`: `tetris`, `comecocos`, `invasores`, `pong`, `snake`, `plataformas`, `carreras`, `rompebloques`. `marco`: `maquinita` (con su letrero), `tele`, `portatil` o `ninguno`. El juego se mueve solo: piezas que caen, fantasmas que persiguen, marcador que sube |
+| `documento` | `titulo`, `sub`, `fecha`, `lineas` (se escriben una por una; `['Salario', '$3,000']` en dos columnas; `'~Impuesto'` sale tachado en rojo), `firma` (se dibuja), `sello` (cae al final). `estilo`: `hoja`, `recibo`, `carta` u `oficio` |
+| `bandera` | `pais`: `mx`, `us`, `es`, `jp`, `fr`, `it`, `de`, `ru`, `ua`, `co`, `ve`, `ec`, `ar`, `br`, `cl`, `pe`, `cu`, `pr`, `gt`, `ca`, `cn`, `kr`, `gb`, `in`, `pt`, `eu`, `onu`. Ondea; `asta: false`, `nombre: false` o un nombre propio |
+
+```js
+{tipo: 'documento', titulo: 'Tratado de París', sub: '10 de diciembre de 1898', lineas: ['Artículo 1…', ['Pago', '$20,000,000']], firma: 'Los representantes', sello: 'Firmado'}
+```
+
 ## Más
 
 - `personaje`: ver [Series y personajes](./series#personajes).

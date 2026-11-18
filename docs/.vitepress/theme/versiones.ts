@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '1.2.0',
+		fecha: '2026-11-17',
+		titulo: 'El lugar sigue a la historia',
+		resumen: 'Paisajes generados, ambiente auto, clima y desastres, juegos y documentos en pantalla, banderas, filas y 10 personajes.',
+		tipo: 'menor',
+	},
+	{
 		v: '1.1.0',
 		fecha: '2026-11-17',
 		titulo: 'Aprueba sin gastar',

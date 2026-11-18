@@ -1,5 +1,5 @@
 ---
-description: 'Ambientes 3D listos (cuarto gamer, sala, arcade) como fondo vivo de cualquier video, con planos de cámara, cortes en las palabras clave, persona que reacciona, postproceso y sonido de fondo.'
+description: 'Ambientes 3D listos (de noche: cuarto gamer, sala, arcade; de día: laboratorio, salón, parque, barrio) como fondo vivo de cualquier video, con planos de cámara, cortes en las palabras clave, persona que reacciona, postproceso y sonido de fondo.'
 ---
 
 # Ambientes 3D (fondo vivo)
@@ -19,7 +19,7 @@ export default {
 };
 ```
 
-Los ambientes son de noche: con un estilo de texto oscuro (como `explicativo`), el texto pasa solo a claro, y una sombra suave arriba deja leer subtítulos y titular aunque el set sea claro.
+Hay ambientes de noche y de día. En los de noche, con un estilo de texto oscuro (como `explicativo`), el texto pasa solo a claro, y una sombra suave arriba deja leer subtítulos y titular aunque el set sea claro.
 
 | Ambiente | Qué trae | Planos |
 |---|---|---|
@@ -30,6 +30,77 @@ Los ambientes son de noche: con un estilo de texto oscuro (como `explicativo`), 
 | `oficina` | Dos escritorios con monitor, ventanal de atardecer con la ciudad, pizarrón con gráfica, garrafón y plantas | `general`, `persona`, `monitor`, `ventana`, `pizarron`, `companero` |
 | `tienda` | Tienda de videojuegos: pared de juegos, mostrador con caja y vitrina, tele de demostración, isla de ofertas y letrero de neón | `general`, `persona`, `estantes`, `mostrador`, `tele`, `isla` |
 | `calle` | Calle de noche con lluvia: fachadas con ventanas encendidas, un local con vitrina, toldo y letrero, farola, banca y un coche estacionado | `general`, `persona`, `vitrina`, `edificios`, `coche`, `farola` |
+
+**De día:**
+
+| Ambiente | Qué trae | Planos |
+|---|---|---|
+| `laboratorio` | Mesas con matraces que burbujean, microscopio, gradilla con tubos, campana de extracción, pantallas con gráficas y ventanal. La persona trae bata | `general`, `persona`, `mesa`, `matraces`, `microscopio`, `pantallas`, `ventana`, `cenital` |
+| `salon` | Salón de clases: pizarrón con gis, pupitres, escritorio del maestro, reloj, mapa y ventanas con sol | `general`, `persona`, `pizarron`, `pupitres`, `ventana`, `reloj`, `mapa` |
+| `parque` | Pasto, camino, árboles, fuente con agua, banca, faroles, columpio, pájaros y nubes | `general`, `persona`, `fuente`, `camino`, `banca`, `arboles`, `columpio`, `cielo` |
+| `barrio` | Calle de día con casas de colores, tiendita con toldo, coches estacionados, uno que pasa, árboles y nubes | `general`, `persona`, `tiendita`, `casas`, `coche`, `calle`, `cielo` |
+
+**Paisajes generados** (el terreno sale de una función, con agua que ondea, vegetación y cámara de dron que se mueve):
+
+| Ambiente | Qué trae |
+|---|---|
+| `isla` | Isla con playa, palmeras, árboles, mar y un barco |
+| `montana` | Montaña nevada en la cima, cerros, pinos y pradera |
+| `playa` | Arena que baja al mar, palmeras, olas y velero |
+| `desierto` | Dunas, cactus y un sol grande |
+| `bosque` | Lomas cubiertas de árboles |
+| `nevado` | Todo blanco, pinos con nieve y nevando |
+| `oceano` | Mar abierto con islotes y un barco |
+| `ciudad` | Cuadras de edificios de día |
+
+Sus planos se mueven: `general`, `dron` (cruza de lado a lado), `acercar` (se acerca a lo importante), `persona`,
+`espalda`, `cielo` y `rodear`.
+
+## Que el lugar siga a la historia: `ambiente: 'auto'`
+
+Con `ambiente: 'auto'` cada escena va al lugar del que habla: "llegaron a una **isla**" → isla, "subieron la
+**montaña**" → montaña, "en la **escuela**" → salón, "hicieron **fila** en la **tienda**" → tienda, "en el
+**laboratorio**" → laboratorio, "juegas con tu **consola**" → cuarto gamer. Si una escena no nombra ningún lugar, se
+queda donde iba. `ambiente: {nombre: 'auto', persona: 'ana'}` lleva la misma persona a todos lados.
+
+## Clima, estaciones y desastres
+
+```js
+ambiente: {nombre: 'barrio', estacion: 'otono', clima: 'lluvia'}
+{say: 'Y entonces se inundó todo.', ambiente: {nombre: 'barrio', clima: 'tormenta', desastre: 'inundacion', desastreEn: 'inundó'}}
+```
+
+- `estacion`: `primavera` (árboles con flores y pétalos), `verano`, `otono` (hojas naranjas que caen; sin tilde),
+  `invierno` (nieve en el piso y cayendo).
+- `clima`: `lluvia`, `nieve`, `tormenta` (con relámpagos), `niebla`, `viento` (hojas volando). El cielo se nubla.
+- `desastre`: `inundacion` (el agua sube y flotan cosas), `incendio` (fuego y humo), `sismo` (todo tiembla),
+  `tornado`, `volcan` (erupción a lo lejos), `meteorito` (cae y destella), `calor`. `desastreEn` (palabra o
+  segundos) dice cuándo empieza; sube en unos 3 segundos.
+- `hora` en los de día: `'amanecer'`, `'atardecer'`, `'noche'` o un número de 0 a 24.
+- Cada uno suena: lluvia, truenos, viento, fuego que truena, agua corriendo o el retumbo del sismo.
+
+## Filas y letreros
+
+- `fila: 6` forma una fila de personas distintas (en la tienda frente al mostrador, en el barrio hacia la tiendita…)
+  y agrega el plano `fila` para verla de lado.
+- `letrero: 'VIDEOJUEGOS'` pone el nombre de la tienda o marca en su letrero (`{texto, fondo, color}` para cambiar
+  colores).
+
+## Cambiar de lugar dentro de un video
+
+Una escena con su propio `ambiente` cambia de lugar ahí, y las siguientes se quedan en él hasta que otra diga otro.
+Al llegar a un lugar nuevo la escena abre con el plano `general`, para que se vea dónde estamos:
+
+```js
+ambiente: {nombre: 'laboratorio', persona: true},
+scenes: [
+	{say: 'En el laboratorio descubrieron algo raro.'},
+	{say: 'Y lo fueron a probar al parque.', ambiente: 'parque'},
+	{say: 'Al otro día lo explicaron en clase.', ambiente: {nombre: 'salon', persona: 'gus'}},
+],
+```
+
+Lo que diga el `ambiente` del video (persona, post…) vale para todos los lugares; cada escena puede cambiarlo.
 
 Todo se mueve aunque la escena no haga nada: la tele parpadea y alumbra la pared, el LED cambia de color, llueve en la
 ventana, flota polvo en la luz.
@@ -59,7 +130,30 @@ ventana, flota polvo en la luz.
 
 Con `persona: true` aparece una persona en su lugar del set (sentada frente a la tele, en el sillón o parada en la
 maquinita) y **reacciona a lo que se dice**: pensativa en las preguntas, sorprendida con cifras o exclamaciones y
-feliz con "felicidades". `persona: {ropa: '#E5484D'}` cambia su ropa y `reaccionar: false` la deja quieta.
+feliz con "felicidades". `reaccionar: false` la deja quieta.
+
+**Con nombre:** `persona: {personaje: 'gus', nombre: 'Satoru Iwata', sub: 'presidente de Nintendo'}` le pone una
+etiqueta arriba de la cabeza con su nombre y cargo.
+
+**No siempre es la misma persona.** Hay 10 personajes con distinta piel, peinado, ropa, lentes o barba, y cada video
+toma uno según su título. Para elegirlo: `persona: 'ana'`. Para ajustarlo: `persona: {personaje: 'ana', ropa: '#30A46C'}`.
+
+| Personaje | Cómo es |
+|---|---|
+| `beto` | Pelo corto, sudadera azul |
+| `ana` | Pelo largo, playera roja |
+| `caro` | Pelirroja de cola de caballo, con lentes |
+| `dani` | Pelo chino, playera amarilla |
+| `eli` | Rubia de chongo, playera morada |
+| `fer` | Gorra roja y barba, sudadera negra |
+| `gus` | Señor calvo con barba gris y lentes |
+| `lu` | Pelo largo, piel morena, playera naranja |
+| `memo` | Gorra azul, playera turquesa |
+| `sofi` | Cola de caballo, playera rosa |
+
+También se ajusta pieza por pieza: `peinado` (`corto`, `largo`, `cola`, `chongo`, `chino`, `calvo`, `gorra`), `lentes`,
+`barba`, `bata` (en el laboratorio va puesta), `piel`, `pelo`, `ropa` y `pantalon`. En un componente propio,
+`Persona3D` de `morfeo/kit` acepta lo mismo.
 
 ## Primera persona (POV)
 
@@ -80,7 +174,8 @@ componente `ManosPOV` de `morfeo/kit` hace lo mismo con tus `tomas`.
   maqueta, `false` = sin postproceso).
 - Cada ambiente suena, muy bajito: lluvia y el juego de la tele en el cuarto, lluvia y murmullo en la sala, maquinitas en el arcade,
   herramientas en el taller, teclas con aire acondicionado en la oficina, murmullo y la tele de demostración en la
-  tienda, y lluvia, viento y algún coche lejano en la calle.
+  tienda, lluvia, viento y algún coche lejano en la calle, extractor y burbujeo en el laboratorio, murmullo y pájaros en el
+  salón, pájaros y la fuente en el parque, y pájaros con coches que pasan en el barrio.
   Va bajito y se aparta cuando habla la voz. `ambiente: {nombre: 'arcade', sonido: false}` lo apaga.
 
 ## En tu propio componente

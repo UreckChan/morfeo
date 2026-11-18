@@ -15,6 +15,22 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 1.2.0 {#v1-2-0}
+
+<p class="fecha-version">17 de noviembre de 2026</p>
+
+- **[Ambientes de día](/guia/ambientes)**: `laboratorio`, `salon`, `parque` y `barrio`, con su luz de sol y su sonido de fondo (pájaros, fuente, burbujeo, coches).
+- **[Cambiar de lugar en un video](/guia/ambientes#cambiar-de-lugar-dentro-de-un-video)**: `ambiente` en una escena lleva la historia a otro set, que abre con su plano general.
+- **[Paisajes generados](/guia/ambientes)**: `isla`, `montana`, `playa`, `desierto`, `bosque`, `nevado`, `oceano` y `ciudad`, con agua que ondea y cámara de dron.
+- **[`ambiente: 'auto'`](/guia/ambientes#que-el-lugar-siga-a-la-historia-ambiente-auto)**: cada escena va al lugar del que habla.
+- **[Clima, estaciones y desastres](/guia/ambientes#clima-estaciones-y-desastres)**: lluvia, nieve, tormenta, niebla, viento; primavera, otoño, invierno; inundación, incendio, sismo, tornado, volcán, meteorito y calor, con su sonido.
+- **[Filas y letreros](/guia/ambientes#filas-y-letreros)**: una fila de personas distintas y el nombre de la tienda o marca.
+- **[Juegos, documentos y banderas](/guia/capas#juegos-documentos-y-banderas)**: la pantalla del juego en movimiento (tetris, comecocos, invasores, pong, snake…), hojas con texto, firma y sello, y banderas de 27 países que ondean.
+- **[Figuras de videojuegos](/guia/recursos)**: comecocos, fantasmas, tetrominós, invasores, hongo, bloque, tubo… y `buscar: 'bandera de japón'`.
+- **[Varias copias](/guia/capas#varias-copias)**: `cantidad: 4` repite un objeto acomodado (fila, cuadrícula, pila, círculo o regados).
+- **Persona con nombre**: `persona: {nombre: 'Satoru Iwata', sub: 'presidente de Nintendo'}`.
+- **[Varios personajes](/guia/ambientes#persona)**: 10 personas con distinta piel, peinado, ropa, lentes o barba; cada video toma una distinta, o eliges con `persona: 'ana'`. `Persona3D` suma `peinado`, `lentes`, `barba` y `bata`.
+
 ## 1.1.0 {#v1-1-0}
 
 <p class="fecha-version">17 de noviembre de 2026</p>
