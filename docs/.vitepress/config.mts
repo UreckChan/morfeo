@@ -74,6 +74,7 @@ export default defineConfig({
 					{text: 'Instalación', link: '/guia/empezar'},
 					{text: 'Tu primer video', link: '/guia/primer-video'},
 					{text: 'Del tema al reel terminado', link: '/guia/estudio'},
+					{text: 'Publicar todos los días', link: '/guia/publicar'},
 				],
 			},
 			{

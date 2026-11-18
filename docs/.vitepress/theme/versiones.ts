@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '1.3.0',
+		fecha: '2026-11-18',
+		titulo: 'Publicar todos los días',
+		resumen: 'El objeto dentro de la escena, estudio y cueva, calendario de temas, series encadenadas y carrusel con hilo.',
+		tipo: 'menor',
+	},
+	{
 		v: '1.2.1',
 		fecha: '2026-11-17',
 		titulo: 'Plano técnico',

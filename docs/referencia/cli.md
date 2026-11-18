@@ -13,6 +13,9 @@ npx morfeo <comando> [opciones]
 | `nuevo <carpeta>` | Crea un proyecto con videos de ejemplo |
 | `nuevo-video <id>` | Crea un video desde una base que ya renderiza. `--look 2d`, `3d`, `serie`, `mito`, `escalada`, `biografia` o `construiste` (o `--formula`) |
 | `formulas` | Lista las fórmulas de historia con su gancho de ejemplo |
+| `calendario` | `calendario.md` con un tema por día: fórmula y lugar rotando, sin repetir lo hecho. `--dias 30`, `--desde 2026-12-01`, `--ia` (Claude propone los temas) |
+| `serie "tema"` | Varios videos encadenados (`--partes 4`), cada uno abre recordando el anterior y cierra pidiendo el siguiente. `--ia`, `--investigar`, `--voz` |
+| `carrusel <id>` | Del video hecho: carrusel de imágenes de los momentos clave (`--formato 9:16`, `--max 8`) e hilo para X/Threads |
 | `skills` | Instala o actualiza las [guías para tu IA](../guia/skills) en `.claude/skills/` (`--lista` solo las muestra) |
 | `estilo` | Abre la página para crear tu estilo (guarda `estilo.json`). `--desde https://tusitio.com` toma los colores y la letra de tu web |
 | `voces` | Las voces gratis; `--elevenlabs` lista las más usadas de su biblioteca en español con su ID (`--acento mexicano`, `--genero mujer`, `--muestras 5` genera una muestra de cada una) |

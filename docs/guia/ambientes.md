@@ -116,6 +116,25 @@ ambiente: {nombre: 'barrio', estacion: 'otono', clima: 'lluvia'}
 - `hora` en los de día: `'amanecer'`, `'atardecer'`, `'noche'` o un número de 0 a 24.
 - Cada uno suena: lluvia, truenos, viento, fuego que truena, agua corriendo o el retumbo del sismo.
 
+## El objeto del que se habla, dentro de la escena
+
+Si la escena habla de un objeto, ponlo con `objeto` y no como capa encimada: queda **dentro del set** (sobre el
+escritorio, el mostrador, la mesa del laboratorio, el pedestal), con su sombra, meciéndose despacio, y la cámara va a
+verlo de cerca (plano `objeto`):
+
+```js
+{say: 'Esta es la consola que lo cambió todo.', objeto: 'consola'}
+{say: 'Y en la cueva, una espada.', ambiente: 'cueva', objeto: {buscar: 'espada', escala: 1.2}}
+```
+
+Con `ambiente: 'auto'`, si una escena nombra un objeto que Morfeo tiene hecho (consola, control, cartucho, matraz…) y
+no trae capas, el objeto aparece solo. `girar: true` lo hace dar vueltas; `girar: false` lo deja quieto.
+
+**`estudio`**: un set para cuando el objeto es el protagonista. Tiene un pedestal que gira, un fondo curvo y luces de
+exhibición. Sus planos son `frente`, `detalle`, `arriba`, `rodear` y `contra`.
+
+**`cueva`**: roca, estalactitas, cristales que brillan, antorchas y la entrada con luz de día al fondo.
+
 ## Filas y letreros
 
 - `fila: 6` forma una fila de personas distintas (en la tienda frente al mostrador, en el barrio hacia la tiendita…)

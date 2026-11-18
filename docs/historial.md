@@ -15,6 +15,16 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 1.3.0 {#v1-3-0}
+
+<p class="fecha-version">18 de noviembre de 2026</p>
+
+- **[El objeto, dentro de la escena](/guia/ambientes#el-objeto-del-que-se-habla-dentro-de-la-escena)**: `objeto: 'consola'` lo pone en el set (en el escritorio, el mostrador o el pedestal) con la cámara encima, en vez de un 3D encimado. Con `ambiente: 'auto'` aparece solo cuando se nombra.
+- **Ambientes `estudio` y `cueva`**: pedestal de exhibición para el objeto protagonista, y una cueva con antorchas y cristales. `auto` reconoce cueva, caverna, mina, calle y esquina.
+- **[Calendario](/guia/publicar#calendario-de-temas)**: `npx morfeo calendario --dias 30`, un tema por día sin repetir lo hecho.
+- **[Series](/guia/publicar#series-de-varias-partes)**: `npx morfeo serie "tema" --partes 4`, videos encadenados.
+- **[Carrusel e hilo](/guia/publicar#un-video-varias-publicaciones)**: `npx morfeo carrusel <id>` saca las imágenes de los momentos clave y el hilo para X/Threads.
+
 ## 1.2.1 {#v1-2-1}
 
 <p class="fecha-version">17 de noviembre de 2026</p>
