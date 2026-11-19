@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '1.7.3',
+		fecha: '2026-11-19',
+		titulo: 'Luz de la sala de juntas y revisión de voz',
+		resumen: 'La pantalla de la sala de juntas ya no quema caras y la revisión de voz no da avisos falsos.',
+		tipo: 'arreglo',
+	},
+	{
 		v: '1.7.2',
 		fecha: '2026-11-19',
 		titulo: 'Collages de video',

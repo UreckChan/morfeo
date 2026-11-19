@@ -15,6 +15,13 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 1.7.3 {#v1-7-3}
+
+<p class="fecha-version">19 de noviembre de 2026</p>
+
+- Sala de juntas: la luz de la pantalla ya no quema la cara de quien está sentado enfrente.
+- La revisión de voz ya no da avisos falsos cuando la transcripción parte una palabra en pedazos.
+
 ## 1.7.2 {#v1-7-2}
 
 <p class="fecha-version">19 de noviembre de 2026</p>
