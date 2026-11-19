@@ -23,6 +23,11 @@ npm install morfeo@latest
 - **Lugares nuevos**: canchas de futbol, básquet, voleibol, béisbol y tenis con gradas llenas; `auditorio`, `teatro`, `conferencia`, `sala-juntas` y `vlog`. `ambiente: 'auto'` los elige solos.
 - **Historias de vida**: `etapa` en una escena hace crecer a la persona (de niño a adulto) y le cambia la ropa (escolar, futbolista, sudadera, graduado, traje…).
 - Fondos 2D nuevos: estadio, cancha de básquet, teatro, auditorio, sala de juntas, ciudad de noche, campo, calle, oficina y mar.
+- **Estilos de empresa**: `corporativo`, `pizarra` y `datos`, con capas `grafica` (barras, columnas, línea, área, dona), `kpi` y `proceso`.
+- **Gente de fondo**: ningún lugar 3D se ve solo; `publico: 'vacio' | 'poco' | 'normal' | 'lleno'` (o lo detecta del guion).
+- **Uniformes y equipo** en 3D y 2D: deportes con camiseta, short, medias y tachones; 20 oficios; `sostiene` pone balones, bate, raqueta, micrófono, laptop o trofeo en la mano.
+- Caricatura 2D con 8 peinados; 5 fondos 2D más (aula, oficina abierta, conferencia, vlog, tienda) y `fondos: 'auto'`.
+- Nueva página: [Galería](/guia/galeria) con todos los estilos, lugares, fondos, uniformes, tipos de video y formatos.
 
 ## 1.6.0 {#v1-6-0}
 

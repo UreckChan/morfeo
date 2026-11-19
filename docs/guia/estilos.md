@@ -1,5 +1,5 @@
 ---
-description: 'Los 12 estilos visuales de Morfeo para Shorts, TikTok y Reels: datos curiosos, documental, ilustrado, 3D, maqueta y más.'
+description: 'Los 16 estilos visuales de Morfeo para Shorts, TikTok y Reels: datos curiosos, documental, ilustrado, 3D, maqueta, corporativo, pizarra, datos y más.'
 ---
 
 # Estilos
@@ -20,10 +20,13 @@ Se elige por video (`estilo: 'documental'`) o para todo el proyecto en `morfeo.c
 | ![](/img/infografia.jpg) | **`infografia`** | Infografía plana: medidores, barras, globos, rayos X, subtítulos en caja |
 | ![](/img/3d.jpg) | **`3d`** | Tus escenas de Blender con recorrido de cámara, una palabra grande a la vez |
 | ![](/img/ilustrado.jpg) | **`ilustrado`** | Cuentos y animales: el bosque animado por defecto, o tu escenario ilustrado |
-| | **`maqueta`** | Explicadores largos (90–130 s) en un diorama 3D low-poly con corte de tierra: una palabra a la vez al centro, rótulos con contorno, etiquetas con flecha pegadas a los objetos. Ver [Maqueta 3D](./maqueta) |
-| | **`minimal`** | Oscuro y limpio, para lo que sea |
-| | **`caricatura`** | Historias de "¿qué harías tú?" y relatos en POV: personajes 2D de cabeza grande con contorno grueso (capa `caricatura`), subtítulos en mayúsculas con la palabra que suena en amarillo, cortes secos |
-| | **`linea`** | Explicadores serios (finanzas, negocios, hábitos): fondo negro con foco, personas pictograma con su nombre, íconos de contorno que se dibujan solos y cifras en caja. Ver [Negocios, deportes e historias de vida](/guia/temas-serios) |
+| ![](/img/estilo-maqueta.jpg) | **`maqueta`** | Explicadores largos (90–130 s) en un diorama 3D low-poly con corte de tierra: una palabra a la vez al centro, rótulos con contorno, etiquetas con flecha pegadas a los objetos. Ver [Maqueta 3D](./maqueta) |
+| ![](/img/estilo-minimal.jpg) | **`minimal`** | Oscuro y limpio, para lo que sea |
+| ![](/img/estilo-caricatura.jpg) | **`caricatura`** | Historias de "¿qué harías tú?" y relatos en POV: personajes 2D de cabeza grande con contorno grueso (capa `caricatura`), subtítulos en mayúsculas con la palabra que suena en amarillo, cortes secos |
+| ![](/img/estilo-linea.jpg) | **`linea`** | Explicadores serios (finanzas, negocios, hábitos): fondo negro con foco, personas pictograma con su nombre, íconos de contorno que se dibujan solos y cifras en caja. Ver [Negocios, deportes e historias de vida](/guia/temas-serios) |
+| ![](/img/estilo-corporativo.jpg) | **`corporativo`** | Empresa y reportes: fondo claro con puntos, azul marino, tarjetas blancas, gráficas y KPI |
+| ![](/img/estilo-pizarra.jpg) | **`pizarra`** | Clase en pizarrón blanco: tinta oscura, íconos de plumón, procesos paso a paso |
+| ![](/img/estilo-datos.jpg) | **`datos`** | Tablero de métricas: azul noche con cuadrícula, cifras en verde agua (finanzas, tecnología) |
 
 </div>
 

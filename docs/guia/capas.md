@@ -60,6 +60,10 @@ Para que una imagen se convierta en otra, con un fundido, un barrido o un círcu
 | `barra` | `titulo`, `valor` (0–100, o hasta `max`), `unidad`, `color`, `ancho`: barra de progreso que se llena |
 | `medidor` | `valor`, `min`, `max`, `unidad`, `tam`, `zonas`: velocímetro con aguja |
 | `votacion` | `cabecera`, `titulo`, `opciones: [{texto, valor, sub}]`: resultados en porcentaje |
+| `grafica` | `forma` (`barras`, `columnas`, `linea`, `area`, `dona`), `datos: [{etiqueta, valor}]`, `titulo`, `prefijo`, `unidad`, `resaltar`: gráfica que crece al entrar |
+| `kpi` | `etiqueta`, `valor`, `prefijo`, `sufijo`, `cambio` (% con ▲/▼), `periodo`: indicador con cifra que cuenta |
+| `proceso` | `pasos` (texto o `{titulo, texto, en}`), `direccion` (`vertical`/`horizontal`): pasos numerados que entran por turno |
+| `pictograma`, `icono-linea`, `leyenda` | Personas pictograma, 36 íconos de contorno y textos espaciados: ver [Negocios, deportes e historias de vida](/guia/temas-serios) |
 | `numero` | `texto`: número de paso en un cuadro |
 | `etiqueta` | `texto`: texto pequeño en fuente mono ("// paso 1") |
 

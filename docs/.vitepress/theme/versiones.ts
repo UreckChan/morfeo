@@ -13,7 +13,7 @@ export const VERSIONES: Version[] = [
 		v: '1.7.0',
 		fecha: '2026-11-19',
 		titulo: 'Negocios, deportes e historias de vida',
-		resumen: 'Estilo línea para explicar finanzas, canchas, auditorio, teatro, conferencia, vlog y personas que crecen.',
+		resumen: 'Estilos de empresa (línea, corporativo, pizarra, datos), canchas, teatro y conferencias, gente de fondo, uniformes y personas que crecen.',
 		tipo: 'menor',
 	},
 	{

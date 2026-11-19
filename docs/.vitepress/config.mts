@@ -90,6 +90,7 @@ export default defineConfig({
 					{text: 'Historias, series y fórmulas', link: '/guia/historias'},
 					{text: 'Historias en primera persona', link: '/guia/primera-persona'},
 					{text: 'Negocios, deportes e historias de vida', link: '/guia/temas-serios'},
+					{text: 'Galería', link: '/guia/galeria'},
 					{text: 'Series, HUD y personajes', link: '/guia/series'},
 					{text: 'Objetos 2D y 3D', link: '/guia/recursos'},
 					{text: '3D', link: '/guia/3d'},
