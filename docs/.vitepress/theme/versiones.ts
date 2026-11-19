@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '1.7.2',
+		fecha: '2026-11-19',
+		titulo: 'Collages de video',
+		resumen: 'La capa video empieza con su escena y suma desde, velocidad y recortar para armar collages.',
+		tipo: 'arreglo',
+	},
+	{
 		v: '1.7.1',
 		fecha: '2026-11-19',
 		titulo: 'Lista de estilos y README al día',

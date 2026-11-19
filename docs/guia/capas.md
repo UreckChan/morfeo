@@ -25,7 +25,7 @@ Las apps tapan arriba (~200 px), abajo (~370 px) y la columna derecha (~160 px).
 | Tipo | Campos |
 |---|---|
 | `imagen` | `src` (archivo en `assets/`) o `generar` (descripción para la IA), `ancho`, `alto`, `redondo`, `radio`, `voltear`, `sombra` |
-| `video` | `src`, `ancho`, `alto`, `radio` (va sin sonido) |
+| `video` | `src`, `ancho`, `alto`, `radio`, `desde` (segundo del clip en que empieza), `velocidad`, `recortar` (llena la caja; `false` = completo), `sombra`, `borde`. Va sin sonido y empieza con su escena: sirve para collages |
 
 Para que una imagen se convierta en otra, con un fundido, un barrido o un círculo que se abre (por ejemplo, para pasar a rayos X):
 

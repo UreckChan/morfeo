@@ -15,6 +15,13 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 1.7.2 {#v1-7-2}
+
+<p class="fecha-version">19 de noviembre de 2026</p>
+
+- La capa `video` empieza con su escena (antes seguía el reloj del video completo y en escenas tardías mostraba el final del clip). Nuevas opciones para collages: `desde` (segundo del clip), `velocidad`, `recortar`, `sombra` y `borde`.
+- La plantilla de proyecto nuevo lista los 16 estilos.
+
 ## 1.7.1 {#v1-7-1}
 
 <p class="fecha-version">19 de noviembre de 2026</p>
