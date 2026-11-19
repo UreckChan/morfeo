@@ -15,6 +15,12 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 1.7.1 {#v1-7-1}
+
+<p class="fecha-version">19 de noviembre de 2026</p>
+
+- `npx morfeo estilos` describe los 16 estilos (faltaban caricatura, linea, corporativo, pizarra y datos) y el README de npm explica los estilos de empresa, las capas de negocio, los 35 lugares, la gente de fondo y los uniformes.
+
 ## 1.7.0 {#v1-7-0}
 
 <p class="fecha-version">19 de noviembre de 2026</p>

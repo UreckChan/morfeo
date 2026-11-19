@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '1.7.1',
+		fecha: '2026-11-19',
+		titulo: 'Lista de estilos y README al día',
+		resumen: 'morfeo estilos describe los 16 estilos y el README de npm explica todo lo de la 1.7.',
+		tipo: 'arreglo',
+	},
+	{
 		v: '1.7.0',
 		fecha: '2026-11-19',
 		titulo: 'Negocios, deportes e historias de vida',
