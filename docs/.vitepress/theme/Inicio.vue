@@ -83,7 +83,7 @@ const CAPACIDADES = [
 	{icono: 'musica', titulo: 'Música y efectos', texto: 'Música generada sin derechos y más de 40 efectos grabados (CC0) que suenan solos en cada golpe.'},
 	{icono: 'capas', titulo: 'Motor de capas', texto: 'Texto, contadores, tarjetas, chats, gráficas y mapas que entran en la palabra exacta.'},
 	{icono: 'cubo', titulo: '2D y 3D sin dibujar', texto: 'Escribe "tubería", "pac-man" o "bandera de japón": 177 piezas propias y unos 7.000 modelos libres, con créditos.'},
-	{icono: 'lugar', titulo: 'El lugar sigue a la historia', texto: 'Con ambiente auto, si la voz dice isla, cueva o laboratorio, la escena va ahí. 25 lugares con vida de fondo, de día o de noche.'},
+	{icono: 'lugar', titulo: 'El lugar sigue a la historia', texto: 'Con ambiente auto, si la voz dice isla, cueva o laboratorio, la escena va ahí. 35 lugares con vida de fondo: canchas, teatro, conferencias, de día o de noche.'},
 	{icono: 'clima', titulo: 'Clima y desastres', texto: 'Lluvia, nieve, tormenta; primavera, otoño, invierno; inundación, incendio, sismo o volcán, con su sonido.'},
 	{icono: 'ia', titulo: 'Hecho para tu IA', texto: 'Claude Code o Codex investigan, escriben y renderizan con las guías que trae Morfeo.'},
 	{icono: 'revisar', titulo: 'Revisión de estructura', texto: 'Gancho, ritmo y cierre; que la voz diga el guion; cuadros vacíos, tapados, quietos o con destellos.'},
@@ -315,7 +315,7 @@ onBeforeUnmount(() => {
 					<h2>El lugar sigue a la historia.</h2>
 					<p class="sub-enc">Si la voz dice isla, montaña o laboratorio, la escena va ahí. Con clima, estación o desastre cuando la historia lo pide.</p>
 				</div>
-				<a :href="b('/guia/ambientes')" class="enlace">Ver los 25 lugares <Icono nombre="flecha" /></a>
+				<a :href="b('/guia/ambientes')" class="enlace">Ver los 35 lugares <Icono nombre="flecha" /></a>
 			</div>
 			<div class="tira">
 				<a v-for="l in LUGARES" :key="l.clip" :href="b('/guia/ambientes')" class="tarjeta-estilo">

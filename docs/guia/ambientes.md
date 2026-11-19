@@ -168,6 +168,10 @@ exhibición. Sus planos son `frente`, `detalle`, `arriba`, `rodear` y `contra`.
 **Para historias** (ver [Historias en primera persona](./primera-persona)): `combi` (pesero de noche con gente
 sentada), `campamento` (fogata con amigos), `recamara` (solo en tu cama) y la `sala` con sus tres lugares en el sillón.
 
+Para deportes y temas serios hay canchas (`cancha-futbol`, `cancha-basquet`, `cancha-voleibol`, `cancha-beisbol`,
+`cancha-tenis`), `auditorio`, `teatro`, `conferencia`, `sala-juntas` y `vlog`: ver
+[Negocios, deportes e historias de vida](/guia/temas-serios).
+
 ## De día o de noche, con lluvia o nieve
 
 Todos los lugares aceptan `hora` y `clima`:

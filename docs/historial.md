@@ -15,6 +15,15 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 1.7.0 {#v1-7-0}
+
+<p class="fecha-version">19 de noviembre de 2026</p>
+
+- **[Negocios, deportes e historias de vida](/guia/temas-serios)**: estilo `linea` (blanco sobre negro) con `pictograma`, `icono-linea` (36 íconos que se dibujan solos) y `leyenda`.
+- **Lugares nuevos**: canchas de futbol, básquet, voleibol, béisbol y tenis con gradas llenas; `auditorio`, `teatro`, `conferencia`, `sala-juntas` y `vlog`. `ambiente: 'auto'` los elige solos.
+- **Historias de vida**: `etapa` en una escena hace crecer a la persona (de niño a adulto) y le cambia la ropa (escolar, futbolista, sudadera, graduado, traje…).
+- Fondos 2D nuevos: estadio, cancha de básquet, teatro, auditorio, sala de juntas, ciudad de noche, campo, calle, oficina y mar.
+
 ## 1.6.0 {#v1-6-0}
 
 <p class="fecha-version">18 de noviembre de 2026</p>

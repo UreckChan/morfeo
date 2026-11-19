@@ -89,6 +89,7 @@ export default defineConfig({
 					{text: 'Maqueta 3D (diorama)', link: '/guia/maqueta'},
 					{text: 'Historias, series y fórmulas', link: '/guia/historias'},
 					{text: 'Historias en primera persona', link: '/guia/primera-persona'},
+					{text: 'Negocios, deportes e historias de vida', link: '/guia/temas-serios'},
 					{text: 'Series, HUD y personajes', link: '/guia/series'},
 					{text: 'Objetos 2D y 3D', link: '/guia/recursos'},
 					{text: '3D', link: '/guia/3d'},

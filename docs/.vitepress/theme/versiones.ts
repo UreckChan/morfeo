@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '1.7.0',
+		fecha: '2026-11-19',
+		titulo: 'Negocios, deportes e historias de vida',
+		resumen: 'Estilo línea para explicar finanzas, canchas, auditorio, teatro, conferencia, vlog y personas que crecen.',
+		tipo: 'menor',
+	},
+	{
 		v: '1.6.0',
 		fecha: '2026-11-18',
 		titulo: 'De día, de noche y en la fogata',
