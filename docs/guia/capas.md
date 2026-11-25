@@ -198,6 +198,33 @@ Que se vea lo que se cuenta: si el guion habla de un juego, el juego; si habla d
 {tipo: 'documento', titulo: 'Tratado de París', sub: '10 de diciembre de 1898', lineas: ['Artículo 1…', ['Pago', '$20,000,000']], firma: 'Los representantes', sello: 'Firmado'}
 ```
 
+## Recursos de guion
+
+Las piezas que más retienen en los videos que funcionan: tests, comparaciones, pausas y cierres que piden compartir.
+
+<div class="galeria-docs">
+<figure><img src="/img/capa-opciones.jpg" alt="Capa opciones" loading="lazy"><figcaption><code>opciones</code></figcaption></figure>
+<figure><img src="/img/capa-balanza.jpg" alt="Capa balanza" loading="lazy"><figcaption><code>balanza</code></figcaption></figure>
+<figure><img src="/img/capa-pausa.jpg" alt="Capa pausa" loading="lazy"><figcaption><code>pausa</code></figcaption></figure>
+<figure><img src="/img/capa-comparte.jpg" alt="Capa comparte" loading="lazy"><figcaption><code>comparte</code></figcaption></figure>
+</div>
+
+| Capa | Qué hace | Opciones |
+|---|---|---|
+| `opciones` | Test A/B/C con color; la elegida se enciende en su palabra | `opciones` (textos o `{texto, valor}`), `titulo`, `elegida: 'B'`, `revelar: 'palabra'`, `unidad` |
+| `balanza` | Dos lados con pesas que caen; se inclina hacia el que pesa más | `izquierda` / `derecha`: `{texto, pesas, valor, unidad, color}`, `cada` |
+| `panel-led` | Letrero de puntos de luz (matrícula, aviso, número); corre si no cabe | `texto`, `color`, `parpadea`, `ancho`, `alto` |
+| `pausa` | Todo se congela en gris con el botón de pausa ("Déjame explicarte") | `texto`, `en` |
+| `rebobinar` | ◀◀ al pasado con líneas de cinta y el año | `texto`, `etiqueta`, `dura` |
+| `pie` | La fuente o la ley citada, fija abajo | `texto` |
+| `comparte` | Teléfono con contactos: la mano toca uno y sale "Enviado" | `contactos`, `elegido`, `texto`, `toca` |
+| `parte2` | Adelanto de la siguiente parte | `numero`, `titulo`, `texto` |
+
+```js
+{say: 'Se apaga el motor. ¿Cuál eliges? La B.', capas: [{tipo: 'opciones', y: 1050, titulo: '¿Qué haces?', opciones: [{texto: 'Saltar', valor: 20}, {texto: 'Planear', valor: 85}, {texto: 'Rezar', valor: 5}], elegida: 'B', revelar: 'B'}]}
+{say: 'Pausa. Déjame explicarte.', capas: [{tipo: 'pausa', en: 'Pausa', texto: 'Déjame explicarte'}]}
+```
+
 ## Más
 
 - `personaje`: ver [Series y personajes](./series#personajes).

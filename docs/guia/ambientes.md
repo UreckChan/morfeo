@@ -44,6 +44,15 @@ Hay ambientes de noche y de día. En los de noche, con un estilo de texto oscuro
 <figure><img src="/img/otono.jpg" alt="<code>parque</code> en otoño" loading="lazy"><figcaption><code>parque</code> en otoño</figcaption></figure>
 </div>
 
+**Desde arriba:** `plano: 'cenital'` funciona en todos los lugares, también en los [propios](./elementos-propios):
+sirve para explicar tráfico, formaciones, recorridos o cómo está acomodado algo. En interiores mira desde el techo.
+
+<div class="galeria-docs">
+<figure><img src="/img/cenital-cancha.jpg" alt="Cancha desde arriba" loading="lazy"><figcaption><code>cancha-futbol</code> cenital</figcaption></figure>
+<figure><img src="/img/cenital-parque.jpg" alt="Parque desde arriba" loading="lazy"><figcaption><code>parque</code> cenital</figcaption></figure>
+<figure><img src="/img/cenital-beisbol.jpg" alt="Béisbol desde arriba" loading="lazy"><figcaption><code>cancha-beisbol</code> cenital</figcaption></figure>
+</div>
+
 **De día:**
 
 | Ambiente | Qué trae | Planos |

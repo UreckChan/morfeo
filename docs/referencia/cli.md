@@ -19,6 +19,11 @@ npx morfeo <comando> [opciones]
 | `calendario` | `calendario.md` con un tema por día: fórmula y lugar rotando, sin repetir lo hecho. `--dias 30`, `--desde 2026-12-01`, `--ia` (Claude propone los temas) |
 | `serie "tema"` | Varios videos encadenados (`--partes 4`), cada uno abre recordando el anterior y cierra pidiendo el siguiente. `--ia`, `--investigar`, `--voz` |
 | `carrusel <id>` | Del video hecho: carrusel de imágenes de los momentos clave (`--formato 9:16`, `--max 8`) e hilo para X/Threads |
+| `plantillas [buscar "x"]` | Tu [biblioteca de elementos](../guia/elementos-propios) (lugares, piezas, escenarios, personajes, capas). `--tipo ambiente` |
+| `plantilla guardar <nombre>` | Guarda un elemento del proyecto en la biblioteca: `--palabras "a, b"`, `--descripcion`, `--vista imagen.png`, `--como otro-nombre`, `--reemplazar` |
+| `plantilla usar <nombre>` | Copia uno de la biblioteca al proyecto para cambiarlo y lo registra en `morfeo.config.mjs` |
+| `plantilla editar <nombre>` | Guarda una copia y dice qué archivo cambiar; `plantilla deshacer <nombre>` la regresa |
+| `plantilla variante <base> <nueva>` | Otra versión con nombre propio (de noche, en ruinas…); la original no cambia |
 | `skills` | Instala o actualiza las [guías para tu IA](../guia/skills) en `.claude/skills/` (`--lista` solo las muestra) |
 | `estilo` | Abre la página para crear tu estilo (guarda `estilo.json`). `--desde https://tusitio.com` toma los colores y la letra de tu web |
 | `voces` | Las voces gratis; `--elevenlabs` lista las más usadas de su biblioteca en español con su ID (`--acento mexicano`, `--genero mujer`, `--muestras 5` genera una muestra de cada una; `--tono nervioso`, `--edad joven`, `--uso personajes`, `--buscar "texto"`, `--detalle`) |
@@ -27,7 +32,7 @@ npx morfeo <comando> [opciones]
 | `instalar` | Prepara la computadora: Python, voces, navegador y Whisper (opcional). `--si`, `--whisper`, `--sin-whisper` |
 | `doctor` | Revisa qué está instalado y qué falta |
 | `lista` | Muestra los videos del proyecto y cuáles ya están hechos |
-| `render [id...]` | Genera los que faltan, o los que indiques. `--todos` regenera todos, `--gpu` usa la tarjeta de video, `--solo-fallidos` reintenta los que fallaron en el último lote, `--cambiados` rehace solo los videos cuyo guion o componentes cambiaron desde su último render, `--revisar` saca la hoja y revisa cada video al terminar, `--escenas 5-7` solo esas escenas (para corregir una toma) `--borrador` lo hace con la voz gratis de borrador. |
+| `render [id...]` | Genera los que faltan, o los que indiques. `--todos` regenera todos, `--gpu` usa la tarjeta de video, `--solo-fallidos` reintenta los que fallaron en el último lote, `--cambiados` rehace solo los videos cuyo guion o componentes cambiaron desde su último render, `--revisar` saca la hoja y revisa cada video al terminar, `--escenas 5-7` solo esas escenas (para corregir una toma) `--borrador` lo hace con la voz gratis de borrador. `--looks comic,pixel,neon` saca una variante por [look](../guia/looks) (también en `animatica`). |
 | `revisar [id...]` | Revisa la estructura (gancho, ritmo, preguntas, rótulos, cierre), la voz, la zona segura, el riesgo de "diapositiva" y, si ya está el MP4, cuadros negros, tapados, lisos o quietos. `--sin-cuadros` salta lo último. Ver [Estructura](../guia/mundo#revisar-la-estructura) |
 | `hoja <id>` | Hoja de contacto PNG para revisar un video de un vistazo. `--desde 8 --hasta 11`, `--cols 5 --filas 3`, `--zona` (zonas que tapan las apps) |
 | `studio` | Abre el editor en el navegador con los videos ya preparados. `--puerto 3001` |

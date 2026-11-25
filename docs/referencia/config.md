@@ -42,6 +42,10 @@ export default defineConfig({
 | `estilos` | Tus estilos, con `base` para heredar de uno existente |
 | `personajes` | Personajes con poses. Ver [Personajes](../guia/series#personajes) |
 | `componentes` | Componentes de React. Ver [Componentes](../guia/componentes) |
+| `ambientes` | Lugares 3D propios: `{'estadio-por-partes': './lugares/Estadio.tsx'}`. Ver [Elementos a la medida](../guia/elementos-propios) |
+| `piezas` | Objetos 3D propios: `{balanza: './piezas/Balanza.tsx'}` |
+| `escenarios` | Fondos 2D propios: `{glorieta: './escenarios/Glorieta.tsx'}` |
+| `personajes3d` | Personajes 3D propios (un look): `{abuelo: {piel, pelo, ropa, pantalon, peinado}}` |
 | `fuentes` | Fuentes propias `{Nombre: './archivo.ttf'}`; úsalas en `tema.fuentes` o en `fuente` de un texto |
 | `imagenes` | Proveedor y línea gráfica de las imágenes con IA |
 | `videos` | Archivo con `{id: video}`, o una carpeta (por defecto `./videos.mjs`) |

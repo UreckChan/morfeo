@@ -5,7 +5,7 @@ const SITIO = 'https://morfeo.ureck.dev';
 export default defineConfig({
 	lang: 'es-MX',
 	title: 'Morfeo',
-	description: 'Videos verticales animados desde código: voz, música, subtítulos, 12 estilos y mundos 3D.',
+	description: 'Videos verticales animados desde código: voz, música, subtítulos, 16 estilos, 9 looks y mundos 3D a la medida.',
 	appearance: 'dark',
 		cleanUrls: true,
 	sitemap: {hostname: SITIO},
@@ -34,7 +34,7 @@ export default defineConfig({
 				name: 'Morfeo',
 				applicationCategory: 'MultimediaApplication',
 				operatingSystem: 'Windows, macOS, Linux',
-				description: 'Crea videos verticales animados (YouTube Shorts, TikTok, Reels) desde código o con tu IA: voz, música, subtítulos, 12 estilos, mundos 3D y fórmulas de historia.',
+				description: 'Crea videos verticales animados (YouTube Shorts, TikTok, Reels) desde código o con tu IA: voz, música, subtítulos, 16 estilos, 9 looks de render, mundos 3D a la medida y fórmulas de historia.',
 				url: SITIO,
 				downloadUrl: 'https://www.npmjs.com/package/morfeo',
 				inLanguage: 'es',
@@ -95,6 +95,8 @@ export default defineConfig({
 					{text: 'Objetos 2D y 3D', link: '/guia/recursos'},
 					{text: '3D', link: '/guia/3d'},
 					{text: 'Componentes propios', link: '/guia/componentes'},
+					{text: 'Elementos a la medida y biblioteca', link: '/guia/elementos-propios'},
+					{text: 'Looks de render', link: '/guia/looks'},
 				],
 			},
 			{

@@ -149,7 +149,7 @@ onMounted(() => {
 		},
 		{threshold: 0.35},
 	);
-	document.querySelectorAll<HTMLVideoElement>('.inicio video').forEach((v) => observador!.observe(v));
+	document.querySelectorAll<HTMLVideoElement>('.inicio video:not(.con-sonido)').forEach((v) => observador!.observe(v));
 });
 onBeforeUnmount(() => {
 	clearInterval(reloj);
@@ -198,9 +198,10 @@ onBeforeUnmount(() => {
 					</a>
 				</div>
 				<ul class="datos">
-					<li><b>12</b> estilos</li>
-					<li><b>158</b> piezas 3D</li>
-					<li><b>4</b> guías para tu IA</li>
+					<li><b>16</b> estilos</li>
+					<li><b>9</b> looks de render</li>
+					<li><b>5</b> guías para tu IA</li>
+					<li>Lugares y objetos <b>a la medida</b></li>
 					<li><b>Gratis</b> incluso para uso comercial</li>
 				</ul>
 			</div>
@@ -218,6 +219,20 @@ onBeforeUnmount(() => {
 				<span class="marca m1">VOZ</span>
 				<span class="marca m2">SUBTÍTULOS</span>
 				<span class="marca m3">MUNDO 3D</span>
+			</div>
+		</section>
+
+		<!-- QUÉ ES MORFEO (video con sonido) -->
+		<section class="bloque presentacion">
+			<div class="encabezado">
+				<p class="ceja">En un minuto</p>
+				<h2>Qué es Morfeo</h2>
+				<p>Qué hace, cómo funciona, cómo se instala y lo nuevo de la 2.0: lugares a la medida, biblioteca y 9 looks. El video también lo hizo Morfeo.</p>
+			</div>
+			<div class="presentacion-video">
+				<div class="tel tel-video">
+					<video class="con-sonido" :src="b('/clips/que-es-morfeo.mp4')" :poster="b('/clips/que-es-morfeo.jpg')" controls playsinline preload="none" />
+				</div>
 			</div>
 		</section>
 
@@ -750,6 +765,16 @@ section {
 	left: 50%;
 	margin-left: -5px;
 	bottom: -4px;
+}
+
+/* video de presentación: con sonido y controles, no se reproduce solo */
+.presentacion-video {
+	display: flex;
+	justify-content: center;
+}
+.tel.tel-video {
+	position: relative;
+	height: min(720px, 82vh);
 }
 
 /* BLOQUES */

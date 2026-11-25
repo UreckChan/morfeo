@@ -31,6 +31,13 @@ npx morfeo nuevo-video mi-serie --look serie         # una base que ya renderiza
 | `biografia` | una vida año por año con un secreto como gancho | `biografia` | 90–180 s |
 | `dia` | "Un día en la vida de…" en segunda persona, con un `marcador` del chiste que se repite | — | 60–110 s |
 | `reto` | una meta colectiva enorme que avanza con cada seguidor ("cada persona que nos sigue entra en la fila") | — | 30–50 s |
+| `elige` | test con una situación y opciones A/B/C en pantalla: "¿cuál eliges?", se revela la correcta | — | 35–60 s |
+| `despiertas` | "Te despiertas en…": un lugar con reglas raras, un número tuyo y cuenta regresiva | — | 45–75 s |
+| `pausa` | la historia se congela ("Pausa. Déjame explicarte") para dar el dato real y luego sigue | — | 45–80 s |
+| `imagina` | "¿Te imaginas que…?": absurdo que escala con lógica impecable | — | 30–50 s |
+| `ranking` | lista o serie con contador en pantalla ("Día 22 de 32", "#3") | — | 30–60 s |
+| `balanza` | comparar dos cosas sumando pesos categoría por categoría | — | 35–60 s |
+| `rant` | el narrador se queja con gracia y lo demuestra con un diagrama visto desde arriba | — | 30–60 s |
 
 Pon `formula: 'serie'` en el guion y `npx morfeo revisar` te da consejos propios de esa fórmula (por ejemplo, que
 la serie termine con una decisión A/B o que "construiste" tenga suficientes "pero").

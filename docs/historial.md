@@ -15,6 +15,34 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 2.0.0 {#v2-0-0}
+
+<p class="fecha-version">24 de noviembre de 2026</p>
+
+Morfeo deja de estar limitado a lo que trae: tu IA crea lo que el tema pide y lo guarda para siempre.
+
+- **[Elementos a la medida y biblioteca](/guia/elementos-propios)**: lugares 3D (`defineAmbiente`, que crecen con la
+  historia), piezas 3D, fondos 2D y personajes propios en `morfeo.config.mjs`, elegidos solos por sus palabras.
+  Biblioteca en `~/.morfeo/plantillas` que sirve en todos tus proyectos: `npx morfeo plantillas`, `plantilla guardar`,
+  `usar`, `editar` (con `deshacer`) y `variante`. Guía nueva para tu IA: `morfeo-plantillas`.
+- **[Looks de render](/guia/looks)**: el mismo video 3D en cómic, pixel, PS2, neón, tinta, papel, boceto, plastilina o
+  juguete. `look` en el guion o `--looks comic,pixel` para sacar variantes.
+- **Vista desde arriba** en todos los lugares: `plano: 'cenital'`.
+- **7 fórmulas nuevas** ([Historias](/guia/historias#formulas)): `elige`, `despiertas`, `pausa`, `imagina`, `ranking`,
+  `balanza` y `rant`.
+- **8 capas nuevas** ([Capas](/guia/capas#recursos-de-guion)): `opciones`, `balanza`, `panel-led`, `pausa`,
+  `rebobinar`, `pie`, `comparte` y `parte2`.
+- Videos a **60 cuadros por segundo** (más fluidos; el render tarda más). Postproceso `realista`. Uniformes con
+  `ropa2`, `patron` (rayas, mitades, banda) y número en la espalda; gradas más llenas.
+- El render se reintenta solo si una pestaña se queda atorada (y da un error claro en vez de quedarse colgado).
+- Nuevas piezas en `morfeo/kit` para armar lugares: `Gradas`, `TorreLuz`, `Porteria`, `Pasto3D`, `Marcador3D`,
+  `Fila3D`, `Letrero3D`, `Fuego`.
+
+**Para pasar de 1.x a 2.0:** `npm install morfeo@latest` y `npx morfeo skills` (trae la guía nueva para tu IA). Los
+guiones de 1.x funcionan igual. Dos cambios que se notan: los videos salen a 60 cuadros (el render tarda ~70 % más) y
+la capa `video` usa ese mismo reloj. Si tenías un ambiente con un nombre que ahora usa un elemento de tu biblioteca,
+manda el de la biblioteca.
+
 ## 1.7.3 {#v1-7-3}
 
 <p class="fecha-version">19 de noviembre de 2026</p>

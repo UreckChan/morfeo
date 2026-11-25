@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '2.0.0',
+		fecha: '2026-11-24',
+		titulo: 'Lo que el tema pida, a la medida',
+		resumen: 'Tu IA crea lugares, objetos, fondos y personajes nuevos y los guarda en tu biblioteca; 9 looks de render, vista desde arriba, 7 fórmulas y 8 capas nuevas.',
+		tipo: 'mayor',
+	},
+	{
 		v: '1.7.3',
 		fecha: '2026-11-19',
 		titulo: 'Luz de la sala de juntas y revisión de voz',
