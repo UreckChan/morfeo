@@ -15,6 +15,13 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 2.0.2 {#v2-0-2}
+
+<p class="fecha-version">25 de noviembre de 2026</p>
+
+- Videos con varios lugares 3D: al cambiar de lugar, el lienzo ya no se queda congelado en la imagen del lugar anterior (pasaba con ciertas secuencias, como montaña → oficina → nevado → montaña).
+- Si un render se atora al codificar el video, ahora se corta y se reintenta solo en lugar de quedarse esperando.
+
 ## 2.0.1 {#v2-0-1}
 
 <p class="fecha-version">25 de noviembre de 2026</p>

@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '2.0.2',
+		fecha: '2026-11-25',
+		titulo: 'Lugares 3D sin congelarse',
+		resumen: 'Al cambiar de lugar el lienzo 3D ya no se queda con la imagen anterior, y un render atorado se reintenta solo.',
+		tipo: 'arreglo',
+	},
+	{
 		v: '2.0.1',
 		fecha: '2026-11-25',
 		titulo: 'Look por escena y objetos completos',
