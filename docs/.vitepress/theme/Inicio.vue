@@ -43,6 +43,55 @@ async function copiar() {
 	} catch {}
 }
 
+// video de la presentación: capítulos que saltan a cada parte
+const presentacion = ref<HTMLVideoElement | null>(null);
+const tiempo = ref(0);
+const CAPITULOS = [
+	{t: 0, titulo: 'Qué es Morfeo'},
+	{t: 7.2, titulo: 'Todo lo que pone por ti'},
+	{t: 11.6, titulo: 'Cómo funciona un guion'},
+	{t: 16.3, titulo: 'Con Claude o Codex'},
+	{t: 21.3, titulo: '16 estilos y 35 lugares'},
+	{t: 26.7, titulo: 'Lugares a la medida', nuevo: true},
+	{t: 36, titulo: 'Nueve looks', nuevo: true},
+	{t: 46.1, titulo: 'Cómo se instala'},
+];
+const mmss = (t: number) => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}`;
+const capituloActual = () => {
+	let k = 0;
+	CAPITULOS.forEach((c, i) => {
+		if (tiempo.value >= c.t - 0.05) k = i;
+	});
+	return k;
+};
+function irA(t: number) {
+	const v = presentacion.value;
+	if (!v) return;
+	v.currentTime = t;
+	v.play().catch(() => {});
+}
+
+// el mismo video en otro look: se cambia solo hasta que la persona elige uno
+const LOOKS = [
+	{id: 'normal', nombre: 'Normal'},
+	{id: 'comic', nombre: 'Cómic'},
+	{id: 'pixel', nombre: 'Pixel art'},
+	{id: 'neon', nombre: 'Neón'},
+	{id: 'plastilina', nombre: 'Plastilina'},
+	{id: 'tinta', nombre: 'Tinta china'},
+	{id: 'juguete', nombre: 'Juguete'},
+	{id: 'papel', nombre: 'Papel'},
+	{id: 'boceto', nombre: 'Boceto'},
+	{id: 'ps2', nombre: 'PS2'},
+];
+const look = ref('comic');
+let rotaLooks: ReturnType<typeof setInterval> | undefined;
+function elegirLook(id: string) {
+	look.value = id;
+	clearInterval(rotaLooks);
+	rotaLooks = undefined;
+}
+
 const ESTILOS = [
 	{nombre: 'maqueta', desc: 'Explicadores en un diorama 3D low-poly', clip: 'diorama'},
 	{nombre: '3d', desc: 'Objetos y mundos 3D con cámara que viaja', clip: 'maqueta'},
@@ -54,6 +103,12 @@ const ESTILOS = [
 	{nombre: 'ilustrado', desc: 'Escenarios 2D con paralaje', img: 'ilustrado'},
 	{nombre: 'historia', desc: 'Relatos con personajes y escenarios', img: 'historia'},
 	{nombre: 'infografia', desc: 'Datos, barras y comparaciones', img: 'infografia'},
+	{nombre: 'caricatura', desc: 'Personajes 2D con cara y ropa', img: 'estilo-caricatura'},
+	{nombre: 'corporativo', desc: 'Gráficas, indicadores y procesos', img: 'estilo-corporativo'},
+	{nombre: 'pizarra', desc: 'Trazo de plumón sobre pizarrón', img: 'estilo-pizarra'},
+	{nombre: 'datos', desc: 'Números grandes que cuentan solos', img: 'estilo-datos'},
+	{nombre: 'linea', desc: 'Blanco sobre negro, íconos que se dibujan', img: 'estilo-linea'},
+	{nombre: 'minimal', desc: 'Oscuro, limpio y directo', img: 'estilo-minimal'},
 ];
 
 const LUGARES = [
@@ -85,7 +140,7 @@ const CAPACIDADES = [
 	{icono: 'cubo', titulo: '2D y 3D sin dibujar', texto: 'Escribe "tubería", "pac-man" o "bandera de japón": 177 piezas propias y unos 7.000 modelos libres, con créditos.'},
 	{icono: 'lugar', titulo: 'El lugar sigue a la historia', texto: 'Con ambiente auto, si la voz dice isla, cueva o laboratorio, la escena va ahí. 35 lugares con vida de fondo: canchas, teatro, conferencias, de día o de noche.'},
 	{icono: 'clima', titulo: 'Clima y desastres', texto: 'Lluvia, nieve, tormenta; primavera, otoño, invierno; inundación, incendio, sismo o volcán, con su sonido.'},
-	{icono: 'ia', titulo: 'Hecho para tu IA', texto: 'Claude Code o Codex investigan, escriben y renderizan con las guías que trae Morfeo.'},
+	{icono: 'ia', titulo: 'Hecho para tu IA', texto: 'Claude Code o Codex investigan, escriben y renderizan con las guías que trae Morfeo; si el tema pide un lugar que no existe, lo construyen.'},
 	{icono: 'revisar', titulo: 'Revisión de estructura', texto: 'Gancho, ritmo y cierre; que la voz diga el guion; cuadros vacíos, tapados, quietos o con destellos.'},
 	{icono: 'calendario', titulo: 'Publicar todos los días', texto: 'Calendario de temas que no se repiten, series encadenadas y un carrusel con hilo de cada video.'},
 ];
@@ -109,13 +164,14 @@ const SKILLS = [
 	{nombre: 'morfeo-animacion', titulo: 'Animación', texto: 'Tiempos, curvas y escalonado; cada cosa entra en la palabra que la nombra.'},
 	{nombre: 'morfeo-3d', titulo: '3D', texto: 'Luz, materiales, paleta y encuadre vertical para mundos y piezas.'},
 	{nombre: 'morfeo-video', titulo: 'Ruta completa', texto: 'Del tema al archivo terminado, con revisión antes de entregar.'},
+	{nombre: 'morfeo-plantillas', titulo: 'A la medida', texto: 'Crea el lugar, objeto o personaje que el tema pide y lo guarda en tu biblioteca.'},
 ];
 
 const CIFRAS = [
 	{n: '177', de: 'piezas 3D hechas en código', nota: 'De un grifo a un comecocos'},
 	{n: '7.000', de: 'modelos libres al escribir su nombre', nota: 'Kenney, Quaternius y KayKit, sin derechos'},
-	{n: '25', de: 'lugares con vida de fondo', nota: 'Isla, cueva, combi, fogata, plano técnico…'},
-	{n: '13', de: 'fórmulas de historia', nota: 'Mito, misterio, un día en la vida, reto…'},
+	{n: '35', de: 'lugares con vida de fondo', nota: 'Y los que tu IA haga a la medida'},
+	{n: '20', de: 'fórmulas de historia', nota: 'Mito, test A/B/C, te despiertas en…'},
 ];
 const BUSCA = ['tubería', 'ambulancia', 'pac-man', 'placa madre', 'bandera de japón', 'dinosaurio', 'guitarra', 'tetris', 'cerebro', 'refinería', 'control', 'cable submarino'];
 
@@ -132,6 +188,11 @@ let observador: IntersectionObserver | undefined;
 onMounted(() => {
 	contadores();
 	const quieto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+	if (!quieto)
+		rotaLooks = setInterval(() => {
+			const i = LOOKS.findIndex((l) => l.id === look.value);
+			look.value = LOOKS[(i + 1) % LOOKS.length].id;
+		}, 3200);
 	if (!quieto) {
 		let i = 0;
 		reloj = setInterval(() => {
@@ -153,6 +214,7 @@ onMounted(() => {
 });
 onBeforeUnmount(() => {
 	clearInterval(reloj);
+	clearInterval(rotaLooks);
 	observador?.disconnect();
 });
 </script>
@@ -198,12 +260,12 @@ onBeforeUnmount(() => {
 					</a>
 				</div>
 				<ul class="datos">
-					<li><b>16</b> estilos</li>
-					<li><b>9</b> looks de render</li>
-					<li><b>5</b> guías para tu IA</li>
-					<li>Lugares y objetos <b>a la medida</b></li>
-					<li><b>Gratis</b> incluso para uso comercial</li>
+					<li><b>16</b><span>estilos</span></li>
+					<li><b>9</b><span>looks de render</span></li>
+					<li><b>35</b><span>lugares, y los tuyos</span></li>
+					<li><b>5</b><span>guías para tu IA</span></li>
 				</ul>
+				<p class="gratis"><b>Gratis</b>, incluso para uso comercial.</p>
 			</div>
 
 			<div class="escenario" aria-hidden="true">
@@ -224,14 +286,72 @@ onBeforeUnmount(() => {
 
 		<!-- QUÉ ES MORFEO (video con sonido) -->
 		<section class="bloque presentacion">
-			<div class="encabezado">
-				<p class="ceja">En un minuto</p>
-				<h2>Qué es Morfeo</h2>
-				<p>Qué hace, cómo funciona, cómo se instala y lo nuevo de la 2.0: lugares a la medida, biblioteca y 9 looks. El video también lo hizo Morfeo.</p>
-			</div>
-			<div class="presentacion-video">
+			<div class="presentacion-par">
 				<div class="tel tel-video">
-					<video class="con-sonido" :src="b('/clips/que-es-morfeo.mp4')" :poster="b('/clips/que-es-morfeo.jpg')" controls playsinline preload="none" />
+					<video ref="presentacion" class="con-sonido" :src="b('/clips/que-es-morfeo.mp4')" :poster="b('/clips/que-es-morfeo.jpg')" controls playsinline preload="none" @timeupdate="tiempo = ($event.target as HTMLVideoElement).currentTime" />
+				</div>
+				<div class="presentacion-texto">
+					<p class="ceja">En un minuto</p>
+					<h2>Qué es Morfeo</h2>
+					<p class="presentacion-bajada">Qué hace, cómo funciona, cómo se instala y lo nuevo de la 2.0. El video también lo hizo Morfeo.</p>
+					<ol class="capitulos">
+						<li v-for="(c, i) in CAPITULOS" :key="c.t">
+							<button type="button" :class="['capitulo', {activo: tiempo > 0 && capituloActual() === i}]" @click="irA(c.t)">
+								<span class="cap-tiempo">{{ mmss(c.t) }}</span>
+								<span class="cap-titulo">{{ c.titulo }}</span>
+								<span v-if="c.nuevo" class="cap-nuevo">2.0</span>
+							</button>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</section>
+
+		<!-- NUEVE LOOKS -->
+		<section class="bloque looks">
+			<div class="looks-par">
+				<div class="looks-texto">
+					<p class="ceja">Nuevo en 2.0</p>
+					<h2>Un video, nueve looks.</h2>
+					<p>El mismo guion y el mismo mundo 3D, en otro estilo visual. Una línea en el guion, o una variante por look desde la terminal.</p>
+					<div class="looks-botones" role="radiogroup" aria-label="Look de render">
+						<button v-for="l in LOOKS" :key="l.id" type="button" role="radio" :aria-checked="look === l.id" :class="['look-boton', {activo: look === l.id}]" @click="elegirLook(l.id)">{{ l.nombre }}</button>
+					</div>
+					<div class="codigo codigo-chico">
+						<div class="codigo-barra"><span /><span /><span /><em>terminal</em></div>
+						<pre><code>npx morfeo render mi-video <span class="s">--looks {{ look === 'normal' ? 'comic,pixel,neon' : look }}</span></code></pre>
+					</div>
+					<a :href="b('/guia/looks')" class="enlace">Ver los looks <Icono nombre="flecha" /></a>
+				</div>
+				<div class="looks-tel">
+					<div class="tel tel-look">
+						<video :key="look" :src="b(`/clips/look-${look}.mp4`)" :poster="b(`/clips/look-${look}.jpg`)" muted loop playsinline autoplay preload="auto" />
+						<span class="look-etiqueta">{{ LOOKS.find((l) => l.id === look)?.nombre }}</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- A LA MEDIDA -->
+		<section class="bloque medida">
+			<div class="medida-par">
+				<div class="medida-tel">
+					<div class="tel tel-medida">
+						<video :src="b('/clips/estadio.mp4')" :poster="b('/clips/estadio.jpg')" muted loop playsinline preload="none" />
+					</div>
+					<span class="medida-sello">Hecho a la medida</span>
+				</div>
+				<div class="medida-texto">
+					<p class="ceja">Nuevo en 2.0</p>
+					<h2>Si no existe, tu IA lo construye.</h2>
+					<p>Lo que trae Morfeo es la base, no el límite. ¿Un estadio que se arma pieza por pieza, una cárcel en corte, un laberinto de Pac-Man? Tu IA lo hace con las piezas del kit, lo revisa y lo guarda en tu biblioteca. Desde ahí sirve en todos tus proyectos.</p>
+					<ol class="medida-pasos">
+						<li><b>Busca</b><code>npx morfeo plantillas buscar "estadio"</code></li>
+						<li><b>Construye</b><code>defineAmbiente({ planos, Set })</code></li>
+						<li><b>Guarda</b><code>npx morfeo plantilla guardar estadio</code></li>
+						<li><b>Varía</b><code>npx morfeo plantilla variante estadio estadio-noche</code></li>
+					</ol>
+					<a :href="b('/guia/elementos-propios')" class="enlace">Elementos a la medida <Icono nombre="flecha" /></a>
 				</div>
 			</div>
 		</section>
@@ -306,7 +426,7 @@ onBeforeUnmount(() => {
 			<div class="encabezado fila-enc">
 				<div>
 					<p class="ceja">Estilos</p>
-					<h2>Doce looks listos, y los tuyos.</h2>
+					<h2>Dieciséis estilos, y los tuyos.</h2>
 				</div>
 				<a :href="b('/guia/estilos')" class="enlace">Ver todos los estilos <Icono nombre="flecha" /></a>
 			</div>
@@ -651,19 +771,47 @@ section {
 	color: var(--m-tenue);
 }
 .datos {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 8px 28px;
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 0;
 	list-style: none;
 	padding: 0;
 	margin: 40px 0 0;
-	font-size: 14px;
-	color: var(--m-tenue);
+	max-width: 560px;
+	border-top: 1px solid var(--m-linea);
 	animation: subir 0.8s 0.32s both;
 }
+.datos li {
+	margin: 0;
+	padding: 14px 14px 0 0;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+.datos li + li {
+	padding-left: 14px;
+	border-left: 1px solid var(--m-linea);
+}
 .datos b {
+	font-family: var(--m-display);
+	font-size: 28px;
+	line-height: 1;
 	color: var(--m-tinta);
-	font-weight: 700;
+	font-weight: 800;
+}
+.datos span {
+	font-size: 13px;
+	line-height: 1.3;
+	color: var(--m-tenue);
+}
+.gratis {
+	margin: 18px 0 0;
+	font-size: 14px;
+	color: var(--m-tenue);
+	animation: subir 0.8s 0.4s both;
+}
+.gratis b {
+	color: var(--m-acento);
 }
 
 /* teléfonos */
@@ -767,14 +915,220 @@ section {
 	bottom: -4px;
 }
 
-/* video de presentación: con sonido y controles, no se reproduce solo */
-.presentacion-video {
-	display: flex;
-	justify-content: center;
+/* video de presentación: con sonido y controles, no se reproduce solo; capítulos al lado */
+.presentacion-par,
+.looks-par,
+.medida-par {
+	display: grid;
+	grid-template-columns: auto minmax(0, 1fr);
+	align-items: center;
+	gap: clamp(40px, 7vw, 110px);
 }
 .tel.tel-video {
 	position: relative;
-	height: min(720px, 82vh);
+	height: min(700px, 80vh);
+}
+.presentacion-texto h2,
+.looks-texto h2,
+.medida-texto h2 {
+	margin: 0 0 14px;
+}
+.presentacion-bajada {
+	max-width: 460px;
+	color: var(--m-tenue);
+	margin: 0 0 28px;
+}
+.capitulos {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border-top: 1px solid var(--m-linea);
+	max-width: 520px;
+}
+.capitulos li {
+	margin: 0;
+	border-bottom: 1px solid var(--m-linea);
+}
+.capitulo {
+	display: flex;
+	align-items: baseline;
+	gap: 18px;
+	width: 100%;
+	padding: 14px 6px;
+	text-align: left;
+	font: inherit;
+	color: var(--m-tenue);
+	cursor: pointer;
+	transition:
+		color 0.2s,
+		padding-left 0.25s;
+}
+.capitulo:hover,
+.capitulo.activo {
+	color: var(--m-tinta);
+	padding-left: 14px;
+}
+.capitulo.activo .cap-tiempo {
+	color: var(--m-acento);
+}
+.cap-tiempo {
+	font-family: var(--m-mono);
+	font-size: 13px;
+	min-width: 40px;
+	font-variant-numeric: tabular-nums;
+}
+.cap-titulo {
+	flex: 1;
+	font-family: var(--m-display);
+	font-weight: 700;
+	font-size: 19px;
+}
+.cap-nuevo {
+	font-family: var(--m-mono);
+	font-size: 11px;
+	font-weight: 600;
+	padding: 2px 8px;
+	border-radius: 99px;
+	background: var(--m-amarillo);
+	color: #17141f;
+}
+
+/* nueve looks: el teléfono cambia de look */
+.looks-par {
+	grid-template-columns: minmax(0, 1fr) auto;
+}
+.looks-texto > p {
+	max-width: 480px;
+	color: var(--m-tenue);
+}
+.looks-botones {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 26px 0 22px;
+	max-width: 540px;
+}
+.look-boton {
+	font: inherit;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 8px 16px;
+	border-radius: 99px;
+	border: 1px solid var(--m-linea-fuerte);
+	color: var(--m-tinta);
+	background: transparent;
+	cursor: pointer;
+	transition:
+		background 0.2s,
+		color 0.2s,
+		border-color 0.2s,
+		transform 0.2s;
+}
+.look-boton:hover {
+	border-color: var(--m-acento);
+	transform: translateY(-1px);
+}
+.look-boton.activo {
+	background: var(--m-acento);
+	border-color: var(--m-acento);
+	color: #fff;
+}
+.codigo-chico {
+	max-width: 540px;
+	margin-bottom: 26px;
+}
+.codigo-chico pre {
+	padding: 14px 18px 16px;
+}
+.tel.tel-look {
+	position: relative;
+	height: min(620px, 76vh);
+	transform: rotate(-2deg);
+}
+.look-etiqueta {
+	position: absolute;
+	right: -22px;
+	top: 38px;
+	padding: 6px 14px;
+	border-radius: 99px;
+	background: var(--m-amarillo);
+	color: #17141f;
+	font-family: var(--m-display);
+	font-weight: 800;
+	font-size: 15px;
+	transform: rotate(6deg);
+	box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* a la medida */
+.medida-tel {
+	position: relative;
+}
+.tel.tel-medida {
+	position: relative;
+	height: min(620px, 76vh);
+	transform: rotate(2deg);
+}
+.medida-sello {
+	position: absolute;
+	left: -26px;
+	bottom: 70px;
+	padding: 8px 16px;
+	border: 3px solid var(--m-acento);
+	border-radius: 10px;
+	color: var(--m-acento);
+	background: color-mix(in srgb, var(--m-fondo) 85%, transparent);
+	font-family: var(--m-display);
+	font-weight: 800;
+	font-size: 15px;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	transform: rotate(-8deg);
+}
+.medida-texto > p {
+	max-width: 520px;
+	color: var(--m-tenue);
+}
+.medida-pasos {
+	list-style: none;
+	padding: 0;
+	margin: 26px 0 28px;
+	display: grid;
+	gap: 10px;
+	max-width: 560px;
+	counter-reset: paso;
+}
+.medida-pasos li {
+	counter-increment: paso;
+	display: grid;
+	grid-template-columns: 34px 110px minmax(0, 1fr);
+	align-items: center;
+	gap: 12px;
+	margin: 0;
+	padding: 12px 14px;
+	border: 1px solid var(--m-linea);
+	border-radius: 14px;
+	background: var(--m-panel);
+}
+.medida-pasos li::before {
+	content: counter(paso);
+	display: grid;
+	place-items: center;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	background: var(--m-acento);
+	color: #fff;
+	font-family: var(--m-display);
+	font-weight: 800;
+	font-size: 14px;
+}
+.medida-pasos b {
+	font-family: var(--m-display);
+}
+.medida-pasos code {
+	font-size: 12.5px;
+	overflow-wrap: anywhere;
 }
 
 /* BLOQUES */
@@ -1334,8 +1688,19 @@ section {
 		grid-template-columns: 1fr;
 		gap: 56px;
 	}
-	.guion-par {
+	.guion-par,
+	.presentacion-par,
+	.looks-par,
+	.medida-par {
 		grid-template-columns: 1fr;
+	}
+	.presentacion-par .tel-video,
+	.looks-tel,
+	.medida-tel {
+		justify-self: center;
+	}
+	.looks-tel {
+		order: -1;
 	}
 	.flecha-grande {
 		transform: rotate(90deg);
@@ -1345,6 +1710,27 @@ section {
 @media (max-width: 560px) {
 	section {
 		padding: 0 16px;
+	}
+	.tel.tel-video,
+	.tel.tel-look,
+	.tel.tel-medida {
+		height: min(520px, 70vh);
+	}
+	.look-etiqueta {
+		right: 10px;
+		top: 18px;
+	}
+	.medida-sello {
+		left: -6px;
+	}
+	.medida-pasos li {
+		grid-template-columns: 34px minmax(0, 1fr);
+	}
+	.medida-pasos code {
+		grid-column: 1 / -1;
+	}
+	.datos b {
+		font-size: 24px;
 	}
 	.tira {
 		margin: 0 -16px;
