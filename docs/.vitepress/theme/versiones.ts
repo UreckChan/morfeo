@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '2.0.1',
+		fecha: '2026-11-25',
+		titulo: 'Look por escena y objetos completos',
+		resumen: 'El look se puede poner en una sola escena; el estudio ya no corta los objetos y el plano del objeto los deja completos.',
+		tipo: 'arreglo',
+	},
+	{
 		v: '2.0.0',
 		fecha: '2026-11-24',
 		titulo: 'Lo que el tema pida, a la medida',

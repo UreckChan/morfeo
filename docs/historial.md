@@ -15,6 +15,16 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 2.0.1 {#v2-0-1}
+
+<p class="fecha-version">25 de noviembre de 2026</p>
+
+- **`look` por escena**: un momento en pixel art o cómic y el resto normal (`{say: '…', look: 'pixel'}`). Los looks de baja resolución se ven mejor así que en todo el video.
+- Estudio: el pedestal ya no queda enterrado en el fondo y los objetos se ven completos (antes se cortaban en diagonal por abajo).
+- El plano del objeto se acerca menos: los objetos altos ya no se salen del cuadro.
+- Plastilina y juguete: un objeto que cambia de color entre escenas ya no se queda con el color del primero.
+- Cierre `comparte`: si el texto ocupa dos renglones, ya no choca con tu avatar. La capa `balanza` trae un panel oscuro y letras más grandes para leerse sobre cualquier fondo.
+
 ## 2.0.0 {#v2-0-0}
 
 <p class="fecha-version">24 de noviembre de 2026</p>

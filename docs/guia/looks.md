@@ -38,4 +38,6 @@ npx morfeo animatica mi-video --looks plastilina,juguete   # rápido, para elegi
 
 - Las tramas, el papel y el tramado están fijos en pantalla: no cambian en cada cuadro, así que el MP4 no pesa más.
 - Los textos, subtítulos y capas 2D no cambian: el look es solo del mundo 3D.
+- **Por escena**: `{say: '…', look: 'pixel'}` cambia el look solo en esa escena (un arranque retro, un recuerdo).
+  Los de baja resolución (`pixel`, `ps2`) se ven mejor así, en momentos puntuales, que en todo el video.
 - `Lienzo3D look="pixel"` lo fija en un componente propio.
