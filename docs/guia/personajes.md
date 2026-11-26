@@ -99,6 +99,26 @@ persona: {piel: 'morena', ojos: 'almendrados', colorOjos: 'miel', cejas: 'poblad
 - `barba`: corta, completa, larga, candado, chivo, patillas, tres-dias · `bigote`: normal, grueso, manubrio, lapiz,
   herradura · `colorBarba`.
 
+## Cuerpos diversos y rasgos de la piel
+
+<figure><img src="/img/diversos-3.jpg" alt="Rasgos, prótesis, apoyos y peces con aletas" loading="lazy" style="width:100%;border-radius:12px"><figcaption>Acné, ojeras, cicatrices y parche; prótesis, muletas y silla de ruedas; peces con aletas; lo mismo en 2D</figcaption></figure>
+
+```js
+persona: {acne: true, ojeras: true, cicatriz: ['ojo', 'labio'], parche: 'izquierdo', manchas: true}
+persona: {falta: ['pierna-izq'], protesis: ['pierna-izq-carrera'], accion: 'trotar'}
+persona: {falta: ['antebrazo-der'], protesis: ['antebrazo-der']}   // con gancho
+persona: {apoyo: 'silla-ruedas'}                                   // va sentada en su silla
+```
+
+- `acne`, `ojeras`, `manchas` (vitíligo), `cicatriz` (true o dónde: mejilla, ojo, frente, labio, ceja; o varias),
+  `parche` (true, 'izquierdo' o 'derecho'), `arrugas`, `pecas`, `lunar`.
+- `falta`: brazo, antebrazo, mano, pierna, ojo u oreja, de cada lado (`'brazo-izq'`, `'ojo-der'`…). Sin una pierna y
+  sin prótesis, la persona va con muletas.
+- `protesis`: pierna (tubo y pie), pierna de carrera (hoja), brazo o antebrazo (gancho), mano.
+- `apoyo`: `baston`, `muletas`, `silla-ruedas`, `andadera`.
+
+Todo vale igual en la caricatura 2D.
+
 ## Acciones animadas
 
 <figure><img src="/img/acciones-3.jpg" alt="Acciones deportivas" loading="lazy" style="width:100%;border-radius:12px"><figcaption>Tiro a la canasta, remate, cabezazo y correr, con su balón</figcaption></figure>
@@ -153,7 +173,7 @@ persona: {especie: 'gato', cabeza: 'sombrero', collar: 'dije', espalda: 'capa'}
 
 perro, gato, caballo, unicornio, vaca, cerdo, oveja, conejo, oso, panda, león, tigre, zorro, lobo, elefante, jirafa,
 cebra, ratón, cocodrilo, tortuga, rana, dinosaurio, dragón, mono, pingüino, gallina, pato, águila, loro, pez, tiburón,
-delfín y ballena. Caminan, corren, se sientan y saltan; cualquiera puede llevar alas.
+delfín y ballena. Caminan, corren, se sientan y saltan. Los de tierra pueden llevar alas; los peces nadan con sus aletas y las aves ya traen sus alas.
 
 ## En 2D
 

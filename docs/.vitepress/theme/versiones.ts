@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '3.0.1',
+		fecha: '2026-11-26',
+		titulo: 'Cuerpos diversos',
+		resumen: 'Acné, ojeras, cicatrices, parche, partes que faltan, prótesis, muletas y silla de ruedas; peces con aletas.',
+		tipo: 'menor',
+	},
+	{
 		v: '3.0.0',
 		fecha: '2026-11-26',
 		titulo: 'Cada video distinto',

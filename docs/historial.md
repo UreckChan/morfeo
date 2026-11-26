@@ -15,6 +15,13 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 3.0.1 {#v3-0-1}
+
+<p class="fecha-version">26 de noviembre de 2026</p>
+
+- **Cuerpos diversos** ([guía](/guia/personajes#cuerpos-diversos-y-rasgos-de-la-piel)): acné, ojeras, manchas (vitíligo), cicatrices en mejilla, ojo, frente, labio o ceja, parche; partes que faltan (brazo, antebrazo, mano, pierna, ojo, oreja), prótesis (pierna, hoja de carrera, gancho, mano) y apoyos (bastón, muletas, silla de ruedas, andadera). En 3D y en 2D.
+- Los peces nadan con aletas laterales y ya no se les ponen alas; a las aves tampoco (ya traen las suyas).
+
 ## 3.0.0 {#v3-0-0}
 
 <p class="fecha-version">26 de noviembre de 2026</p>
