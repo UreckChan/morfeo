@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '3.0.3',
+		fecha: '2026-11-26',
+		titulo: 'Objetos rotos y escenas coherentes',
+		resumen: 'Estados y daño de objetos (se estrellan, chocan, explotan), balones de fuego y hielo, cielo según la hora, partidos por rama y sala de cómputo.',
+		tipo: 'menor',
+	},
+	{
 		v: '3.0.2',
 		fecha: '2026-11-26',
 		titulo: 'Nada limitado por el catálogo',

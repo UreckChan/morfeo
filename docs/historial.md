@@ -15,6 +15,17 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 3.0.3 {#v3-0-3}
+
+<p class="fecha-version">26 de noviembre de 2026</p>
+
+- **Objetos con estado y daño**: cualquier objeto puede estar nuevo, usado, gastado, sucio, oxidado, quemado, maltratado, roto (con grietas) o destrozado, y romperse en una palabra (`romper: {en: 'cayó', tipo: 'estrellar' | 'choque' | 'explotar' | 'aplastar'…}`) con pedazos, chispas, humo, sacudida y sonido. En 3D y en imágenes 2D; también para tus mundos (`Desgaste` en el kit).
+- Piezas nuevas: celular, tele, monitor y tableta.
+- Balones especiales: de fuego, de hielo, de rayo y de energía, en la mano o en las acciones.
+- El cielo de los paisajes sigue la hora: de noche con luna y estrellas, al atardecer naranja (antes salía el sol siempre). La persona de los paisajes mira a la cámara.
+- Partidos por rama: femenil (solo mujeres), varonil o mixto; Morfeo la detecta del guion.
+- Lugar nuevo: sala de cómputo (laboratorio de computación, de IA o de videojuegos), distinto del laboratorio de química.
+
 ## 3.0.2 {#v3-0-2}
 
 <p class="fecha-version">26 de noviembre de 2026</p>

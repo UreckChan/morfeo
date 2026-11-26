@@ -78,3 +78,15 @@ Nuevos: `canon`, `volcan`, `rio`, `pradera`, `selva` y `cascada` (también los e
 
 Los estilos 2D llevan luz suave y viñeta, y algunos papel o grano (`acabado: 'luz' | 'papel' | 'grano' | 'ninguno'`).
 Las caricaturas tienen sombra y brillo como en animación.
+
+## Objetos nuevos, usados o rotos
+
+```js
+{say: 'Así quedó la tele.', objeto: {forma: 'tele', estado: 'roto'}}
+{say: 'Y el celular se cayó.', objeto: {forma: 'celular', romper: {en: 'cayó', tipo: 'estrellar'}}}
+```
+
+Estados: `nuevo`, `usado`, `gastado`, `sucio`, `oxidado`, `quemado`, `maltratado`, `roto`, `destrozado`. Golpes:
+`estrellar`, `romper`, `aplastar`, `choque`, `explotar`, `caer`, `quemar` (con pedazos, chispas, humo y su sonido).
+Sirve con cualquier objeto: piezas de Morfeo, modelos de la biblioteca, tus piezas y, en tus mundos, envolviendo lo que
+sea con `<Desgaste>` (un coche que choca, una pantalla que se estrella).
