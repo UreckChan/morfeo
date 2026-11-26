@@ -28,6 +28,8 @@ biblioteca**. La próxima vez ya existe, en cualquier proyecto.
 | Una profesión o vestuario (salvavidas, astronauta retro) | receta de ropa (3.0) | `atuendos` | `persona: {atuendo: 'nombre'}` |
 | Un movimiento (chilena, voltereta) | acción (3.0) | `animaciones` | `accion: 'nombre'` |
 | Un rótulo con otro diseño (grafiti, pizarra) | rótulo (3.0) | `rotulos` | `rotuloEstilo: 'nombre'` |
+| Ropa, accesorio o parte del cuerpo (casco vikingo, tatuaje, cola) | prenda (3.0.2) | `prendas` | en su ranura o `extras` |
+| Un animal que no existe (ajolote, grifo) | especie (3.0.2) | `especies` | `persona: {especie}` |
 
 ```js
 // morfeo.config.mjs

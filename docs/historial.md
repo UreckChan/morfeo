@@ -15,6 +15,14 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 3.0.2 {#v3-0-2}
+
+<p class="fecha-version">26 de noviembre de 2026</p>
+
+- **Nada limitado por el catálogo** ([guía](/guia/personajes#lo-que-no-existe-se-agrega)): prendas y partes del cuerpo propias en cualquier ranura (casco, tenis, tatuaje, cuernos, cola, piercing, peinado…) o como `extras` sin límite, en 3D y 2D; reemplazan a las de fábrica con el mismo nombre.
+- **Especies propias**: con datos sobre una de fábrica o con un archivo propio.
+- Todo se guarda y se reusa desde la biblioteca, igual que lugares, objetos, oficios, acciones y rótulos.
+
 ## 3.0.1 {#v3-0-1}
 
 <p class="fecha-version">26 de noviembre de 2026</p>

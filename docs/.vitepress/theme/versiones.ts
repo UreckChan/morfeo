@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '3.0.2',
+		fecha: '2026-11-26',
+		titulo: 'Nada limitado por el catálogo',
+		resumen: 'Prendas, partes del cuerpo y especies propias en cualquier lugar del personaje, guardables en la biblioteca.',
+		tipo: 'menor',
+	},
+	{
 		v: '3.0.1',
 		fecha: '2026-11-26',
 		titulo: 'Cuerpos diversos',

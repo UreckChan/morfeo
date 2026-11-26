@@ -175,6 +175,32 @@ perro, gato, caballo, unicornio, vaca, cerdo, oveja, conejo, oso, panda, león, 
 cebra, ratón, cocodrilo, tortuga, rana, dinosaurio, dragón, mono, pingüino, gallina, pato, águila, loro, pez, tiburón,
 delfín y ballena. Caminan, corren, se sientan y saltan. Los de tierra pueden llevar alas; los peces nadan con sus aletas y las aves ya traen sus alas.
 
+## Lo que no existe, se agrega
+
+Ninguna lista de esta página es un tope. Si el tema pide algo que Morfeo no trae, se crea una vez y se usa como las de
+fábrica (y se guarda en la biblioteca para otros proyectos):
+
+<figure><img src="/img/propias-3.jpg" alt="Prendas propias: casco vikingo, espada, tatuaje y cuernos" loading="lazy" style="width:70%;border-radius:12px"><figcaption>Casco vikingo, espada, tatuaje y cuernos hechos como prendas propias</figcaption></figure>
+
+- **Prendas y partes del cuerpo**: un casco, unos tenis con luces, un tatuaje, cuernos, una cola, un piercing, un
+  peinado nuevo. Un archivo con `// @ranura cabeza` (o pelo, cara, lentes, aretes, torso, cuello, collar, espalda,
+  cuerpo, piernas, pies, munecas, mano) registrado en `prendas`. Va en su ranura (`cabeza: 'casco-vikingo'`,
+  `sostiene: 'espada'`) o en `extras`, sin límite. Con el nombre de una de fábrica, la reemplaza.
+- **Especies**: con datos sobre una de fábrica (`especies: {ajolote: {base: 'rana', c: '#F2A8C8', extra: ['cresta']}}`)
+  o un archivo que dibuja al animal completo.
+- **Oficios** (`atuendos`), **acciones** (`animaciones`) y **rótulos** (`rotulos`), como se explicó arriba.
+
+```js
+// morfeo.config.mjs
+prendas: {'casco-vikingo': './prendas/CascoVikingo.tsx', 'cola-zorro': './prendas/ColaZorro.tsx'},
+especies: {ajolote: {base: 'rana', c: '#F2A8C8', c2: '#FFD8E8', cola: 'larga', extra: ['cresta']}},
+// guion
+persona: {cabeza: 'casco-vikingo', extras: [{tipo: 'cola-zorro', color: '#E0702A'}], sostiene: 'espada'}
+```
+
+Tu IA sabe hacerlas: la skill `morfeo-plantillas` trae la guía de cada ranura (dónde va el origen del dibujo y qué
+medidas del cuerpo recibe).
+
 ## En 2D
 
 La caricatura usa las mismas recetas y piezas:
