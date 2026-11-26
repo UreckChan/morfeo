@@ -25,6 +25,9 @@ biblioteca**. La próxima vez ya existe, en cualquier proyecto.
 | Un fondo ilustrado (pasillo, mapa, aula de otro país) | escenario 2D | `escenarios` | `fondo: {tipo: 'escenario', nombre}`, `fondos: 'auto'` |
 | Alguien de la historia (abuelo, niño, monstruo) | personaje 3D | `personajes3d` | `persona: 'nombre'`, `gente: [{personaje}]` |
 | Un gráfico o panel propio | capa | `componentes` | `{tipo: 'componente', nombre}` |
+| Una profesión o vestuario (salvavidas, astronauta retro) | receta de ropa (3.0) | `atuendos` | `persona: {atuendo: 'nombre'}` |
+| Un movimiento (chilena, voltereta) | acción (3.0) | `animaciones` | `accion: 'nombre'` |
+| Un rótulo con otro diseño (grafiti, pizarra) | rótulo (3.0) | `rotulos` | `rotuloEstilo: 'nombre'` |
 
 ```js
 // morfeo.config.mjs

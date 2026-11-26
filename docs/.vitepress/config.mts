@@ -5,7 +5,7 @@ const SITIO = 'https://morfeo.ureck.dev';
 export default defineConfig({
 	lang: 'es-MX',
 	title: 'Morfeo',
-	description: 'Videos verticales animados desde código: voz, música, subtítulos, 16 estilos, 9 looks y mundos 3D a la medida.',
+	description: 'Videos verticales animados desde código: voz, música, subtítulos, 16 estilos, 9 looks, personajes por piezas con acciones animadas y mundos 3D a la medida.',
 	appearance: 'dark',
 		cleanUrls: true,
 	sitemap: {hostname: SITIO},
@@ -97,6 +97,8 @@ export default defineConfig({
 					{text: 'Componentes propios', link: '/guia/componentes'},
 					{text: 'Elementos a la medida y biblioteca', link: '/guia/elementos-propios'},
 					{text: 'Looks de render', link: '/guia/looks'},
+					{text: 'Personajes, ropa y acciones', link: '/guia/personajes'},
+					{text: 'Textos, color y variedad', link: '/guia/textos'},
 				],
 			},
 			{

@@ -15,6 +15,23 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 3.0.0 {#v3-0-0}
+
+<p class="fecha-version">26 de noviembre de 2026</p>
+
+Los videos de un canal ya no se parecen entre sí (salvo las series).
+
+- **Personajes por piezas** ([guía](/guia/personajes)): cuatro estilos de cuerpo (redondo, bloques, chibi, estilizado), 25 peinados, 24 gorras y sombreros, lentes, aretes, collares, corbatas, 18 prendas, calzado (tenis, botas, tacones…), reloj, pulsera, mochila, capa y alas. 56 oficios como recetas que se cambian pieza por pieza; los tuyos en `atuendos`.
+- **Sin decir cómo va vestida**, cada video tiene otra persona, vestida según el lugar; la gente de fondo también cambia.
+- **Piel, cara, barba y bigote**: tonos con nombre, ojos, cejas, nariz, labios, orejas, lunar, cicatriz, 7 barbas y 5 bigotes.
+- **Acciones animadas**: correr, patear a gol, festejo, tiro a la canasta, clavada, remate, cabezazo, batear, lanzar, saque, bailar y más, con su balón. Se cambian o se crean en `animaciones`.
+- **Modelos animados** (Kenney y KayKit) y **33 animales** con accesorios; un animal puede ser el protagonista.
+- **Textos** ([guía](/guia/textos)): unas 50 tipografías que se bajan solas (`rotuloFuente`, `fuente` en cualquier capa), 15 rótulos nuevos, rótulos propios y 5 subtítulos nuevos.
+- **Dirección de arte por video**: grado de color y tono del set distintos en cada video; `revisar` avisa cuando un video se parece a los anteriores.
+- **Paisajes**: relieve, roca, nieve, cielo, agua y vegetación mucho más detallados; nuevos cañón, volcán, río, pradera, selva y cascada.
+- **2D**: luz, viñeta, papel o grano según el estilo, y caricaturas con las mismas piezas y sombreado.
+- Para volver al personaje de antes: `persona: {estilo: 'clasico'}`. Para quitar el color automático: `direccion: false`.
+
 ## 2.0.2 {#v2-0-2}
 
 <p class="fecha-version">25 de noviembre de 2026</p>

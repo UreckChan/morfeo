@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '3.0.0',
+		fecha: '2026-11-26',
+		titulo: 'Cada video distinto',
+		resumen: 'Personajes por piezas en 4 estilos, 56 oficios, acciones animadas, animales y modelos animados; 50 tipografías y 15 rótulos; color y set distintos por video; 6 paisajes nuevos.',
+		tipo: 'mayor',
+	},
+	{
 		v: '2.0.2',
 		fecha: '2026-11-25',
 		titulo: 'Lugares 3D sin congelarse',

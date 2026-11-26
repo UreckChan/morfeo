@@ -74,6 +74,12 @@ sirve para explicar tráfico, formaciones, recorridos o cómo está acomodado al
 | `nevado` | Todo blanco, pinos con nieve y nevando |
 | `oceano` | Mar abierto con islotes y un barco |
 | `ciudad` | Cuadras de edificios de día |
+| `canon` | Meseta roja cortada por un cañón con estratos y un río al fondo (3.0) |
+| `volcan` | Volcán con lava que brilla en el cráter y humo (3.0) |
+| `rio` | Pradera con un río que serpentea y árboles en las orillas (3.0) |
+| `pradera` | Lomas suaves llenas de flores (3.0) |
+| `selva` | Selva tupida con palmeras y cerros (3.0) |
+| `cascada` | Río que cae por un acantilado a una poza (3.0) |
 
 Sus planos se mueven: `general`, `dron` (cruza de lado a lado), `acercar` (se acerca a lo importante), `persona`,
 `espalda`, `cielo` y `rodear`.
