@@ -1,8 +1,8 @@
 ---
 layout: home
 title: Morfeo
-titleTemplate: Videos verticales animados desde código
-description: 'Morfeo crea videos verticales animados (Shorts, TikTok, Reels) desde código o con tu IA, gratis y en tu computadora. Voz, música, subtítulos, 12 estilos, mundos 3D y fórmulas de historia.'
+titleTemplate: Crea videos para TikTok, Shorts y Reels con IA o código, gratis
+description: 'Morfeo es un generador gratuito de videos verticales animados para TikTok, YouTube Shorts y Reels. Pídeselo a tu IA (Claude Code, Codex) o escríbelo en código: voz, música, subtítulos, 16 estilos, personajes y mundos 3D, en tu computadora.'
 ---
 
 <Inicio />

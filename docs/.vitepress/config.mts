@@ -5,7 +5,7 @@ const SITIO = 'https://morfeo.ureck.dev';
 export default defineConfig({
 	lang: 'es-MX',
 	title: 'Morfeo',
-	description: 'Videos verticales animados desde código: voz, música, subtítulos, 16 estilos, 9 looks, personajes por piezas con acciones animadas y mundos 3D a la medida.',
+	description: 'Generador gratuito de videos verticales para TikTok, YouTube Shorts y Reels: con tu IA o desde código, con voz, música, subtítulos, 16 estilos, personajes y mundos 3D.',
 	appearance: 'dark',
 		cleanUrls: true,
 	sitemap: {hostname: SITIO},
@@ -40,7 +40,17 @@ export default defineConfig({
 				inLanguage: 'es',
 				offers: {'@type': 'Offer', price: '0', priceCurrency: 'USD'},
 				author: {'@type': 'Person', name: 'Uriel Gómez'},
+				alternateName: ['Morfeo npm', 'Morfeo videos'],
+				image: `${SITIO}/img/galeria.jpg`,
+				screenshot: `${SITIO}/img/galeria.jpg`,
+				keywords: 'generador de videos, videos para TikTok, YouTube Shorts, Reels, videos verticales, videos con IA, Remotion, Three.js, Claude Code, español',
+				sameAs: ['https://www.npmjs.com/package/morfeo', 'https://github.com/UreckChan/morfeo'],
 			}),
+		],
+		[
+			'script',
+			{type: 'application/ld+json'},
+			JSON.stringify({'@context': 'https://schema.org', '@type': 'WebSite', name: 'Morfeo', alternateName: 'Morfeo · videos verticales', url: SITIO, inLanguage: 'es'}),
 		],
 	],
 	// por página: URL canónica y título/descripción para compartir (Google, WhatsApp, X)
@@ -75,6 +85,7 @@ export default defineConfig({
 					{text: 'Tu primer video', link: '/guia/primer-video'},
 					{text: 'Del tema al reel terminado', link: '/guia/estudio'},
 					{text: 'Publicar todos los días', link: '/guia/publicar'},
+					{text: 'Preguntas frecuentes', link: '/guia/preguntas'},
 				],
 			},
 			{
