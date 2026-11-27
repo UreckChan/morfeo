@@ -90,3 +90,43 @@ Estados: `nuevo`, `usado`, `gastado`, `sucio`, `oxidado`, `quemado`, `maltratado
 `estrellar`, `romper`, `aplastar`, `choque`, `explotar`, `caer`, `quemar` (con pedazos, chispas, humo y su sonido).
 Sirve con cualquier objeto: piezas de Morfeo, modelos de la biblioteca, tus piezas y, en tus mundos, envolviendo lo que
 sea con `<Desgaste>` (un coche que choca, una pantalla que se estrella).
+
+## Por dentro
+
+<figure><img src="/img/adentro-3.jpg" alt="Objetos abiertos con una pieza resaltada" loading="lazy" style="width:100%;border-radius:12px"><figcaption>Cartucho, consola, control, celular, tele, carro, casa, un reloj con piezas propias y un cohete que se despieza</figcaption></figure>
+
+Cuando la voz dice qué hay dentro de algo, el objeto se abre y la pieza que se nombra brilla, se acerca y lleva su
+etiqueta:
+
+```js
+{say: 'Dentro de cada cartucho va una pila de reloj.', objeto: {forma: 'cartucho'}}   // se abre solo
+{say: 'El motor del carro.', objeto: {forma: 'carro', adentro: {resaltar: 'motor'}}}
+{say: 'La soldadura del chip.', objeto: {forma: 'consola', adentro: {modo: 'rayos', resaltar: 'soldadura'}}}
+```
+
+Si la voz dice "dentro", "adentro" o "componentes", se abre solo y resalta la pieza que nombra (`adentro: false` lo
+apaga). Modos: `abrir` (la carcasa se levanta; por defecto), `rayos` (queda transparente) y `despiece` (las piezas se
+separan). También: `en` (cuándo se abre), `resaltarEn` (por defecto, cuando la voz nombra la pieza), `etiqueta`
+(texto o `false`) y `color`.
+
+| Objeto | Piezas |
+|---|---|
+| `cartucho` | placa, juego (chip), memoria (la partida), pila, controlador, reloj, contactos, capacitor |
+| `consola` | placa, procesador, grafica, soldadura, disipador, ventilador, fuente, disco, lector, memoria |
+| `control` | placa, procesador, palancas, botones, vibracion, pilas, gatillos |
+| `celular`, `tableta` | bateria, placa, procesador, memoria, camara, bocina, conector, vibracion |
+| `tele`, `monitor` | panel, luces (LED), placa, procesador, fuente, bocinas |
+| `carro` | motor, bateria, radiador, transmision, flecha, tanque, escape, frenos, amortiguadores, llantas, asientos, volante, chasis |
+| `casa` | cimientos, castillos, varillas, muros (ladrillos), losa, tuberia, cables, piso |
+
+Acepta sinónimos ("batería", "ladrillos", "cableado"). Cualquier otro objeto se despieza solo, o arma su interior con
+las piezas 3D de Morfeo:
+
+```js
+objeto: {forma: 'reloj', adentro: {
+	piezas: [{nombre: 'engrane', forma: 'engrane', pos: [0, 0, 0], escala: 0.35}, {nombre: 'resorte', forma: 'resorte', pos: [0.4, -0.3, 0], escala: 0.2}],
+	resaltar: 'engrane',
+}}
+```
+
+Funciona igual en las capas `modelo`.

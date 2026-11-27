@@ -10,6 +10,13 @@ export type Version = {
 
 export const VERSIONES: Version[] = [
 	{
+		v: '3.0.4',
+		fecha: '2026-11-27',
+		titulo: 'Objetos por dentro',
+		resumen: 'Los objetos se abren y resaltan la pieza que nombra la voz: cartucho, consola, control, celular, tele, carro y casa; cualquier otro se despieza o arma su interior.',
+		tipo: 'menor',
+	},
+	{
 		v: '3.0.3',
 		fecha: '2026-11-26',
 		titulo: 'Objetos rotos y escenas coherentes',

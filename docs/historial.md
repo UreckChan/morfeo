@@ -15,6 +15,13 @@ npm install morfeo@latest
 <Versiones enlaces="misma" />
 </div>
 
+## 3.0.4 {#v3-0-4}
+
+<p class="fecha-version">27 de noviembre de 2026</p>
+
+- **Por dentro**: cuando la voz dice qué hay dentro de algo, el objeto se abre (o queda en rayos X, o se despieza) y la pieza que se nombra brilla, se acerca y lleva su etiqueta. Con interior hecho: cartucho, consola, control, celular, tableta, tele, monitor, carro y casa (cimientos, castillos con varillas, ladrillos, losa, tubería y cableado). Cualquier otro objeto se despieza o arma su interior con `adentro.piezas`. [Ver la guía](/guia/textos#por-dentro).
+- Pieza nueva: carro.
+
 ## 3.0.3 {#v3-0-3}
 
 <p class="fecha-version">26 de noviembre de 2026</p>
